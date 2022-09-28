@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button, TextInput} from 'react-native';
 
-//för att köra: npm start
+const dbConnect = require("./server")
+dbConnect();
 
 export default function App() {
   return (
