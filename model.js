@@ -10,10 +10,10 @@ const DrinkSchema = new mongoose.Schema({
     default: '',
   },
   alcoholicIngredients: {
-    type: String, // måste vara String[], hitta lösning
+    type: [String], // måste vara String[], hitta lösning
   },
   nonAlcoholicIngredients: {
-    type: String, // måste vara String[], hitta lösning
+    type: [String], // måste vara String[], hitta lösning
   },
 });
 
