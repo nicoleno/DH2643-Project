@@ -1,0 +1,21 @@
+[
+    { 
+	"UUID": "jajdlaBNFSAJDN200",
+    "name": "Gin & Tonic",
+    "Instructions": "Mix all ingredients",
+    "Ingredients": {
+        "Alcohol": ["Gin"],
+        "NonAlcoholic": ["Tonic", "Lemon"]
+                    }
+    },
+
+    { 
+	"UUID": "fwe",
+    "name": "Rom & Cola"
+    },
+    
+    { 
+	"UUID": "fwe",
+    "name": "Rom utan cola"
+    }
+]
