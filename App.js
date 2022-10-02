@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Button, TextInput} from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { StyleSheet, Text, View, Image, Button, TextInput, Animated} from 'react-native';
 
 const data = require("./data.json")
 //console.log(data[0].name); 
@@ -12,6 +12,19 @@ for (let i = 0; i < data.length; i++) {
 export default function App() {
   const [search, setSearch] = useState("");
   const [matches, setMatches] = useState([]);
+  const translation = useRef(new Animated.Value(0)).current; //useRef calls only get created once, 
+  //when the component renders for the first time
+  useEffect(() => {
+    Animated.sequence([
+      Animated.timing(translation, { toValue: 25, duration: 100, useNativeDriver: true }),
+      Animated.timing(translation, { toValue: -25, duration: 100, useNativeDriver: true }),
+      Animated.timing(translation, { toValue: 25, duration: 100, useNativeDriver: true }),
+      Animated.timing(translation, { toValue: -25, duration: 100, useNativeDriver: true }),
+      Animated.timing(translation, { toValue: 25, duration: 100, useNativeDriver: true }),
+      Animated.timing(translation, { toValue: -25, duration: 100, useNativeDriver: true }),
+      Animated.timing(translation, { toValue: 0, duration: 100, useNativeDriver: true })
+    ]).start();
+  }, []);
 
   function searchDrink (list, substring) {
     const newMatches = []
@@ -28,20 +41,21 @@ export default function App() {
     }
   
   return (
-    <View style={styles.container}>   
+    <View style={styles.container}>  
+      <Animated.Image style={{width: 100, height: 100, backgroundColor: 'pink',
+        transform: [{ translateX: translation }],}} source={require('./assets/images/shaker.jpg')} ></Animated.Image>
       <TextInput style={styles.searchBar} placeholder="Search drink..." 
         onChangeText = {(search)=> setSearch(search)} editable={true}/>
       <Button title="Search" onPress={() => searchDrink (results, search)}></Button>
       {matches.map((match) => <Text key={match}>{match}</Text>)}
-      <Image style={styles.image}source={require('./assets/images/shaker.jpg')} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: 0.8,
+    backgrondColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -57,8 +71,8 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    width:150,
-    height: 150,
+    width:120,
+    height: 100,
     margin: 20
   },
 });
