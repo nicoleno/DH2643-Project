@@ -1,13 +1,13 @@
+import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import ShakerModel from './models/shaker';
-
+import SearchDrink from './search';
 
 export const HomePage = () => {
     const shaker = new ShakerModel;
-
       // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
   // const shaker = {
   //   height: 0,
@@ -28,6 +28,7 @@ export const HomePage = () => {
     
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
+          <SearchDrink/>
             <View style={styles.container}>
                 <View style={styles.navbuttons}>
                 <TouchableOpacity onPress={() => { alert("you clicked me") }}>

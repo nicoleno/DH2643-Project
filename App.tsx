@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import ShakerModel from './models/shaker';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import { HomePage } from './HomePage'
 
 //för att köra: npm start
@@ -13,6 +11,7 @@ export default function App() {
 
   return (
     // <Provider store={store}>
+      
        <HomePage/>
     // </Provider>
 
