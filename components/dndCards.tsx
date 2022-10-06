@@ -6,7 +6,7 @@ type ContextType = {
   translateX: number;
   translateY: number;
 }
-const DraggableCard = () => {
+const DraggableCard = (props) => {
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -55,8 +55,9 @@ const DraggableCard = () => {
   })
   return (
     <PanGestureHandler onGestureEvent={panGestureEvent}>
-      <Animated.View style={[styles.square, rStyle]} />
-
+      <Animated.View style={[styles.square, rStyle]}>
+        <Text>{props.name}</Text>
+      </Animated.View>
     </PanGestureHandler>)
 
 }
@@ -64,7 +65,7 @@ const DraggableCard = () => {
 const styles = StyleSheet.create({
   square: {
     width: 100,
-    height: 150,
+    height: 100,
     backgroundColor: 'rgb(225, 255, 177)',
     borderRadius: 20,
     margin: 10,
