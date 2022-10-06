@@ -2,12 +2,12 @@ import { GestureHandlerRootView, PanGestureHandler, PanGestureHandlerGestureEven
 import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, TextInput } from 'react-native';
-
 type ContextType = {
   translateX: number;
   translateY: number;
 }
 const DraggableCard = () => {
+
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
@@ -25,7 +25,6 @@ const DraggableCard = () => {
 
       },
       onEnd: (event, context) => {
-
         // NÄSTA steg, hitta koordinater av shakern och gör en if sats.
         if ((110 < event.absoluteX) && (event.absoluteX < 300)
           && (298 < event.absoluteY) && (event.absoluteY < 470)) {

@@ -2,30 +2,30 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
+import ShakerModel from './models/shaker';
 import DraggableCard from './components/dndCards';
 
 //för att köra: npm start
 
 export default function App() {
-
+  const shaker = new ShakerModel();
   // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
-  let shaker = {
-    height: 0,
-    width: 0,
-    posX: 0,
-    posY: 0,
-  }
+  // const shaker = {
+  //   height: 0,
+  //   width: 0,
+  //   posX: 0,
+  //   posY: 0,
+  // }
 
-  function getShakerPos(height: number, width: number, x: number, y: number) {
-    console.log("hej");
+  // function getShakerPos(height: number, width: number, x: number, y: number) {
+  //   console.log("hej");
 
-    shaker.height = height;
-    console.log(shaker.height);
-    shaker.width = width;
-    shaker.posX = x;
-    shaker.posY = y;
-  }
+  //   shaker.height = height;
+  //   console.log(shaker.height);
+  //   shaker.width = width;
+  //   shaker.posX = x;
+  //   shaker.posY = y;
+  // }
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -43,11 +43,10 @@ export default function App() {
 
           <Image style={styles.image} source={require('./assets/images/shaker.png')} onLayout={(event) => {
             const layout = event.nativeEvent.layout;
-            console.log("height:", layout.height);
-            console.log("width:", layout.width);
-            console.log("x:", layout.x);
-            console.log("y:", layout.y);
-            getShakerPos(layout.height, layout.width, layout.x, layout.y);
+            shaker.setHeight(layout.height);
+            shaker.setWidth(layout.width);
+            shaker.setPosX(layout.x);
+            shaker.setPosY(layout.y);
           }}
           />
         </View>
