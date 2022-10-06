@@ -7,6 +7,7 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
+    "expo-cli": "^6.0.6",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
     "expo": "~46.0.13",
