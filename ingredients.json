@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Lemon"
+    },
+    {
+        "id": 2,
+        "name": "Lime"
+    },
+    {
+        "id": 3,
+        "name": "Sugar"
+    },
+    {
+        "id": 4,
+        "name": "Raspberries"
+    },
+    {
+        "id": 5,
+        "name": "Soda water"
+    },
+    {
+        "id": 6,
+        "name": "Ginger ale"
+    },
+    {
+        "id": 7,
+        "name": "Cranberry juice"
+    },
+    {
+        "id": 8,
+        "name": "Agave syrup"
+    },
+    {
+        "id": 9,
+        "name": "Lime"
+    },
+    {
+        "id": 10,
+        "name": "Eggwhite"
+    },
+    {
+        "id": 11,
+        "name": "Sugar cube"
+    },
+    {
+        "id": 12,
+        "name": "Brown sugar"
+    },
+    {
+        "id": 13,
+        "name": "Coffee"
+    },
+    {
+        "id": 14,
+        "name": "Angostura Bitter"
+    },
+    {
+        "id": 15,
+        "name": "Cream"
+    },
+    {
+        "id": 16,
+        "name": "Milk"
+    },
+    {
+        "id": 17,
+        "name": "Coca-Cola"
+    },
+    {
+        "id": 18,
+        "name": "Espresso"
+    },
+    {
+        "id": 19,
+        "name": "Honey"
+    },
+    {
+        "id": 20,
+        "name": "Mint leaves"
+    },
+    {
+        "id": 21,
+        "name": "Orange juice"
+    },
+    {
+        "id": 22,
+        "name": "Tomato juice"
+    },
+    {
+        "id": 23,
+        "name": "Celery"
+    },
+    {
+        "id": 24,
+        "name": "Peach puré"
+    },
+    {
+        "id": 25,
+        "name": "Grenadine"
+    }
+]
