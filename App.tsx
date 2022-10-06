@@ -1,73 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { StyleSheet } from 'react-native';
 import ShakerModel from './models/shaker';
-import DraggableCard from './components/dndCards';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { HomePage } from './HomePage'
 
 //för att köra: npm start
 
+// const store = createStore();
+
 export default function App() {
-  const shaker = new ShakerModel();
-  // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
-  // const shaker = {
-  //   height: 0,
-  //   width: 0,
-  //   posX: 0,
-  //   posY: 0,
-  // }
-
-  // function getShakerPos(height: number, width: number, x: number, y: number) {
-  //   console.log("hej");
-
-  //   shaker.height = height;
-  //   console.log(shaker.height);
-  //   shaker.width = width;
-  //   shaker.posX = x;
-  //   shaker.posY = y;
-  // }
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        <View style={styles.navbuttons}>
-          <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-            <Image style={styles.image2} source={require('./assets/images/menu.png')} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-            <Image style={styles.image2} source={require('./assets/images/settings.png')} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.shakerArea}>
-          <StatusBar style="auto" />
-
-          <Image style={styles.image} source={require('./assets/images/shaker.png')} onLayout={(event) => {
-            const layout = event.nativeEvent.layout;
-            shaker.setHeight(layout.height);
-            shaker.setWidth(layout.width);
-            shaker.setPosX(layout.x);
-            shaker.setPosY(layout.y);
-          }}
-          />
-        </View>
-        <View style={styles.bottomBar}>
-          <View style={styles.header}>
-            <View style={styles.toggle}>
-              <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
-              </TouchableOpacity>
-            </View>
-            <Text>här har vi vår search bar</Text>
-          </View>
-          <View style={styles.cardContainer}>
-            <DraggableCard />
-            <DraggableCard />
-          </View>
-        </View>
-      </View></GestureHandlerRootView >
+    // <Provider store={store}>
+       <HomePage/>
+    // </Provider>
 
   );
 }
