@@ -6,9 +6,6 @@ import { Provider } from 'react-redux';
 import { HomePage } from './HomePage'
 import Sidebar from './components/navigator';
 
-
-//för att köra: npm start
-
 // const store = createStore();
 
 export default function App() {
