@@ -2,9 +2,15 @@ import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Button } from 'react-native';
 import ShakerModel from './models/shaker';
 import SearchDrink from './search';
+import { useNavigate } from "react-router-dom";
+// let navigate = useNavigate(); 
+// const routeChange = () =>{ 
+//   let path = `newPath`; 
+//   navigate(path);
+// }
 
 export const HomePage = () => {
     const shaker = new ShakerModel;
@@ -28,7 +34,6 @@ export const HomePage = () => {
     
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
-          <SearchDrink/>
             <View style={styles.container}>
                 <View style={styles.navbuttons}>
                 <TouchableOpacity onPress={() => { alert("you clicked me") }}>
@@ -38,6 +43,10 @@ export const HomePage = () => {
                     <Image style={styles.image2} source={require('./assets/images/settings.png')} />
                 </TouchableOpacity>
                 </View>
+                <SearchDrink/>
+                {/* <button onClick={routeChange}>
+              Login
+            </button> */}
                 <View style={styles.shakerArea}>
                 <StatusBar style="auto" />
 
