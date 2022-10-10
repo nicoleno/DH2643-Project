@@ -7,8 +7,8 @@ import ingredients from './ingredients.json';
 import SearchDrink from './search';
 
 
-export const HomePage = () => {
-    const shaker = new ShakerModel;
+export const HomePage = (props) => {
+    let shaker = props.shaker;
 
       // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
   // const shaker = {
@@ -50,14 +50,16 @@ export const HomePage = () => {
                         <Image style={styles.image2} source={require('./assets/images/settings.png')} />
                     </TouchableOpacity>
                 </View>
-                <View style={styles.shakerArea}>
-                    <Image style={styles.image} source={require('./assets/images/shaker.png')} onLayout={(event) => {
-                        const layout = event.nativeEvent.layout;
-                        shaker.setHeight(layout.height);
-                        shaker.setWidth(layout.width);
-                        shaker.setPosX(layout.x);
-                        shaker.setPosY(layout.y);
-                    }}
+                <View>
+                    <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')} 
+                         onLayout={(event) => {
+                            const layout = event.nativeEvent.layout;
+                            console.log("layout", layout);
+                            shaker.setHeight(layout.height);
+                            shaker.setWidth(layout.width);
+                            shaker.setPosX(layout.x);
+                            shaker.setPosY(layout.y);
+                        }}
                 />
                 </View>
                 <View style={styles.bottomBar}>
@@ -72,7 +74,7 @@ export const HomePage = () => {
                         </View>
                         <Text>här har vi vår search bar</Text>
                     </View>
-                <FlatList horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
+                    <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
                 </View>
             </View>
         </GestureHandlerRootView >
@@ -104,15 +106,15 @@ const styles = StyleSheet.create({
     },
   
     image: {
-      width: 150,
-      height: 150,
+      width:200,
+      height: 200,
       margin: 20
     },
+    
     shakerArea: {
       flex: 1,
       height: 300,
       marginTop: 100,
-  
     },
   
     bottomBar: {
