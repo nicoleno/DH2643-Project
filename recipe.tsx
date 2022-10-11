@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image } from 'react-native';
-import SearchDrink from "./search.jsx";
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -70,13 +68,13 @@ const styles = StyleSheet.create({
     }
   });
 
-export const Cocktails = () => {
+const Recipe = () => {
 
     return (
         <View>
-            <Text>Cocktaillista</Text>
-            <SearchDrink/>
-            <Image style={styles.image}source={require('./assets/images/shaker.png')}/>
+            <Text>Hej här e ett recept</Text>
         </View>
     )
 }
+
+export default Recipe;

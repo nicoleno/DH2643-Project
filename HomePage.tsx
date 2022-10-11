@@ -1,10 +1,12 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './ingredients.json';
-import SearchDrink from './search';
+import ShakeEventExpo from "./accelerometer";
+import Recipe from "./recipe"
 
 
 export const HomePage = ({ navigation }) => {
@@ -27,6 +29,14 @@ export const HomePage = ({ navigation }) => {
   //   shaker.posX = x;
   //   shaker.posY = y;
   // }
+    
+  ShakeEventExpo.addListener(() => {
+      console.log('Skakad');
+      navigation.navigate({Screen:"recipe.tsx"}) 
+      //ShakeEventExpo.removeListener();
+      
+
+    });
 
   const Item = ({ name }) => {
     return (
