@@ -74,19 +74,18 @@ const styles = StyleSheet.create({
 //npm install expo-sensors
 
 export const Cocktails = () => {
-    const hej = []
+    const hej = {}
     
     ShakeEventExpo.addListener(() => {
         //add your code here
         console.log('Skakad');
-        hej.push("Tjohej")
-        
+  
       });
     return (
         <View>
             <Text>Cocktaillista</Text>
             <SearchDrink/>
-            <View>{hej}</View>
+  
             <Image style={styles.image}source={require('./assets/images/shaker.png')}/>
         </View>
     )

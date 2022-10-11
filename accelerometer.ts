@@ -14,7 +14,7 @@ export default class ShakeEventExpo {
         if ((currTime - lastUpdate) > 100) {
         let diffTime = (currTime - lastUpdate);
         lastUpdate = currTime;
-        let speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+        let speed = Math.abs(x + y  - last_x - last_y ) / diffTime * 10000;
         if (speed > THRESHOLD) {
         handler();
         }
