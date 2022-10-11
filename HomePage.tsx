@@ -5,40 +5,43 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react
 import ShakerModel from './models/shaker';
 import ingredients from './ingredients.json';
 import SearchDrink from './search';
+import store from './store/store';
+import { addIngredient } from './store/actions';
 
 
 export const HomePage = (props) => {
     let shaker = props.shaker;
 
-      // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
-  // const shaker = {
-  //   height: 0,
-  //   width: 0,
-  //   posX: 0,
-  //   posY: 0,
-  // }
 
-  // function getShakerPos(height: number, width: number, x: number, y: number) {
-  //   console.log("hej");
+    // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
+    // const shaker = {
+    //   height: 0,
+    //   width: 0,
+    //   posX: 0,
+    //   posY: 0,
+    // }
 
-  //   shaker.height = height;
-  //   console.log(shaker.height);
-  //   shaker.width = width;
-  //   shaker.posX = x;
-  //   shaker.posY = y;
-  // }
+    // function getShakerPos(height: number, width: number, x: number, y: number) {
+    //   console.log("hej");
 
-  const Item = ({name}) => {
-    return(
-    <View style={styles.cardContainer}>
-        <DraggableCard name={name}/>
-    </View>
-    );
-    }
-    const renderItem = ({item})=>(
-        <Item name={item.name}/>
+    //   shaker.height = height;
+    //   console.log(shaker.height);
+    //   shaker.width = width;
+    //   shaker.posX = x;
+    //   shaker.posY = y;
+    // }
+
+    const Item = ({ name }) => {
+        return (
+            <View style={styles.cardContainer}>
+                <DraggableCard name={name} />
+            </View>
         );
-    
+    }
+    const renderItem = ({ item }) => (
+        <Item name={item.name} />
+    );
+
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
             <View style={styles.container}>
@@ -51,8 +54,8 @@ export const HomePage = (props) => {
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')} 
-                         onLayout={(event) => {
+                    <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')}
+                        onLayout={(event) => {
                             const layout = event.nativeEvent.layout;
                             console.log("layout", layout);
                             shaker.setHeight(layout.height);
@@ -60,17 +63,17 @@ export const HomePage = (props) => {
                             shaker.setPosX(layout.x);
                             shaker.setPosY(layout.y);
                         }}
-                />
+                    />
                 </View>
                 <View style={styles.bottomBar}>
                     <View style={styles.header}>
                         <View style={styles.toggle}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
-                        </TouchableOpacity>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
+                            </TouchableOpacity>
                         </View>
                         <Text>här har vi vår search bar</Text>
                     </View>
@@ -78,73 +81,74 @@ export const HomePage = (props) => {
                 </View>
             </View>
         </GestureHandlerRootView >
-)};
+    )
+};
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      display: 'flex',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
     },
-  
+
     navbuttons: {
-      margin: 20,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
+        margin: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
-  
+
     searchBar: {
-      color: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderWidth: 2,
-      borderColor: 'blue',
-      padding: 15,
-      borderRadius: 10
+        color: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 2,
+        borderColor: 'blue',
+        padding: 15,
+        borderRadius: 10
     },
-  
+
     image: {
-      width:200,
-      height: 200,
-      margin: 20
+        width: 200,
+        height: 200,
+        margin: 20
     },
-    
+
     shakerArea: {
-      flex: 1,
-      height: 300,
-      marginTop: 100,
+        flex: 1,
+        height: 300,
+        marginTop: 100,
     },
-  
+
     bottomBar: {
-      flex: 2,
-      alignSelf: 'stretch',
-      backgroundColor: 'rgb(182,227,136)',
-      borderTopRightRadius: 30,
-      borderTopLeftRadius: 30,
-      marginTop: 200,
-      justifyContent: 'space-between',
+        flex: 2,
+        alignSelf: 'stretch',
+        backgroundColor: 'rgb(182,227,136)',
+        borderTopRightRadius: 30,
+        borderTopLeftRadius: 30,
+        marginTop: 200,
+        justifyContent: 'space-between',
     },
     header: {
-      margin: 20,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
+        margin: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     cardContainer: {
-      backgroundColor: 'rgb(199, 242, 164)',
-      flexDirection: 'row',
-      height: 200,
+        backgroundColor: 'rgb(199, 242, 164)',
+        flexDirection: 'row',
+        height: 200,
     },
     toggle: {
-      flexDirection: 'row',
-  
+        flexDirection: 'row',
+
     },
     image2: {
-      height: 50,
-      width: 50,
-      borderRadius: 30,
-      margin: 5,
-      backgroundColor: 'rgb(199, 242, 164)',
+        height: 50,
+        width: 50,
+        borderRadius: 30,
+        margin: 5,
+        backgroundColor: 'rgb(199, 242, 164)',
     }
-  });
+});

@@ -1,15 +1,25 @@
 import { GestureHandlerRootView, PanGestureHandler, PanGestureHandlerGestureEvent } from 'react-native-gesture-handler';
-import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
+import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, withTiming, runOnJS, useDerivedValue } from 'react-native-reanimated';
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, TextInput } from 'react-native';
+import store from '../store/store';
+import { addIngredient } from '../store/actions';
+import { useDispatch } from 'react-redux';
 type ContextType = {
     translateX: number;
     translateY: number;
+    ingredientName: string;
 }
 const DraggableCard = (props) => {
     const translateX = useSharedValue(0);
     const translateY = useSharedValue(0);
     const shrink = useSharedValue(1);
+    const dispatch = useDispatch();
+
+    const saveIngredient = (name: string) => {
+        dispatch(addIngredient(name, '1'));
+        console.log(store.getState());
+    };
 
 
     const panGestureEvent = useAnimatedGestureHandler
@@ -33,7 +43,9 @@ const DraggableCard = (props) => {
                     && (170 < event.absoluteY) && (event.absoluteY < 400)) {
 
                     console.log("i shakern");
+                    runOnJS(saveIngredient)(props.name);
                     shrink.value = 0;
+
 
                 }
 
