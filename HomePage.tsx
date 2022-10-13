@@ -6,7 +6,6 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react
 import ShakerModel from './models/shaker';
 import ingredients from './ingredients.json';
 import ShakeEventExpo from "./accelerometer";
-import Recipe from "./recipe"
 
 
 export const HomePage = ({ navigation }) => {
@@ -31,11 +30,9 @@ export const HomePage = ({ navigation }) => {
   // }
     
   ShakeEventExpo.addListener(() => {
-      console.log('Skakad');
-      navigation.navigate({Screen:"recipe.tsx"}) 
       //ShakeEventExpo.removeListener();
-      
-
+      console.log('Skakad');
+      navigation.navigate('Recipe')      
     });
 
   const Item = ({ name }) => {
