@@ -36,6 +36,7 @@ const Sidebar = () => {
                 <Drawer.Screen name="DrinkList" component={DrinkList} options={{
                     drawerItemStyle: { height: 0 },
 
+
                 }} />
 
                 <Drawer.Screen name="Details" component={Details} options={{
