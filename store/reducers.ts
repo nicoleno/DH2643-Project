@@ -1,25 +1,10 @@
-import { ADD_INGREDIENT } from './actions';
+import ingredientsReducer from "./reducers/ingredientsReducer";
+import { combineReducers } from "redux";
 
-const initialState = {
-  ingredients: [],
-};
+const reducers = combineReducers({
+    ingredients: ingredientsReducer,
+  });
+  
+export default reducers;
 
-function rootReducer(state = initialState, action: any) {
-  switch (action.type) {
-    case ADD_INGREDIENT:
-      return {
-        ingredients: [
-          ...state.ingredients,
-          {
-            id: action.id,
-            name: action.name,
-          },
-        ],
-      };
-
-    default:
-      return state;
-  }
-}
-
-export default rootReducer;
+export type RootState = ReturnType<typeof reducers>;

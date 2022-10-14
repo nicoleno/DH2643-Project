@@ -16,8 +16,8 @@ const DraggableCard = (props) => {
     const shrink = useSharedValue(1);
     const dispatch = useDispatch();
 
-    const saveIngredient = (name: string) => {
-        dispatch(addIngredient(name, '1'));
+    const saveIngredient = (ingredient) => {
+        dispatch(addIngredient(ingredient.id, ingredient.name));
         console.log(store.getState());
     };
 
@@ -43,7 +43,7 @@ const DraggableCard = (props) => {
                     && (170 < event.absoluteY) && (event.absoluteY < 400)) {
 
                     console.log("i shakern");
-                    runOnJS(saveIngredient)(props.name);
+                    runOnJS(saveIngredient)(props.ingredient);
                     shrink.value = 0;
 
 
@@ -79,7 +79,7 @@ const DraggableCard = (props) => {
     return (
         <PanGestureHandler onGestureEvent={panGestureEvent}>
             <Animated.View style={[styles.square, rStyle]}>
-                <Text>{props.name}</Text>
+                <Text>{props.ingredient.name}</Text>
             </Animated.View>
         </PanGestureHandler>)
 

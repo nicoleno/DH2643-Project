@@ -1,5 +1,5 @@
 
 import { legacy_createStore as createStore } from 'redux';
-import rootReducer from './reducers';
+import reducers from './reducers';
 
-export default createStore(rootReducer);
+export default createStore(reducers);

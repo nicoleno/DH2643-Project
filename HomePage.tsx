@@ -3,43 +3,26 @@ import { StatusBar } from 'expo-status-bar';
 import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import ShakerModel from './models/shaker';
-import ingredients from './ingredients.json';
+import ingredients from './assets/ingredients.json';
 import SearchDrink from './search';
 import store from './store/store';
-import { addIngredient } from './store/actions';
+import { addIngredient, removeIngredient } from './store/actions';
+import { RenderIngredients } from './components/renderIngredients';
+import IngredientCountIcon from './components/ingredientCountIcon';
 
 
 export const HomePage = (props) => {
     let shaker = props.shaker;
 
-
-    // TO DO - Set state för att ändra färgen på knappen beroende på vilken knapp är intryckt. 
-    // const shaker = {
-    //   height: 0,
-    //   width: 0,
-    //   posX: 0,
-    //   posY: 0,
-    // }
-
-    // function getShakerPos(height: number, width: number, x: number, y: number) {
-    //   console.log("hej");
-
-    //   shaker.height = height;
-    //   console.log(shaker.height);
-    //   shaker.width = width;
-    //   shaker.posX = x;
-    //   shaker.posY = y;
-    // }
-
-    const Item = ({ name }) => {
+    const Item = ({ ingredient }) => {
         return (
             <View style={styles.cardContainer}>
-                <DraggableCard name={name} />
+                <DraggableCard ingredient={ingredient} />
             </View>
         );
     }
     const renderItem = ({ item }) => (
-        <Item name={item.name} />
+        <Item ingredient={item} />
     );
 
     return (
@@ -65,6 +48,7 @@ export const HomePage = (props) => {
                         }}
                     />
                 </View>
+                <IngredientCountIcon />
                 <View style={styles.bottomBar}>
                     <View style={styles.header}>
                         <View style={styles.toggle}>

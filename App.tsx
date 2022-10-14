@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { HomePage } from './HomePage';
 import store from './store/store';
 import { addIngredient } from './store/actions';
+import { RenderIngredients } from './components/renderIngredients';
 
 // import { configureStore } from '@reduxjs/toolkit';
 
@@ -13,13 +14,9 @@ import { addIngredient } from './store/actions';
 // const store = configureStore
 
 export default function App() {
-    console.log('Before:', store.getState());
-    console.log('Before:', store.getState());
-    store.dispatch(addIngredient('One', 'One content'));
-    store.dispatch(addIngredient('Two', 'Two content'));
-    store.dispatch(addIngredient('Three', 'Three content'));
-    console.log('After:', store.getState());
     const shaker = new ShakerModel;
+
+    let ingr = store.getState().ingredients;
 
     return (
         <Provider store={store}>
