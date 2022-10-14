@@ -1,0 +1,171 @@
+[
+    {
+        "id": 1,
+        "name": "Vodka"
+    },
+    {
+        "id": 2,
+        "name": "Cointreau (Triple Sec)"
+    },
+    {
+        "id": 3,
+        "name": "Tequila"
+    },
+    {
+        "id": 4,
+        "name": "Creme de Cassis"
+    },
+    {
+        "id": 5,
+        "name": "Gin"
+    },
+    {
+        "id": 6,
+        "name": "Maraschino Liquer"
+    },
+    {
+        "id": 7,
+        "name": "Violet Liquer"
+    },
+    {
+        "id": 8,
+        "name": "Sweet Vermouth"
+    },
+    {
+        "id": 9,
+        "name": "Campari"
+    },
+    {
+        "id": 10,
+        "name": "Bourbon Whiskey"
+    },
+    {
+        "id": 11,
+        "name": "Dry Vermouth"
+    },
+    {
+        "id": 12,
+        "name": "Amaretto"
+    },
+    {
+        "id": 13,
+        "name": "Scotch Whiskey"
+    },
+    {
+        "id": 14,
+        "name": "Irish Whiskey"
+    },
+    {
+        "id": 15,
+        "name": "Baileys"
+    },
+    {
+        "id": 16,
+        "name": "Licor 43"
+    },
+    {
+        "id": 17,
+        "name": "Kahlua"
+    },
+    {
+        "id": 18,
+        "name": "Creme de Mûre"
+    },
+    {
+        "id": 19,
+        "name": "Green Chartreusse"
+    },
+    {
+        "id": 20,
+        "name": "Rye Whiskey"
+    },
+    {
+        "id": 21,
+        "name": "White Rum"
+    },
+    {
+        "id": 22,
+        "name": "Dark Rum"
+    },
+    {
+        "id": 23,
+        "name": "Peach Liquer"
+    },
+    {
+        "id": 24,
+        "name": "Peach puré"
+    },
+    {
+        "id": 25,
+        "name": "Pisco"
+    },
+    {
+        "id": 26,
+        "name": "Cognac"
+    },
+    {
+        "id": 27,
+        "name": "Vanilla Vodka"
+    },
+    {
+        "id": 28,
+        "name": "Passionfruit Liquer"
+    },
+    {
+        "id": 29,
+        "name": "Sparkling Wine"
+    },
+    {
+        "id": 30,
+        "name": "Creme de Menthe"
+    },
+    {
+        "id": 31,
+        "name": "Creme de Cacao"
+    },
+    {
+        "id": 32,
+        "name": "Cachaca"
+    },
+    {
+        "id": 33,
+        "name": "Elderflower Liquer"
+    },
+    {
+        "id": 34,
+        "name": "Aperol"
+    },
+    {
+        "id": 35,
+        "name": "Red Wine"
+    },
+    {
+        "id": 36,
+        "name": "Pimm's No.1"
+    },
+    {
+        "id": 37,
+        "name": "Galliano"
+    },
+    {
+        "id": 38,
+        "name": "Absinthe"
+    },
+    {
+        "id": 39,
+        "name": "Lillet Blanc"
+    },
+    {
+        "id": 40,
+        "name": "Apple Liquer"
+    },
+    {
+        "id": 41,
+        "name": "Drambuie"
+    },
+    {
+        "id": 42,
+        "name": "Fernet Branca"
+    }
+    
+]
