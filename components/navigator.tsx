@@ -21,7 +21,7 @@ const Sidebar = () => {
                 drawerActiveBackgroundColor: '#aa18ea',
                 drawerLabelStyle: { marginLeft: -25, fontSize: 15 }
             }}
-                initialRouteName="DrinkList">
+                initialRouteName="Home">
                 <Drawer.Screen name="Home" component={HomePage} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
