@@ -1,15 +1,17 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import ShakerModel from './models/shaker';
 import { Provider } from 'react-redux';
 import { HomePage } from './HomePage';
 import store from './store/store';
 import { addIngredient } from './store/actions';
 import { RenderIngredients } from './components/renderIngredients';
+import Sidebar from './components/navigator';
 
 // import { configureStore } from '@reduxjs/toolkit';
 
 //för att köra: npm start
+
 
 // const store = configureStore
 
@@ -20,10 +22,9 @@ export default function App() {
 
     return (
         <Provider store={store}>
-            <HomePage shaker={shaker} />
+            <Sidebar />
         </Provider>
-
-    );
+    )
 }
 
 const styles = StyleSheet.create({

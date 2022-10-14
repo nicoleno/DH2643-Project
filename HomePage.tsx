@@ -1,5 +1,6 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import ShakerModel from './models/shaker';
@@ -9,10 +10,17 @@ import store from './store/store';
 import { addIngredient, removeIngredient } from './store/actions';
 import { RenderIngredients } from './components/renderIngredients';
 import IngredientCountIcon from './components/ingredientCountIcon';
+import ShakeEventExpo from './accelerometer';
+import { Hamburger } from './components/menuButton';
 
 
-export const HomePage = (props) => {
-    let shaker = props.shaker;
+export const HomePage = ({ navigation }) => {
+    let shaker = new ShakerModel;
+
+    ShakeEventExpo.addListener(() => {
+        console.log('Skakad');
+        navigation.navigate('DrinkList');
+    })
 
     const Item = ({ ingredient }) => {
         return (
@@ -28,41 +36,34 @@ export const HomePage = (props) => {
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
             <View style={styles.container}>
-                <View style={styles.navbuttons}>
-                    <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                        <Image style={styles.image2} source={require('./assets/images/menu.png')} />
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                        <Image style={styles.image2} source={require('./assets/images/settings.png')} />
-                    </TouchableOpacity>
-                </View>
-                <View>
-                    <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')}
-                        onLayout={(event) => {
-                            const layout = event.nativeEvent.layout;
-                            console.log("layout", layout);
-                            shaker.setHeight(layout.height);
-                            shaker.setWidth(layout.width);
-                            shaker.setPosX(layout.x);
-                            shaker.setPosY(layout.y);
-                        }}
-                    />
-                </View>
-                <IngredientCountIcon />
-                <View style={styles.bottomBar}>
-                    <View style={styles.header}>
-                        <View style={styles.toggle}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                                <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
-                            </TouchableOpacity>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                                <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
-                            </TouchableOpacity>
-                        </View>
-                        <Text>här har vi vår search bar</Text>
+                <Hamburger navigation={navigation} />
+            </View>
+            <View style={styles.shakerArea}>
+                <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')}
+                    onLayout={(event) => {
+                        const layout = event.nativeEvent.layout;
+                        console.log("layout", layout);
+                        shaker.setHeight(layout.height);
+                        shaker.setWidth(layout.width);
+                        shaker.setPosX(layout.x);
+                        shaker.setPosY(layout.y);
+                    }}
+                />
+            </View>
+            <IngredientCountIcon />
+            <View style={styles.bottomBar}>
+                <View style={styles.header}>
+                    <View style={styles.toggle}>
+                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
+                        </TouchableOpacity>
                     </View>
-                    <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
+                    <Text>här har vi vår search bar</Text>
                 </View>
+                <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
             </View>
         </GestureHandlerRootView >
     )

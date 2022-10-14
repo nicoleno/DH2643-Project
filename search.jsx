@@ -31,6 +31,7 @@ const SearchDrink = () => {{
   
   for (let i = 0; i < data.length; i++) {
   results.push(data[i].name)}
+
   const [search, setSearch] = useState("");
   const [matches, setMatches] = useState([]);
 
