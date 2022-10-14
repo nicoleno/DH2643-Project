@@ -1,11 +1,10 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import ShakerModel from './models/shaker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { HomePage } from './HomePage'
-
-//för att köra: npm start
+import Sidebar from './components/navigator';
 
 // const store = createStore();
 
@@ -13,7 +12,8 @@ export default function App() {
 
   return (
     // <Provider store={store}>
-       <HomePage/>
+    <Sidebar />
+
     // </Provider>
 
   );
