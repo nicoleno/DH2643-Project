@@ -6,7 +6,7 @@ import { HomePage } from "../HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import Recipe from "../recipe";
+import DrinkList from "../drinkList";
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
@@ -21,7 +21,7 @@ const Sidebar = () => {
                 drawerActiveBackgroundColor: '#aa18ea',
                 drawerLabelStyle: { marginLeft: -25, fontSize: 15 }
             }}
-                initialRouteName="HomePage">
+                initialRouteName="DrinkList">
                 <Drawer.Screen name="Home" component={HomePage} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
@@ -33,17 +33,17 @@ const Sidebar = () => {
                     )
                 }} />
 
-                <Drawer.Screen name="DrinkList" component={Recipe} options={{
-                    drawerIcon: () => (
-                        <Image source={require('../assets/images/cocktail.png')} style={{ height: 0 }} />
-                    )
+                <Drawer.Screen name="DrinkList" component={DrinkList} options={{
+                    drawerItemStyle: { height: 0 },
+
+
                 }} />
 
                 <Drawer.Screen name="Details" component={Details} options={{
-                    drawerItemStyle: { height: 0 }
+                    drawerItemStyle: { height: 0 },
                 }} />
                 <Drawer.Screen name="Hamburger" component={Hamburger} options={{
-                    drawerItemStyle: { height: 0 }
+                    drawerItemStyle: { height: 0 },
                 }} />
 
 
