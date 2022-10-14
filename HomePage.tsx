@@ -31,9 +31,8 @@ export const HomePage = ({ navigation }) => {
   // }
 
   ShakeEventExpo.addListener(() => {
-    //ShakeEventExpo.removeListener();
     console.log('Skakad');
-    navigation.navigate('Recipe')
+    navigation.navigate('DrinkList')
   });
 
   const Item = ({ name }) => {
