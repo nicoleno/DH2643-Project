@@ -33,7 +33,7 @@ const Sidebar = () => {
                     )
                 }} />
 
-                <Drawer.Screen name="Recipe" component={Recipe} options={{
+                <Drawer.Screen name="DrinkList" component={Recipe} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/cocktail.png')} style={{ height: 0 }} />
                     )
