@@ -6,7 +6,8 @@ import { HomePage } from "../HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import Recipe  from "../recipe";
+import Recipe from "../recipe";
+import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
 // Nästa grej, addera details utan att den syns i listan 
@@ -39,6 +40,9 @@ const Sidebar = () => {
                 }} />
 
                 <Drawer.Screen name="Details" component={Details} options={{
+                    drawerItemStyle: { height: 0 }
+                }} />
+                <Drawer.Screen name="Hamburger" component={Hamburger} options={{
                     drawerItemStyle: { height: 0 }
                 }} />
 

@@ -6,6 +6,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react
 import ShakerModel from './models/shaker';
 import ingredients from './ingredients.json';
 import ShakeEventExpo from "./accelerometer";
+import { Hamburger } from './components/menuButton';
 
 
 export const HomePage = ({ navigation }) => {
@@ -28,12 +29,12 @@ export const HomePage = ({ navigation }) => {
   //   shaker.posX = x;
   //   shaker.posY = y;
   // }
-    
+
   ShakeEventExpo.addListener(() => {
-      //ShakeEventExpo.removeListener();
-      console.log('Skakad');
-      navigation.navigate('Recipe')      
-    });
+    //ShakeEventExpo.removeListener();
+    console.log('Skakad');
+    navigation.navigate('Recipe')
+  });
 
   const Item = ({ name }) => {
     return (
@@ -49,6 +50,7 @@ export const HomePage = ({ navigation }) => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <View style={styles.container}>
+        <Hamburger navigation={navigation} />
         <View style={styles.shakerArea}>
           <Image style={styles.image} source={require('./assets/images/shaker.png')} onLayout={(event) => {
             const layout = event.nativeEvent.layout;
