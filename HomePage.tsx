@@ -33,7 +33,7 @@ export const HomePage = ({ navigation }) => {
     const renderItem = ({ item }) => (
         <Item ingredient={item} />
     );
-    console.log(ingredients)
+    console.log(newMatches)
   
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>

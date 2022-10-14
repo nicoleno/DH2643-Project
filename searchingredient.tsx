@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 const SearchIngredient = () => {{
   const data = require("./assets/ingredients.json")
-  const [search, setSearch] = useState("R");
+  const [search, setSearch] = useState("");
   const [matches, setMatches] = useState([]);
 
   const searchIngr = (list, substring) => {
