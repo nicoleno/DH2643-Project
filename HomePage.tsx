@@ -23,6 +23,7 @@ export const HomePage = ({ navigation }) => {
         navigation.navigate('DrinkList');
     })
 
+
     const Item = ({ ingredient }) => {
         return (
             <View style={styles.cardContainer}>
