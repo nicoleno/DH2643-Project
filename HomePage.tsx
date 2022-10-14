@@ -15,6 +15,7 @@ import { Hamburger } from './components/menuButton';
 
 
 export const HomePage = ({ navigation }) => {
+    console.log(store.getState());
     let shaker = new ShakerModel;
 
     ShakeEventExpo.addListener(() => {
@@ -42,7 +43,7 @@ export const HomePage = ({ navigation }) => {
                 <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')}
                     onLayout={(event) => {
                         const layout = event.nativeEvent.layout;
-                        console.log("layout", layout);
+                        // console.log("layout", layout);
                         shaker.setHeight(layout.height);
                         shaker.setWidth(layout.width);
                         shaker.setPosX(layout.x);
