@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 });
 
 const SearchIngredient = () => {{
-  const data = require("./ingredients.json")
+  const data = require("./assets/ingredients.json")
   const [search, setSearch] = useState("R");
   const [matches, setMatches] = useState([]);
 

@@ -12,6 +12,7 @@ import { RenderIngredients } from './components/renderIngredients';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
+import SearchIngredient, { newMatches } from './searchingredient';
 
 
 export const HomePage = ({ navigation }) => {
@@ -32,7 +33,8 @@ export const HomePage = ({ navigation }) => {
     const renderItem = ({ item }) => (
         <Item ingredient={item} />
     );
-
+    console.log(ingredients)
+  
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
             <View style={styles.container}>
@@ -61,7 +63,7 @@ export const HomePage = ({ navigation }) => {
                             <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
                         </TouchableOpacity>
                     </View>
-                    <Text>här har vi vår search bar</Text>
+                    <SearchIngredient/>
                 </View>
                 <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
             </View>
