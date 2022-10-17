@@ -1,25 +1,25 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React from 'react';
 import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, ImageBackground} from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
-import SearchDrink from './search';
-import store from './store/store';
-import { addIngredient, removeIngredient } from './store/actions';
-import { RenderIngredients } from './components/renderIngredients';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
 import SearchIngredient, { newMatches } from './searchingredient';
+import { useFonts } from '@expo-google-fonts/carter-one';
+import { setSyntheticLeadingComments } from 'typescript';
 
 
 export const HomePage = ({ navigation }) => {
     let shaker = new ShakerModel;
+    const [loaded] = useFonts({
+        Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
+        Carter: require('./assets/fonts/CarterOne-Regular.ttf')
+      });
 
     ShakeEventExpo.addListener(() => {
-        console.log('Skakad');
         navigation.navigate('DrinkList');
     })
 
@@ -37,24 +37,27 @@ export const HomePage = ({ navigation }) => {
     console.log(newMatches)
   
     return (
-        <GestureHandlerRootView style={{ flex: 1 }}>
-            <View style={styles.container}>
-                <Hamburger navigation={navigation} />
-            </View>
+        <GestureHandlerRootView style={styles.background}>
+  
+            <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
+            <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
             <View style={styles.shakerArea}>
-                <Image style={styles.image} source={require('./assets/images/shaker-black-no-lines.png')}
+                <Image style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
                     onLayout={(event) => {
                         const layout = event.nativeEvent.layout;
                         console.log("layout", layout);
                         shaker.setHeight(layout.height);
                         shaker.setWidth(layout.width);
                         shaker.setPosX(layout.x);
-                        shaker.setPosY(layout.y);
-                    }}
-                />
-            </View>
+                        shaker.setPosY(layout.y);}}/>
             <IngredientCountIcon />
+            <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
+            </View>
+            </ImageBackground>
             <View style={styles.bottomBar}>
+        
+            <Text style={styles.poppins} >Add items</Text>
+            <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
                 <View style={styles.header}>
                     <View style={styles.toggle}>
                         <TouchableOpacity onPress={() => { alert("you clicked me") }}>
@@ -73,6 +76,12 @@ export const HomePage = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+
+    background:{
+        flex: 1,
+        color: "rgba(255,255,1,1)" 
+    },
+
     container: {
         flex: 1,
         backgroundColor: '#fff',
@@ -82,7 +91,7 @@ const styles = StyleSheet.create({
     },
 
     navbuttons: {
-        margin: 20,
+        margin: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -93,29 +102,23 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 2,
         borderColor: 'blue',
-        padding: 15,
         borderRadius: 10
     },
 
     image: {
         width: 200,
         height: 200,
-        margin: 20
+        margin: 20,
     },
 
     shakerArea: {
         flex: 1,
-        height: 300,
-        marginTop: 100,
     },
 
     bottomBar: {
         flex: 2,
         alignSelf: 'stretch',
-        backgroundColor: 'rgb(182,227,136)',
-        borderTopRightRadius: 30,
-        borderTopLeftRadius: 30,
-        marginTop: 200,
+        backgroundColor: '#414141',
         justifyContent: 'space-between',
     },
     header: {
@@ -124,7 +127,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     cardContainer: {
-        backgroundColor: 'rgb(199, 242, 164)',
+        backgroundColor: '#414141',
         flexDirection: 'row',
         height: 200,
     },
@@ -138,5 +141,57 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         margin: 5,
         backgroundColor: 'rgb(199, 242, 164)',
-    }
+    },
+
+    image3: {
+        height: 450,
+       
+    },
+
+    image4: {
+        height: 80,
+        width: 440,
+        alignSelf: 'center'
+
+    },
+
+    shakeit : {
+        fontFamily: "Carter",
+        textAlign: "center",
+        flexDirection: 'row',
+        top: 40,
+        fontSize: 30,
+        color: "rgba(255,255,255,1)",
+      
+      },
+
+      poppins : {
+        fontFamily: "Poppins",
+        weight: "Light",
+        textAlign: "left",
+        marginLeft: 25,
+        flexDirection: 'row',
+        top: 40,
+        fontSize: 20,
+        color: "rgba(255, 255, 255,1)",
+      
+      },
+
+
+      poppins2 : {
+        fontFamily: "Poppins",
+        textAlign: "left",
+        marginLeft: 25,
+        flexDirection: 'row',
+        top: 40,
+        fontSize: 10,
+        color: "rgba(255, 255, 255,1)",
+      
+      },
+
+      shakerReal : {
+        height: 300,
+        width: 230,
+        alignSelf: 'center',
+      },
 });
