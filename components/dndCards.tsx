@@ -3,7 +3,7 @@ import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, 
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, TextInput } from 'react-native';
 import store from '../store/store';
-import { addIngredient } from '../store/actions';
+import { addIngredient } from '../store/actions'
 import { useDispatch } from 'react-redux';
 type ContextType = {
     translateX: number;

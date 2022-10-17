@@ -7,17 +7,39 @@ import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
 import SearchDrink from './search';
 import store from './store/store';
-import { addIngredient, removeIngredient } from './store/actions';
+import { addIngredient, matchedItems, removeIngredient } from './store/actions';
 import { RenderIngredients } from './components/renderIngredients';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
-import SearchIngredient, { newMatches } from './searchingredient';
+import SearchIngredient from './searchingredient';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { RootState } from './store/reducers';
+import alcohol from './assets/alcohol.json';
 
 
 export const HomePage = ({ navigation }) => {
-    console.log(store.getState());
+
     let shaker = new ShakerModel;
+    // const dispatch = useDispatch();
+    // dispatch(matchedItems(ingredients));
+    console.log(store.getState());
+
+    const ingredientsToShow = useSelector((state: RootState) => state.matched);
+    const [ingredientButtonEnabled, setIngredientButtonEnabled] = useState(true);
+    const [alcoholButtonEnabled, setAlcoholButtonEnabled] = useState(false);
+
+    const handleIngredientButtonPressed = () => {
+        setIngredientButtonEnabled(true);
+        setAlcoholButtonEnabled(false);
+        console.log("ingredient button pressed!")
+    }
+    const handleAlcoholButtonPressed = () => {
+        setIngredientButtonEnabled(false);
+        setAlcoholButtonEnabled(true);
+        console.log("alcohol button pressed!")
+    }
 
     ShakeEventExpo.addListener(() => {
         console.log('Skakad');
@@ -34,8 +56,7 @@ export const HomePage = ({ navigation }) => {
     const renderItem = ({ item }) => (
         <Item ingredient={item} />
     );
-    console.log(ingredients)
-  
+
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
             <View style={styles.container}>
@@ -57,16 +78,16 @@ export const HomePage = ({ navigation }) => {
             <View style={styles.bottomBar}>
                 <View style={styles.header}>
                     <View style={styles.toggle}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
+                        <TouchableOpacity onPress={() => handleIngredientButtonPressed()}>
+                            <Image style={!ingredientButtonEnabled ? styles.image2NotChosen : styles.image2} source={require('./assets/images/lemon.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
+                        <TouchableOpacity onPress={() => handleAlcoholButtonPressed()}>
+                            <Image style={!alcoholButtonEnabled ? styles.image2NotChosen : styles.image2} source={require('./assets/images/bottle.png')} />
                         </TouchableOpacity>
                     </View>
-                    <SearchIngredient/>
+                    <SearchIngredient />
                 </View>
-                <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
+                <FlatList style={{ overflow: "visible" }} horizontal data={ingredientButtonEnabled ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
             </View>
         </GestureHandlerRootView >
     )
@@ -138,5 +159,13 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         margin: 5,
         backgroundColor: 'rgb(199, 242, 164)',
+    },
+
+    image2NotChosen: {
+        height: 50,
+        width: 50,
+        borderRadius: 30,
+        margin: 5,
+        backgroundColor: 'gray',
     }
 });
