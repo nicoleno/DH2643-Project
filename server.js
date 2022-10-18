@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Router = require("./routes")
 // import {DB_URL} from '@env'
 
-const DB_URL="mongodb+srv://admin:slemhosta@cluster0.xveinj9.mongodb.net/?retryWrites=true&w=majority";
+const DB_URL="mongodb+srv://admin:slemhosta@cluster0.xveinj9.mongodb.net/drinksDB";
 
 const app = express();
 

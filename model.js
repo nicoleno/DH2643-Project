@@ -1,20 +1,32 @@
 const mongoose = require("mongoose");
 
 const DrinkSchema = new mongoose.Schema({
-  name: {
+    _id: {
+        type: String,
+    },
+  Name: {
     type: String,
     required: true,
   },
-  instructions: {
+  Instructions: {
     type: String,
-    default: '',
   },
-  alcoholicIngredients: {
-    type: [String], // måste vara String[], hitta lösning
+  Measurements: {
+    type: String,
   },
-  nonAlcoholicIngredients: {
-    type: [String], // måste vara String[], hitta lösning
+  AlcoholIngredients: {
+    type: [String], 
   },
+  NonAlcoholIngredients: {
+    type: [String],
+  },
+  Garnish: {
+    type: String,
+  },
+  TypeOfGlass: {
+    type: String,
+  }
+
 });
 
 const Drink = mongoose.model("Drink", DrinkSchema);

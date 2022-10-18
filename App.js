@@ -22,7 +22,7 @@ export default function App() {
         <Image style={styles.image}source={require('./assets/images/shaker.jpg')} />
         <Button title="Shake me" onPress={fetchDrinks}/>
         <TextInput style= {styles.searchBar} placeholder="Search for ingredients..." />
-        {drinks.map((drink) => <Text key={drink?.name}>{drink?.name}</Text>)}
+        {drinks.map((drink) => <Text key={drink?.Name}>{drink?.Name}</Text>)}
       </View>
 
   );
