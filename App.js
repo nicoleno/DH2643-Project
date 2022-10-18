@@ -1,21 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View, Image, Button, TextInput} from 'react-native';
 
-const dbConnect = require("./server")
-dbConnect();
-
 export default function App() {
-  return (
+    const [drinks, setDrinks] = React.useState([]);
+
+    const fetchDrinks = () => {
+    fetch("http://192.168.1.69:3000/drinks", {
+        method: "get",
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+    }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
+    }
+
+    return (
       <View style={styles.container}>
         <Text>DrinkZ</Text>
         <StatusBar style="auto" />
         <Image style={styles.image}source={require('./assets/images/shaker.jpg')} />
-        <Button title="Shake me" />
+        <Button title="Shake me" onPress={fetchDrinks}/>
         <TextInput style= {styles.searchBar} placeholder="Search for ingredients..." />
+        {drinks.map((drink) => <Text key={drink?.name}>{drink?.name}</Text>)}
       </View>
 
   );
-}
+} 
 
 const styles = StyleSheet.create({
   container: {
