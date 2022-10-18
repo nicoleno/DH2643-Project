@@ -21,6 +21,7 @@ import alcohol from './assets/alcohol.json';
 
 export const HomePage = ({ navigation }) => {
 
+    console.log(store.getState());
     let shaker = new ShakerModel;
     // const dispatch = useDispatch();
     // dispatch(matchedItems(ingredients));
@@ -45,6 +46,7 @@ export const HomePage = ({ navigation }) => {
         console.log('Skakad');
         navigation.navigate('DrinkList');
     })
+
 
     const Item = ({ ingredient }) => {
         return (

@@ -5,6 +5,7 @@ export const REMOVE_ALCOHOL = 'REMOVE_ALCOHOL';
 export const MATCHED_ITEMS = 'MATCHED_ITEMS';
 import { Ingredient } from "../models/model";
 
+
 export function addIngredient(id: string, name: string) {
   return { type: ADD_INGREDIENT, id: id, name: name };
 }
@@ -22,5 +23,6 @@ export function removeAlcohol(id: string) {
   }
 
 export function matchedItems(list) {
-return { type: MATCHED_ITEMS, list: list};
+    return { type: MATCHED_ITEMS, list: list};
 }
+
