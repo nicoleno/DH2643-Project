@@ -1,1016 +1,1016 @@
 [
     {
-        "Name": "Cosmopolitan",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass.",
-        "Measurements": "4cl Vodka, 1.5cl Cointreau (Triple Sec), 4cl Cranberry Juice, 1cl Lime",
-        "AlcoholIngredients": [
+        "name": "Cosmopolitan",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass.",
+        "measurements": "4cl Vodka, 1.5cl Cointreau (Triple Sec), 4cl Cranberry Juice, 1cl Lime",
+        "alcoholIngredients": [
             "Vodka",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Cranberry Juice",
             "Lime"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lime/Orange Zest"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lime/Orange Zest"
     },
     {
-        "Name": "El Diablo",
-        "Instructions": "Add all ingredients except Ginger Ale in the shaker, shake it with ice and strain into desired glass. Fill the glass with icecubes and top it up with Ginger Ale ",
-        "Measurements": "3cl Tequila, 2cl Creme de Cassis, 3cl Lime, 2cl Sugar, Ginger ale",
-        "AlcoholIngredients": [
+        "name": "El Diablo",
+        "instructions": "Add all ingredients except Ginger Ale in the shaker, shake it with ice and strain into desired glass. Fill the glass with icecubes and top it up with Ginger Ale ",
+        "measurements": "3cl Tequila, 2cl Creme de Cassis, 3cl Lime, 2cl Sugar, Ginger ale",
+        "alcoholIngredients": [
             "Tequila",
             "Creme de Cassis"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar",
             "Ginger ale"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lime Wedge/Wheel"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lime Wedge/Wheel"
     },
     {
-        "Name": "Margharita",
-        "Instructions": "Rim a glass with salt. Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "4cl Tequila, 1.5cl Cointreau (Triple Sec), 3cl Lime, 1cl Sugar (Optional)",
-        "AlcoholIngredients": [
+        "name": "Margharita",
+        "instructions": "Rim a glass with salt. Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "4cl Tequila, 1.5cl Cointreau (Triple Sec), 3cl Lime, 1cl Sugar (Optional)",
+        "alcoholIngredients": [
             "Tequila",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Salt Rim"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Salt Rim"
     },
     {
-        "Name": "Tommy's Margharita",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. Fill the glass with a big icecube if possible, otherwise regular icecubes ",
-        "Measurements": "5cl Tequila, 3cl Lime, 2cl Agave",
-        "AlcoholIngredients": [
+        "name": "Tommy's Margharita",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. Fill the glass with a big icecube if possible, otherwise regular icecubes ",
+        "measurements": "5cl Tequila, 3cl Lime, 2cl Agave",
+        "alcoholIngredients": [
             "Tequila"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Agave"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Lime wheel"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Lime wheel"
     },
     {
-        "Name": "Gin Sour",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass.",
-        "Measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Gin Sour",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass.",
+        "measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, 1cl Eggwhite",
+        "alcoholIngredients": [
             "Gin"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Bitters, Lemon Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Bitters, Lemon Zest or none at all "
     },
     {
-        "Name": "Tom Collins",
-        "Instructions": "Add all ingredients except Soda Water in the shaker, shake it with ice and strain into desired glass, top with Soda Water.",
-        "Measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, Soda Water",
-        "AlcoholIngredients": [
+        "name": "Tom Collins",
+        "instructions": "Add all ingredients except Soda Water in the shaker, shake it with ice and strain into desired glass, top with Soda Water.",
+        "measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, Soda Water",
+        "alcoholIngredients": [
             "Gin"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Soda Water"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lemon Wedge"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lemon Wedge"
     },
     {
-        "Name": "White Lady",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass ",
-        "Measurements": "4cl Gin, 1.5cl Cointreau (Triple Sec), 3cl Lemon, 2cl Sugar, 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "White Lady",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass ",
+        "measurements": "4cl Gin, 1.5cl Cointreau (Triple Sec), 3cl Lemon, 2cl Sugar, 1cl Eggwhite",
+        "alcoholIngredients": [
             "Gin",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest or none at all"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest or none at all"
     },
     {
-        "Name": "Pink Lady",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
-        "Measurements": "4cl Gin, 1.5cl Cointreau (Triple Sec), 3cl Lemon, 2cl Grenadine, 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Pink Lady",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
+        "measurements": "4cl Gin, 1.5cl Cointreau (Triple Sec), 3cl Lemon, 2cl Grenadine, 1cl Eggwhite",
+        "alcoholIngredients": [
             "Gin",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Grenadine",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest or none at all"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest or none at all"
     },
     {
-        "Name": "Aviation",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "3cl Gin, 1cl Maraschino Liquer, 1cl Violet Liquer, 3cl Lemon, 1cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Aviation",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "3cl Gin, 1cl Maraschino Liquer, 1cl Violet Liquer, 3cl Lemon, 1cl Sugar",
+        "alcoholIngredients": [
             "Gin",
             "Maraschino Liquer",
             "Violet Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Maraschino Berry"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Maraschino Berry"
     },
     {
-        "Name": "Clover Club",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass. PS. Can change the Raspberry Sugar to Raspberry Liquer if available ",
-        "Measurements": "5cl Gin, 3cl Lemon 2cl Raspberry Sugar, 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Clover Club",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass. PS. Can change the Raspberry Sugar to Raspberry Liquer if available ",
+        "measurements": "5cl Gin, 3cl Lemon 2cl Raspberry Sugar, 1cl Eggwhite",
+        "alcoholIngredients": [
             "Gin"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Raspberry Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Raspberries on a cocktail pick"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Raspberries on a cocktail pick"
     },
     {
-        "Name": "Negroni",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube ",
-        "Measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Campari",
-        "AlcoholIngredients": [
+        "name": "Negroni",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube ",
+        "measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Campari",
+        "alcoholIngredients": [
             "Gin",
             "Sweet Vermouth",
             "Campari"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest"
     },
     {
-        "Name": "Old Fashioned",
-        "Instructions": "Place a sugarcube in the glass, add Angostura Bitters and then mash the cube. Add Whiskey and stir it with ice. Strain it into desired glass with a big icecube ",
-        "Measurements": "5cl Bourbon Whiskey, 3 Dash Angostura Bitters, 1 Sugarcube",
-        "AlcoholIngredients": [
+        "name": "Old Fashioned",
+        "instructions": "Place a sugarcube in the glass, add Angostura Bitters and then mash the cube. Add Whiskey and stir it with ice. Strain it into desired glass with a big icecube ",
+        "measurements": "5cl Bourbon Whiskey, 3 Dash Angostura Bitters, 1 Sugarcube",
+        "alcoholIngredients": [
             "Bourbon Whiskey"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Angostura Bitters",
             "Sugar Cube"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest, Maraschino Berry"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest, Maraschino Berry"
     },
     {
-        "Name": "Dry Martini",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass ",
-        "Measurements": "5cl Gin, 1cl Dry Vermouth",
-        "AlcoholIngredients": [
+        "name": "Dry Martini",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass ",
+        "measurements": "5cl Gin, 1cl Dry Vermouth",
+        "alcoholIngredients": [
             "Gin",
             "Dry Vermouth"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest or Olive"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest or Olive"
     },
     {
-        "Name": "Vodka Martini",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "Measurements": "5cl Vodka, 1cl Dry Vermouth",
-        "AlcoholIngredients": [
+        "name": "Vodka Martini",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
+        "measurements": "5cl Vodka, 1cl Dry Vermouth",
+        "alcoholIngredients": [
             "Vodka",
             "Dry Vermouth"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest or Olive"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest or Olive"
     },
     {
-        "Name": "Vodka Sour",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
-        "Measurements": "5cl Vodka, 3cl Lemon 2cl Sugar 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Vodka Sour",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
+        "measurements": "5cl Vodka, 3cl Lemon 2cl Sugar 1cl Eggwhite",
+        "alcoholIngredients": [
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Bitters, Lemon Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Bitters, Lemon Zest or none at all "
     },
     {
-        "Name": "Whiskey Sour",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
-        "Measurements": "5cl Bourbon Whiskey, 3cl Lemon 2cl Sugar 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Whiskey Sour",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
+        "measurements": "5cl Bourbon Whiskey, 3cl Lemon 2cl Sugar 1cl Eggwhite",
+        "alcoholIngredients": [
             "Bourbon Whiskey"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Bitters, Lemon Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Bitters, Lemon Zest or none at all "
     },
     {
-        "Name": "Amaretto Sour",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
-        "Measurements": "5cl Amaretto, 3cl Lemon 2cl Sugar 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Amaretto Sour",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
+        "measurements": "5cl Amaretto, 3cl Lemon 2cl Sugar 1cl Eggwhite",
+        "alcoholIngredients": [
             "Amaretto"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Bitters, Lemon Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Bitters, Lemon Zest or none at all "
     },
     {
-        "Name": "Lynchburg Lemonade",
-        "Instructions": "Add all ingredients except Soda Water in the shaker, shake it with ice and strain into desired glass. Fill up the glass with icecubes and top with Soda Water",
-        "Measurements": "4cl Bourbon Whiskey, 1,5cl Cointreau (Triple Sec), 3cl Lemon 2cl Sugar, Soda Water",
-        "AlcoholIngredients": [
+        "name": "Lynchburg Lemonade",
+        "instructions": "Add all ingredients except Soda Water in the shaker, shake it with ice and strain into desired glass. Fill up the glass with icecubes and top with Soda Water",
+        "measurements": "4cl Bourbon Whiskey, 1,5cl Cointreau (Triple Sec), 3cl Lemon 2cl Sugar, Soda Water",
+        "alcoholIngredients": [
             "Bourbon Whiskey",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Soda Water"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lemon Wedge "
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lemon Wedge "
     },
     {
-        "Name": "Penicilin ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass with big icecube ",
-        "Measurements": "5cl Scotch Whiskey, 3cl Lemon, 2cl Honey",
-        "AlcoholIngredients": [
+        "name": "Penicilin ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass with big icecube ",
+        "measurements": "5cl Scotch Whiskey, 3cl Lemon, 2cl Honey",
+        "alcoholIngredients": [
             "Scotch Whiskey"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Honey"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Lemon Zest"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Lemon Zest"
     },
     {
-        "Name": "Irish Coffee",
-        "Instructions": "Add the Whiskey, Brown Sugar and Coffee to a glass, stir it and then top with Cream",
-        "Measurements": "5cl Irish Whiskey, Coffee, Teaspoon Brown Sugar, Cream",
-        "AlcoholIngredients": [
+        "name": "Irish Coffee",
+        "instructions": "Add the Whiskey, Brown Sugar and Coffee to a glass, stir it and then top with Cream",
+        "measurements": "5cl Irish Whiskey, Coffee, Teaspoon Brown Sugar, Cream",
+        "alcoholIngredients": [
             "Irish Whiskey"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Coffee",
             "Brown Sugar",
             "Cream"
         ],
-        "Type of Glass": "Irish Coffee Glass",
-        "Garnish": "Coffee Beans"
+        "typeOfGlass": "Irish Coffee Glass",
+        "garnish": "Coffee Beans"
     },
     {
-        "Name": "Kaffe Karlsson",
-        "Instructions": "Add the spirits and coffee to a glass, top with Cream",
-        "Measurements": "2.5cl Baileys, 2.5cl Cointreau (Triple Sec), Coffee, Cream",
-        "AlcoholIngredients": [
+        "name": "Kaffe Karlsson",
+        "instructions": "Add the spirits and coffee to a glass, top with Cream",
+        "measurements": "2.5cl Baileys, 2.5cl Cointreau (Triple Sec), Coffee, Cream",
+        "alcoholIngredients": [
             "Baileys",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Coffee",
             "Cream"
         ],
-        "Type of Glass": "Irish Coffee Glass",
-        "Garnish": "Coffee Beans"
+        "typeOfGlass": "Irish Coffee Glass",
+        "garnish": "Coffee Beans"
     },
     {
-        "Name": "Spanish Coffee",
-        "Instructions": "Add the spirit and coffee to a glass, top with Cream",
-        "Measurements": "5cl Licor 43, Coffee, Cream",
-        "AlcoholIngredients": [
+        "name": "Spanish Coffee",
+        "instructions": "Add the spirit and coffee to a glass, top with Cream",
+        "measurements": "5cl Licor 43, Coffee, Cream",
+        "alcoholIngredients": [
             "Licor 43"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Coffee, Cream"
         ],
-        "Type of Glass": "Irish Coffee Glass",
-        "Garnish": "Coffee Beans"
+        "typeOfGlass": "Irish Coffee Glass",
+        "garnish": "Coffee Beans"
     },
     {
-        "Name": "Espresso Martini ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "2.5cl Kahlua, 2.5cl Vodka, 5cl Espresso",
-        "AlcoholIngredients": [
+        "name": "Espresso Martini ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "2.5cl Kahlua, 2.5cl Vodka, 5cl Espresso",
+        "alcoholIngredients": [
             "Kahlua",
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Espresso"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Coffee Beans"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Coffee Beans"
     },
     {
-        "Name": "White Russian",
-        "Instructions": "Add the spirits to the desired glass with icecubes, top with milk and stir ",
-        "Measurements": "2.5cl Kahlua, 2.5cl Vodka, Milk",
-        "AlcoholIngredients": [
+        "name": "White Russian",
+        "instructions": "Add the spirits to the desired glass with icecubes, top with milk and stir ",
+        "measurements": "2.5cl Kahlua, 2.5cl Vodka, Milk",
+        "alcoholIngredients": [
             "Kahlua",
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Milk"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": null
+        "typeOfGlass": "Highball Glass",
+        "garnish": null
     },
     {
-        "Name": "Black Russian",
-        "Instructions": "Add the spirits to the desired glass with icecubes or a big icecube",
-        "Measurements": "2.5cl Kahlua, 2.5cl Vodka",
-        "AlcoholIngredients": [
+        "name": "Black Russian",
+        "instructions": "Add the spirits to the desired glass with icecubes or a big icecube",
+        "measurements": "2.5cl Kahlua, 2.5cl Vodka",
+        "alcoholIngredients": [
             "Kahlua",
             "Vodka"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": null
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": null
     },
     {
-        "Name": "Colorado Bulldog ",
-        "Instructions": "Add the spirits to the desired glass with icecubes, fill up with Coca Cola and top with Cream",
-        "Measurements": "2.5cl Kahlua, 2.5cl Vodka, Coca Cola, Cream",
-        "AlcoholIngredients": [
+        "name": "Colorado Bulldog ",
+        "instructions": "Add the spirits to the desired glass with icecubes, fill up with Coca Cola and top with Cream",
+        "measurements": "2.5cl Kahlua, 2.5cl Vodka, Coca Cola, Cream",
+        "alcoholIngredients": [
             "Kahlua",
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Coca Cola",
             "Cream"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": null
+        "typeOfGlass": "Highball Glass",
+        "garnish": null
     },
     {
-        "Name": "Bramble",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass, fill the glass with crushed ice",
-        "Measurements": "3cl Gin, 2cl Creme de Mûre, 3cl Lemon, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Bramble",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass, fill the glass with crushed ice",
+        "measurements": "3cl Gin, 2cl Creme de Mûre, 3cl Lemon, 2cl Sugar",
+        "alcoholIngredients": [
             "Gin",
             "Creme de Mûre"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Lemon Zest"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Lemon Zest"
     },
     {
-        "Name": "Last Word",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "2cl Gin, 2cl Green Chartreusse, 2cl Maraschino Liquer, 3cl Lime",
-        "AlcoholIngredients": [
+        "name": "Last Word",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "2cl Gin, 2cl Green Chartreusse, 2cl Maraschino Liquer, 3cl Lime",
+        "alcoholIngredients": [
             "Gin",
             "Green Chartreusse",
             "Maraschino Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lime Zest or Maraschino Berry"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lime Zest or Maraschino Berry"
     },
     {
-        "Name": "Final Ward",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "2cl Rye Whiskey, 2cl Green Chartreusse, 2cl Maraschino Liquer, 3cl Lemon",
-        "AlcoholIngredients": [
+        "name": "Final Ward",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "2cl Rye Whiskey, 2cl Green Chartreusse, 2cl Maraschino Liquer, 3cl Lemon",
+        "alcoholIngredients": [
             "Rye Whiskey",
             "Green Chartreusse",
             "Maraschino Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest or Maraschino Berry"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest or Maraschino Berry"
     },
     {
-        "Name": "Daquiri ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "5cl White Rum, 3cl Lime, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Daquiri ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "5cl White Rum, 3cl Lime, 2cl Sugar",
+        "alcoholIngredients": [
             "White Rum"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lime Zest, Maraschino Berry"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lime Zest, Maraschino Berry"
     },
     {
-        "Name": "Dark & Stormy",
-        "Instructions": "Add all ingredients except Soda Water in the shaker, shake it with ice and strain into desired glass, top with Soda Water. PS. Can top with Ginger Beer if you don't have Ginger Juice ",
-        "Measurements": "5cl Dark Rum, 3cl Lime, 2cl Sugar, 1cl Ginger Juice",
-        "AlcoholIngredients": [
+        "name": "Dark & Stormy",
+        "instructions": "Add all ingredients except Soda Water in the shaker, shake it with ice and strain into desired glass, top with Soda Water. PS. Can top with Ginger Beer if you don't have Ginger Juice ",
+        "measurements": "5cl Dark Rum, 3cl Lime, 2cl Sugar, 1cl Ginger Juice",
+        "alcoholIngredients": [
             "Dark Rum"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar",
             "Ginger Juice"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lime Wedge"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lime Wedge"
     },
     {
-        "Name": "Gin Fizz",
-        "Instructions": "Add all ingredients except Soda Water in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass with ice cubes, top with soda water",
-        "Measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, 1cl Eggwhite, Soda Water",
-        "AlcoholIngredients": [
+        "name": "Gin Fizz",
+        "instructions": "Add all ingredients except Soda Water in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass with ice cubes, top with soda water",
+        "measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, 1cl Eggwhite, Soda Water",
+        "alcoholIngredients": [
             "Gin"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite",
             "Soda Water"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lemon Zest or none at all"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lemon Zest or none at all"
     },
     {
-        "Name": "Manhattan",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "Measurements": "4cl Bourbon Whiskey, 2cl Sweet Vermouth, 3 Dash Angostura Bitters ",
-        "AlcoholIngredients": [
+        "name": "Manhattan",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
+        "measurements": "4cl Bourbon Whiskey, 2cl Sweet Vermouth, 3 Dash Angostura Bitters ",
+        "alcoholIngredients": [
             "Bourbon Whiskey",
             "Sweet Vermouth"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Angostura Bitters"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Orange Zest, Maraschino Berry"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Orange Zest, Maraschino Berry"
     },
     {
-        "Name": "Sex on the Beach",
-        "Instructions": "Add the spirits to the desired glass with icecubes, flll it up with equal parts of the juices",
-        "Measurements": "2.5cl Vodka, 2.5cl Peach Liquer, Orange Juice, Cranberry Juice",
-        "AlcoholIngredients": [
+        "name": "Sex on the Beach",
+        "instructions": "Add the spirits to the desired glass with icecubes, flll it up with equal parts of the juices",
+        "measurements": "2.5cl Vodka, 2.5cl Peach Liquer, Orange Juice, Cranberry Juice",
+        "alcoholIngredients": [
             "Vodka",
             "Peach Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Orange Juice",
             "Cranberry Juice"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Orange Wedge or Zest, Maraschino Berry"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Orange Wedge or Zest, Maraschino Berry"
     },
     {
-        "Name": "Pisco Sour",
-        "Instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
-        "Measurements": "5cl Pisco, 3cl Lime, 2cl Sugar, 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "Pisco Sour",
+        "instructions": "Add all ingredients in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass",
+        "measurements": "5cl Pisco, 3cl Lime, 2cl Sugar, 1cl Eggwhite",
+        "alcoholIngredients": [
             "Pisco"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Bitters, Lime Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Bitters, Lime Zest or none at all "
     },
     {
-        "Name": "Between the Sheets",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "2cl White Rum, 2cl Cognac, 2cl Cointreau(Triple Sec), 2cl Lemon, 1cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Between the Sheets",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "2cl White Rum, 2cl Cognac, 2cl Cointreau(Triple Sec), 2cl Lemon, 1cl Sugar",
+        "alcoholIngredients": [
             "White Rum",
             "Cognac",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest"
     },
     {
-        "Name": "Moscow Mule",
-        "Instructions": "Add all ingredients to the Copper Mug, fill it up with crushed ice or icecubes, top it up with Ginger Beer",
-        "Measurements": "5cl Vodka, 2cl Lime, 1cl Sugar, Ginger Beer",
-        "AlcoholIngredients": [
+        "name": "Moscow Mule",
+        "instructions": "Add all ingredients to the Copper Mug, fill it up with crushed ice or icecubes, top it up with Ginger Beer",
+        "measurements": "5cl Vodka, 2cl Lime, 1cl Sugar, Ginger Beer",
+        "alcoholIngredients": [
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar",
             "Ginger Beer"
         ],
-        "Type of Glass": "Copper Mug",
-        "Garnish": "Lime Wedge or Wheel"
+        "typeOfGlass": "Copper Mug",
+        "garnish": "Lime Wedge or Wheel"
     },
     {
-        "Name": "Pornstar Martini ",
-        "Instructions": "Add all ingredients except Sparkling Wine in the shaker, shake it with ice and strain into desired glass, fill up a shot glass with Sparkling Wine to serve on the side ",
-        "Measurements": "4cl Vanilla Vodka, 2cl Passionfruit Liquer, Shot of Sparkling Wine, 3cl Lime, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Pornstar Martini ",
+        "instructions": "Add all ingredients except Sparkling Wine in the shaker, shake it with ice and strain into desired glass, fill up a shot glass with Sparkling Wine to serve on the side ",
+        "measurements": "4cl Vanilla Vodka, 2cl Passionfruit Liquer, Shot of Sparkling Wine, 3cl Lime, 2cl Sugar",
+        "alcoholIngredients": [
             "Vanilla Vodka",
             "Passionfruit Liquer",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Quarter of a Passionfruit or "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Quarter of a Passionfruit"
     },
     {
-        "Name": "Sidecar",
-        "Instructions": "Rim half the glass with sugar.Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "4cl Cognac, 1.5cl Cointreau (Triple Sec), 3cl Lemon, 1cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Sidecar",
+        "instructions": "Rim half the glass with sugar.Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "4cl Cognac, 1.5cl Cointreau (Triple Sec), 3cl Lemon, 1cl Sugar",
+        "alcoholIngredients": [
             "Cognac",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lemon Zest or none at all"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lemon Zest or none at all"
     },
     {
-        "Name": "French 75 ",
-        "Instructions": "Add all ingredients except Sparkling Wine in the shaker, shake it with ice and strain into desired glass. Top with Sparkling Wine",
-        "Measurements": "2cl Gin, Sparkling Wine, 2cl Lemon, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "French 75 ",
+        "instructions": "Add all ingredients except Sparkling Wine in the shaker, shake it with ice and strain into desired glass. Top with Sparkling Wine",
+        "measurements": "2cl Gin, Sparkling Wine, 2cl Lemon, 2cl Sugar",
+        "alcoholIngredients": [
             "Gin",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar"
         ],
-        "Type of Glass": "Champagne Glass",
-        "Garnish": "Lemon Zest or none at all"
+        "typeOfGlass": "Champagne Glass",
+        "garnish": "Lemon Zest or none at all"
     },
     {
-        "Name": "Godfather",
-        "Instructions": "Add the spirits to the desried glass, add a big icecube or regular icecubes, thereafter stir the glass",
-        "Measurements": "3cl Scotch Whiskey, 3cl Amaretto",
-        "AlcoholIngredients": [
+        "name": "Godfather",
+        "instructions": "Add the spirits to the desried glass, add a big icecube or regular icecubes, thereafter stir the glass",
+        "measurements": "3cl Scotch Whiskey, 3cl Amaretto",
+        "alcoholIngredients": [
             "Scotch Whiskey",
             "Amaretto"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": null
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": null
     },
     {
-        "Name": "Godmother ",
-        "Instructions": "Add the spirits to the desried glass, add a big icecube or regular icecubes, thereafter stir the glass",
-        "Measurements": "3cl Vodka, 3cl Amaretto",
-        "AlcoholIngredients": [
+        "name": "Godmother ",
+        "instructions": "Add the spirits to the desried glass, add a big icecube or regular icecubes, thereafter stir the glass",
+        "measurements": "3cl Vodka, 3cl Amaretto",
+        "alcoholIngredients": [
             "Vodka",
             "Amaretto"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": null
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": null
     },
     {
-        "Name": "Orgasm",
-        "Instructions": "Add the spirits to the desried glass, add a big icecube regular icecubes, thereafter stir the glass",
-        "Measurements": "2cl Amaretto, 2cl Kahlua, 2cl Baileys",
-        "AlcoholIngredients": [
+        "name": "Orgasm",
+        "instructions": "Add the spirits to the desried glass, add a big icecube regular icecubes, thereafter stir the glass",
+        "measurements": "2cl Amaretto, 2cl Kahlua, 2cl Baileys",
+        "alcoholIngredients": [
             "Amaretto",
             "Kahlua",
             "Baileys"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass ",
-        "Garnish": null
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass ",
+        "garnish": null
     },
     {
-        "Name": "Boulevardier",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube ",
-        "Measurements": "2cl Bourbon Whiskey, 2cl Sweet Vermouth, 2cl Campari",
-        "AlcoholIngredients": [
+        "name": "Boulevardier",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube ",
+        "measurements": "2cl Bourbon Whiskey, 2cl Sweet Vermouth, 2cl Campari",
+        "alcoholIngredients": [
             "Bourbon Whiskey",
             "Sweet Vermouth",
             "Campari"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest"
     },
     {
-        "Name": "Americano",
-        "Instructions": "Add all ingredients except Soda Water to a glass, stir it and then pour into desired glass with a big icecube , top with Soda Water",
-        "Measurements": "2cl Sweet Vermouth, 2cl Campari, Soda Water",
-        "AlcoholIngredients": [
+        "name": "Americano",
+        "instructions": "Add all ingredients except Soda Water to a glass, stir it and then pour into desired glass with a big icecube , top with Soda Water",
+        "measurements": "2cl Sweet Vermouth, 2cl Campari, Soda Water",
+        "alcoholIngredients": [
             "Sweet Vermouth",
             "Campari"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Soda Water"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest"
     },
     {
-        "Name": "Sbagliato ",
-        "Instructions": "Add all ingredients except Sparkling Wine to a glass, stir it and then pour into desired glass with a big icecube , top with Sparkling Wine",
-        "Measurements": "2cl Sweet Vermouth, 2cl Campari, Sparkling Wine",
-        "AlcoholIngredients": [
+        "name": "Sbagliato ",
+        "instructions": "Add all ingredients except Sparkling Wine to a glass, stir it and then pour into desired glass with a big icecube , top with Sparkling Wine",
+        "measurements": "2cl Sweet Vermouth, 2cl Campari, Sparkling Wine",
+        "alcoholIngredients": [
             "Sweet Vermouth",
             "Campari",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest"
     },
     {
-        "Name": "Old Cuban",
-        "Instructions": "Add all ingredients except Sparkling Wine in the shaker, shake it with ice and strain into desired glass, top with Sparkling Wine. ",
-        "Measurements": "4cl Dark Rum, Sparkling Wine, 2cl Lime, 1cl Sugar, Mint Leaves",
-        "AlcoholIngredients": [
+        "name": "Old Cuban",
+        "instructions": "Add all ingredients except Sparkling Wine in the shaker, shake it with ice and strain into desired glass, top with Sparkling Wine. ",
+        "measurements": "4cl Dark Rum, Sparkling Wine, 2cl Lime, 1cl Sugar, Mint Leaves",
+        "alcoholIngredients": [
             "Dark Rum",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar",
             "Mint Leaves"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Mint Leaves or Lime Zest"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Mint Leaves or Lime Zest"
     },
     {
-        "Name": "Southside ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass ",
-        "Measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, Mint Leaves",
-        "AlcoholIngredients": [
+        "name": "Southside ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass ",
+        "measurements": "5cl Gin, 3cl Lemon, 2cl Sugar, Mint Leaves",
+        "alcoholIngredients": [
             "Gin"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Mint Leaves"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Mint Leaves or Lemon Zest"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Mint Leaves or Lemon Zest"
     },
     {
-        "Name": "Piña colada",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. Fill up with icecubes ",
-        "Measurements": "5cl White Rum, 8cl Pineapple Juice, 3cl Coconut Cream, 1cl Lime",
-        "AlcoholIngredients": [
+        "name": "Piña Colada",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. Fill up with icecubes ",
+        "measurements": "5cl White Rum, 8cl Pineapple Juice, 3cl Coconut Cream, 1cl Lime",
+        "alcoholIngredients": [
             "White Rum"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Pineapple Juice",
             "Coconut Cream",
             "Lime"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lime Zest, Pineapple wedge, Maraschino Berry"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lime Zest, Pineapple wedge, Maraschino Berry"
     },
     {
-        "Name": "Pink Panther",
-        "Instructions": "Add the spirit to the desired glass, fill it up wth icecubes and milk, then top with Grenadine and stir",
-        "Measurements": "5cl Licor 43, Milk, 2cl Grenadine",
-        "AlcoholIngredients": [
+        "name": "Pink Panther",
+        "instructions": "Add the spirit to the desired glass, fill it up wth icecubes and milk, then top with Grenadine and stir",
+        "measurements": "5cl Licor 43, Milk, 2cl Grenadine",
+        "alcoholIngredients": [
             "Licor 43"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Milk",
             "Grenadine"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": null
+        "typeOfGlass": "Highball Glass",
+        "garnish": null
     },
     {
-        "Name": "After Eight",
-        "Instructions": "Add the spirit to the desired glass, fill it up wth icecubes and milk, then stir ",
-        "Measurements": "2cl Vodka, 2cl Kahlua, 2cl Creme de Menthe",
-        "AlcoholIngredients": [
+        "name": "After Eight",
+        "instructions": "Add the spirit to the desired glass, fill it up wth icecubes and milk, then stir ",
+        "measurements": "2cl Vodka, 2cl Kahlua, 2cl Creme de Menthe",
+        "alcoholIngredients": [
             "Vodka",
             "Kahlua",
             "Creme de Menthe"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Milk"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Chocolate Flakes"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Chocolate Flakes"
     },
     {
-        "Name": "Grasshopper ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "2.5cl Creme de Cacao, 2.5cl Creme de Menthe, 3cl Cream",
-        "AlcoholIngredients": [
+        "name": "Grasshopper ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "2.5cl Creme de Cacao, 2.5cl Creme de Menthe, 3cl Cream",
+        "alcoholIngredients": [
             "Creme de Cacao",
             "Creme de Menthe"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Cream"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Chocolate Flakes"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Chocolate Flakes"
     },
     {
-        "Name": "Strawberry Daquiri ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. If you want it Frozen, add all ingredients and ice to a blender, mix it to a slush and pour in desired glass",
-        "Measurements": "5cl White Rum, 3cl Lime Juice, 2cl Strawberry Sugar",
-        "AlcoholIngredients": [
+        "name": "Strawberry Daquiri ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. If you want it Frozen, add all ingredients and ice to a blender, mix it to a slush and pour in desired glass",
+        "measurements": "5cl White Rum, 3cl Lime Juice, 2cl Strawberry Sugar",
+        "alcoholIngredients": [
             "White Rum"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime Juice",
             "Strawberry Sugar"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Strawberries"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Strawberries"
     },
     {
-        "Name": "Long Island Ice Tea ",
-        "Instructions": "Add all ingredients to the desried glass, fill it up with icecubes and Coca Cola ",
-        "Measurements": "2cl Gin, 2cl Vodka, 2cl White Rum, 2cl Tequila, 2cl Cointreau (Triple Sec), 2cl Lemon, 1cl Sugar, Coca Cola",
-        "AlcoholIngredients": [
+        "name": "Long Island Ice Tea ",
+        "instructions": "Add all ingredients to the desried glass, fill it up with icecubes and Coca Cola ",
+        "measurements": "2cl Gin, 2cl Vodka, 2cl White Rum, 2cl Tequila, 2cl Cointreau (Triple Sec), 2cl Lemon, 1cl Sugar, Coca Cola",
+        "alcoholIngredients": [
             "Gin",
             "Vodka",
             "White Rum",
             "Tequila",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Coca Cola"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lemon Wedge"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lemon Wedge"
     },
     {
-        "Name": "Hemingway Daquiri ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "3cl White Rum, 2cl Maraschino Liquer, 2cl Lime, 3cl Grapefruit Juice",
-        "AlcoholIngredients": [
+        "name": "Hemingway Daquiri ",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "3cl White Rum, 2cl Maraschino Liquer, 2cl Lime, 3cl Grapefruit Juice",
+        "alcoholIngredients": [
             "White Rum",
             "Maraschino Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Grapefruit Juice"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Grapefruit Zest"
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Grapefruit Zest"
     },
     {
-        "Name": "Paloma",
-        "Instructions": "Rim the glass with salt. Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "5cl Tequila, 2cl Lime, Pink Grapefruit Soda",
-        "AlcoholIngredients": [
+        "name": "Paloma",
+        "instructions": "Rim the glass with salt. Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "5cl Tequila, 2cl Lime, Pink Grapefruit Soda",
+        "alcoholIngredients": [
             "Tequila"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Pink Grapefruit Soda"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lime Wedge or Wheel"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lime Wedge or Wheel"
     },
     {
-        "Name": "Caipirinha",
-        "Instructions": "Add all ingredient to the desired glass, fill it up with crushed ice. PS. Can add brown sugar to make it a little sweeter ",
-        "Measurements": "5cl Cachaca, 3cl Lime, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Caipirinha",
+        "instructions": "Add all ingredient to the desired glass, fill it up with crushed ice. PS. Can add brown sugar to make it a little sweeter ",
+        "measurements": "5cl Cachaca, 3cl Lime, 2cl Sugar",
+        "alcoholIngredients": [
             "Cachaca"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Lime Wedge or Wheel"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Lime Wedge or Wheel"
     },
     {
-        "Name": "Capiroska ",
-        "Instructions": "Add all ingredient to the desired glass, fill it up with crushed ice. PS. Can add brown sugar to make it a little sweeter ",
-        "Measurements": "5cl Vodka, 3cl Lime, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Capiroska",
+        "instructions": "Add all ingredient to the desired glass, fill it up with crushed ice. PS. Can add brown sugar to make it a little sweeter ",
+        "measurements": "5cl Vodka, 3cl Lime, 2cl Sugar",
+        "alcoholIngredients": [
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Lime Wedge or Wheel"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Lime Wedge or Wheel"
     },
     {
-        "Name": "Hugo",
-        "Instructions": "Add the spirit and Mint Leaves to the desired glass, fill it up with icecubes and Sparkling Wine, top it with Soda Water",
-        "Measurements": "4cl Elderflower Liquer, Sparkling Wine, Soda Water, Mint Leaves",
-        "AlcoholIngredients": [
+        "name": "Hugo",
+        "instructions": "Add the spirit and Mint Leaves to the desired glass, fill it up with icecubes and Sparkling Wine, top it with Soda Water",
+        "measurements": "4cl Elderflower Liquer, Sparkling Wine, Soda Water, Mint Leaves",
+        "alcoholIngredients": [
             "Elderflower Liquer",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Soda Water",
             "Mint Leaves"
         ],
-        "Type of Glass": "Wine Glass",
-        "Garnish": "Lime Wheel, Mint Leaves"
+        "typeOfGlass": "Wine Glass",
+        "garnish": "Lime Wheel, Mint Leaves"
     },
     {
-        "Name": "Aperol Spritz",
-        "Instructions": "Add the spirit to the desired glass, fill it up with icecubes and Sparkling Wine, top it with Soda Water",
-        "Measurements": "4cl Aperol, Sparkling Wine, Soda Water, Mint Leaves",
-        "AlcoholIngredients": [
+        "name": "Aperol Spritz",
+        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and Sparkling Wine, top it with Soda Water",
+        "measurements": "4cl Aperol, Sparkling Wine, Soda Water, Mint Leaves",
+        "alcoholIngredients": [
             "Aperol",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Soda Water",
             "Mint Leaves"
         ],
-        "Type of Glass": "Wine Glass",
-        "Garnish": "Orange Wedge "
+        "typeOfGlass": "Wine Glass",
+        "garnish": "Orange Wedge "
     },
     {
-        "Name": "New York Sour",
-        "Instructions": "Add all ingredients exceot Red Wine in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass, pour the Red Wine on a spoon to layer it on the top",
-        "Measurements": "5cl Bourbon Whiskey, 1cl Red Wine, 3cl Lemon, 2cl Sugar, 1cl Eggwhite",
-        "AlcoholIngredients": [
+        "name": "New York Sour",
+        "instructions": "Add all ingredients exceot Red Wine in the shaker, first dry shake it without ice, add ice and shake it again. Pour into desired glass, pour the Red Wine on a spoon to layer it on the top",
+        "measurements": "5cl Bourbon Whiskey, 1cl Red Wine, 3cl Lemon, 2cl Sugar, 1cl Eggwhite",
+        "alcoholIngredients": [
             "Bourbon Whiskey",
             "Red Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar",
             "Eggwhite"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": null
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": null
     },
     {
-        "Name": "Mint Julep",
-        "Instructions": "Add all ingredients to the Copper Mug, fill it up with crushed ice or icecubes",
-        "Measurements": "5cl Bourbon Whiskey, 2cl Sugar, Mint Leaves",
-        "AlcoholIngredients": [
+        "name": "Mint Julep",
+        "instructions": "Add all ingredients to the Copper Mug, fill it up with crushed ice or icecubes",
+        "measurements": "5cl Bourbon Whiskey, 2cl Sugar, Mint Leaves",
+        "alcoholIngredients": [
             "Bourbon Whiskey"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Sugar",
             "Mint Leaves"
         ],
-        "Type of Glass": "Copper Mug",
-        "Garnish": "Mint Leaves"
+        "typeOfGlass": "Copper Mug",
+        "garnish": "Mint Leaves"
     },
     {
-        "Name": "Mojito",
-        "Instructions": "Add all ingredient to the desired glass, flatten the Mint Leaves in your hand first to open their pores. Fill the glass with crushed ice and top with Soda Water",
-        "Measurements": "5cl White Rum, 3cl Lime, 2cl Sugar, Mint Leaves, Sodawater",
-        "AlcoholIngredients": [
+        "name": "Mojito",
+        "instructions": "Add all ingredient to the desired glass, flatten the Mint Leaves in your hand first to open their pores. Fill the glass with crushed ice and top with Soda Water",
+        "measurements": "5cl White Rum, 3cl Lime, 2cl Sugar, Mint Leaves, Sodawater",
+        "alcoholIngredients": [
             "White Rum"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar",
             "Mint Leaves",
             "Sodawater"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Lime Wheel, Mint Leaves"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Lime Wheel, Mint Leaves"
     },
     {
-        "Name": "Kir Royale",
-        "Instructions": "Pour the spirit into the desired glass, fill it up with Sparkling Whine",
-        "Measurements": "4cl Creme de Cassis, Sparkling Wine",
-        "AlcoholIngredients": [
+        "name": "Kir Royale",
+        "instructions": "Pour the spirit into the desired glass, fill it up with Sparkling Whine",
+        "measurements": "4cl Creme de Cassis, Sparkling Wine",
+        "alcoholIngredients": [
             "Creme de Cassis",
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Champagne Glass",
-        "Garnish": "Lemon Zest or none at all"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Champagne Glass",
+        "garnish": "Lemon Zest or none at all"
     },
     {
-        "Name": "Gimlet",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. This drink can be done with Lime Cordial instead of regular sugar and Lime Juice, which is a sugar that is infused with Lime Zest",
-        "Measurements": "5cl Gin, 3cl Lime, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Gimlet",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. This drink can be done with Lime Cordial instead of regular sugar and Lime Juice, which is a sugar that is infused with Lime Zest",
+        "measurements": "5cl Gin, 3cl Lime, 2cl Sugar",
+        "alcoholIngredients": [
             "Gin"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Sugar"
         ],
-        "Type of Glass": "Cockail Glass",
-        "Garnish": "Lime Zest"
+        "typeOfGlass": "Cockail Glass",
+        "garnish": "Lime Zest"
     },
     {
-        "Name": "Pimms Cup",
-        "Instructions": "Add the spirit to the desired glass, fill it up with icecubes and top with Ginger Ale",
-        "Measurements": "5cl Pimm's No.1, 2cl Lemon, Ginger Ale",
-        "AlcoholIngredients": [
+        "name": "Pimms Cup",
+        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and top with Ginger Ale",
+        "measurements": "5cl Pimm's No.1, 2cl Lemon, Ginger Ale",
+        "alcoholIngredients": [
             "Pimm's No.1"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Ginger Ale"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Apple Slice, Cucumber, Orange Wedge, Strawberries "
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Apple Slice, Cucumber, Orange Wedge, Strawberries "
     },
     {
-        "Name": "Harvey Wallbanger ",
-        "Instructions": "Add the spirit to the desired glass, fill it up with icecubes and top with Orange Juice ",
-        "Measurements": "4cl Vodka, 1,5cl Galliano, Orange Juice",
-        "AlcoholIngredients": [
+        "name": "Harvey Wallbanger",
+        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and top with Orange Juice ",
+        "measurements": "4cl Vodka, 1,5cl Galliano, Orange Juice",
+        "alcoholIngredients": [
             "Vodka",
             "Galliano"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Orange Juice"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Orange Wedge"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Orange Wedge"
     },
     {
-        "Name": "Sazerac",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "Measurements": "4cl Cognac, 1cl Absinthe, 3 Dash Angostura Bitters, 1 Sugar Cube",
-        "AlcoholIngredients": [
+        "name": "Sazerac",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
+        "measurements": "4cl Cognac, 1cl Absinthe, 3 Dash Angostura Bitters, 1 Sugar Cube",
+        "alcoholIngredients": [
             "Cognac",
             "Absinthe"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Angostura Bitters",
             "Sugar Cube"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Orange Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Orange Zest or none at all "
     },
     {
-        "Name": "Martinez ",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "Measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Maraschino Liquer, 3 Dash Orange Bitters",
-        "AlcoholIngredients": [
+        "name": "Martinez ",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
+        "measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Maraschino Liquer, 3 Dash Orange Bitters",
+        "alcoholIngredients": [
             "Gin",
             "Sweet Vermouth",
             "Maraschino Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Orange Bitters"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Orange Zest or none at all "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Orange Zest or none at all "
     },
     {
-        "Name": "Bloody Mary ",
-        "Instructions": "Add all ingredients to the desired glass, fill it up with ice and stir. PS. Add Tabasco, Worchestershire Sauce and Black Pepper according to your own preference, can have regular salt instead of Celery salt",
-        "Measurements": "5cl Vodka",
-        "AlcoholIngredients": [
+        "name": "Bloody Mary",
+        "instructions": "Add all ingredients to the desired glass, fill it up with ice and stir. PS. Add Tabasco, Worchestershire Sauce and Black Pepper according to your own preference, can have regular salt instead of Celery salt",
+        "measurements": "5cl Vodka",
+        "alcoholIngredients": [
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Tomato Juice",
             "Lemon",
             "Celery Salt",
@@ -1018,157 +1018,157 @@
             "Worchestershire Sauce",
             "Black Pepper"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Cucumber, Selleri,  Lemon Wedge "
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Cucumber, Selleri,  Lemon Wedge "
     },
     {
-        "Name": "Mai Tai ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass with big icecube ",
-        "Measurements": "2cl White Rum, 2cl Dark Rum, 1cl Cointreau (Triple Sec)",
-        "AlcoholIngredients": [
+        "name": "Mai Tai",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass with big icecube ",
+        "measurements": "2cl White Rum, 2cl Dark Rum, 1cl Cointreau (Triple Sec)",
+        "alcoholIngredients": [
             "White Rum",
             "Dark Rum",
             "Cointreau (Triple Sec)"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lime",
             "Orgeat Syrup"
         ],
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest, Maraschino Berry"
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest, Maraschino Berry"
     },
     {
-        "Name": "Bellini ",
-        "Instructions": "Pour the puré in the desired glass, fill it up with Sparkling Wine",
-        "Measurements": "Sparkling Wine, 3cl Peach Puré",
-        "AlcoholIngredients": [
+        "name": "Bellini",
+        "instructions": "Pour the puré in the desired glass, fill it up with Sparkling Wine",
+        "measurements": "Sparkling Wine, 3cl Peach Puré",
+        "alcoholIngredients": [
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Peach Puré"
         ],
-        "Type of Glass": "Champagne Glass",
-        "Garnish": null
+        "typeOfGlass": "Champagne Glass",
+        "garnish": null
     },
     {
-        "Name": "Mimosa ",
-        "Instructions": "Pour Sparkling Wine in the desired glass, fill it up with Orange Juice after preference",
-        "Measurements": "Sparkling Wine, Orange Juice",
-        "AlcoholIngredients": [
+        "name": "Mimosa",
+        "instructions": "Pour Sparkling Wine in the desired glass, fill it up with Orange Juice after preference",
+        "measurements": "Sparkling Wine, Orange Juice",
+        "alcoholIngredients": [
             "Sparkling Wine"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Orange Juice"
         ],
-        "Type of Glass": "Champagne Glass",
-        "Garnish": "Orange Zest"
+        "typeOfGlass": "Champagne Glass",
+        "garnish": "Orange Zest"
     },
     {
-        "Name": "Vesper Martini ",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "Measurements": "4cl Gin, 2cl Vodka, 1cl Lillet Blanc",
-        "AlcoholIngredients": [
+        "name": "Vesper Martini",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
+        "measurements": "4cl Gin, 2cl Vodka, 1cl Lillet Blanc",
+        "alcoholIngredients": [
             "Gin",
             "Vodka",
             "Lillet Blanc"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Lime or Lemon Zest"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Lime or Lemon Zest"
     },
     {
-        "Name": "Appletini ",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "3cl Vodka, 2cl Apple Liquer, 3cl Lemon, 2cl Sugar",
-        "AlcoholIngredients": [
+        "name": "Appletini",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "3cl Vodka, 2cl Apple Liquer, 3cl Lemon, 2cl Sugar",
+        "alcoholIngredients": [
             "Vodka",
             "Apple Liquer"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Lemon",
             "Sugar"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Apple Wedge "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Apple Wedge"
     },
     {
-        "Name": "Tequila Sunrise ",
-        "Instructions": "Add the spirit to the desired glass, fill it up with icecubes and Orange Juice, pour the Grenadine on top and stir",
-        "Measurements": "5cl Tequila, 2cl Grenadine, Orange Juice",
-        "AlcoholIngredients": [
+        "name": "Tequila Sunrise",
+        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and Orange Juice, pour the Grenadine on top and stir",
+        "measurements": "5cl Tequila, 2cl Grenadine, Orange Juice",
+        "alcoholIngredients": [
             "Tequila"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Grenadine",
             "Orange Juice"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Orange Zest or Wedge"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Orange Zest or Wedge"
     },
     {
-        "Name": "Screwdriver ",
-        "Instructions": "Add the spirit to the desired glass, fill it up with icecubes and Orange Juice",
-        "Measurements": "5cl Vodka, Orange Juice",
-        "AlcoholIngredients": [
+        "name": "Screwdriver",
+        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and Orange Juice",
+        "measurements": "5cl Vodka, Orange Juice",
+        "alcoholIngredients": [
             "Vodka"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Orange Juice"
         ],
-        "Type of Glass": "Highball Glass",
-        "Garnish": "Orange Zest or Wedge"
+        "typeOfGlass": "Highball Glass",
+        "garnish": "Orange Zest or Wedge"
     },
     {
-        "Name": "Rusty Nail ",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube",
-        "Measurements": "5cl Scotch Whiskey, 1cl Drambuie",
-        "AlcoholIngredients": [
+        "name": "Rusty Nail",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube",
+        "measurements": "5cl Scotch Whiskey, 1cl Drambuie",
+        "alcoholIngredients": [
             "Scotch Whiskey",
             "Drambuie"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Whiskey Glass",
-        "Garnish": "Orange Zest"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Whiskey Glass",
+        "garnish": "Orange Zest"
     },
     {
-        "Name": "Brandy Alexander",
-        "Instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "Measurements": "4 cl Cognac, 1.5cl Creme de Cacao, 3cl Cream",
-        "AlcoholIngredients": [
+        "name": "Brandy Alexander",
+        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
+        "measurements": "4 cl Cognac, 1.5cl Creme de Cacao, 3cl Cream",
+        "alcoholIngredients": [
             "Cognac",
             "Creme de Cacao"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Cream"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Chocolate Flakes "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Chocolate Flakes"
     },
     {
-        "Name": "Rob Roy ",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass ",
-        "Measurements": "4cl Scotch Whiskey, 1.5cl Sweet Vermouth, 3 Dash Angostura Bitters",
-        "AlcoholIngredients": [
+        "name": "Rob Roy",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass ",
+        "measurements": "4cl Scotch Whiskey, 1.5cl Sweet Vermouth, 3 Dash Angostura Bitters",
+        "alcoholIngredients": [
             "Scotch Whiskey",
             "Sweet Vermouth"
         ],
-        "NonAlcoholIngredients": [
+        "nonAlcoholIngredients": [
             "Angostura Bitters"
         ],
-        "Type of Glass": "Cocktail Glass",
-        "Garnish": "Orange Zest or Maraschino Berry "
+        "typeOfGlass": "Cocktail Glass",
+        "garnish": "Orange Zest or Maraschino Berry"
     },
     {
-        "Name": "Hanky Panky ",
-        "Instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "Measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Fernet Branca",
-        "AlcoholIngredients": [
+        "name": "Hanky Panky",
+        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
+        "measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Fernet Branca",
+        "alcoholIngredients": [
             "Gin",
             "Sweet Vermouth",
             "Fernet Branca"
         ],
-        "NonAlcoholIngredients": null,
-        "Type of Glass": "Cockail Glass",
-        "Garnish": "Orange Zest"
+        "nonAlcoholIngredients": null,
+        "typeOfGlass": "Cockail Glass",
+        "garnish": "Orange Zest"
     }
 ]

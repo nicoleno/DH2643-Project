@@ -26,3 +26,16 @@ axios(config)
     .catch(function (error) {
         console.log(error);
     });
+
+
+const [drinks, setDrinks] = React.useState([]);
+
+const fetchDrinks = () => {
+    fetch("http://192.168.1.69:3000/drinks", {
+        method: "get",
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+        },
+    }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
+}
