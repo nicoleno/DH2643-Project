@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "resolveJsonModule": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "extends": "expo/tsconfig.base"
 }
