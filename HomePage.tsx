@@ -1,7 +1,7 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React from 'react';
 import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, ImageBackground} from 'react-native';
+import { StyleSheet, Text, View, Image, Button, FlatList, ImageBackground} from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
 import IngredientCountIcon from './components/ingredientCountIcon';
@@ -12,8 +12,8 @@ import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 export const HomePage = ({ navigation }) => {
+
     let shaker = new ShakerModel;
     const [loaded] = useFonts({
         Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
@@ -38,15 +38,8 @@ export const HomePage = ({ navigation }) => {
     console.log(newMatches)
   
     return (
-        
-        <GestureHandlerRootView style={styles.background}>
-            
-      <LinearGradient
-        // Background Linear Gradient
-        start={{x: 0.0, y: 0.55}} end={{x: 0.5, y: 1.0}}
-        colors={['#414141', '#171717']}
-        style={styles.background}
-      >
+    <GestureHandlerRootView style={styles.background}>    
+      <LinearGradient start={{x: 0.0, y: 0.55}} end={{x: 0.5, y: 1.0}} colors={['#414141', '#171717']} style={styles.background}>
             
             <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
                 <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
@@ -77,10 +70,7 @@ export const HomePage = ({ navigation }) => {
             </View>
             </LinearGradient>  
         </GestureHandlerRootView >
-       
-
-        
-
+    
     )
 };
 
