@@ -9,8 +9,7 @@ import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
 import SearchIngredient, { newMatches } from './searchingredient';
 import { useFonts } from '@expo-google-fonts/carter-one';
-import { setSyntheticLeadingComments } from 'typescript';
-
+import ToggleComponent from './components/togglecomponent';
 
 export const HomePage = ({ navigation }) => {
     let shaker = new ShakerModel;
@@ -38,36 +37,30 @@ export const HomePage = ({ navigation }) => {
   
     return (
         <GestureHandlerRootView style={styles.background}>
-  
             <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
-            <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
-            <View style={styles.shakerArea}>
-                <Image style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
-                    onLayout={(event) => {
-                        const layout = event.nativeEvent.layout;
-                        console.log("layout", layout);
-                        shaker.setHeight(layout.height);
-                        shaker.setWidth(layout.width);
-                        shaker.setPosX(layout.x);
-                        shaker.setPosY(layout.y);}}/>
-            <IngredientCountIcon />
-            <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
-            </View>
+                <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
+                <View style={styles.shakerArea}>
+                    <View style={styles.topsection} >
+                    <IngredientCountIcon/>
+                        <Image style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
+                                onLayout={(event) => {
+                                    const layout = event.nativeEvent.layout;
+                                    console.log("layout", layout);
+                                    shaker.setHeight(layout.height);
+                                    shaker.setWidth(layout.width);
+                                    shaker.setPosX(layout.x);
+                                    shaker.setPosY(layout.y);}}/>
+                    </View>
+                    <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
+                </View>
             </ImageBackground>
+            
             <View style={styles.bottomBar}>
-        
             <Text style={styles.poppins} >Add items</Text>
             <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
                 <View style={styles.header}>
-                    <View style={styles.toggle}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.image2} source={require('./assets/images/lemon.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.image2} source={require('./assets/images/bottle.png')} />
-                        </TouchableOpacity>
-                    </View>
-                    <SearchIngredient/>
+                <ToggleComponent/>
+                <SearchIngredient/>
                 </View>
                 <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
             </View>
@@ -77,9 +70,22 @@ export const HomePage = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 
+
     background:{
         flex: 1,
         color: "rgba(255,255,1,1)" 
+    },
+    
+    topsection:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column'
+
+    },
+
+    topsection2:{
+        alignContent: 'flex-end',
     },
 
     container: {
@@ -118,11 +124,12 @@ const styles = StyleSheet.create({
     bottomBar: {
         flex: 2,
         alignSelf: 'stretch',
-        backgroundColor: '#414141',
+        backgroundColor: '#414191',
         justifyContent: 'space-between',
     },
     header: {
-        margin: 20,
+        marginTop: 25,
+        marginLeft: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },

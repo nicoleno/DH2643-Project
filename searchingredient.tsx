@@ -15,7 +15,10 @@ const styles = StyleSheet.create({
     borderWidth : 2,
     borderColor: 'black',
     padding: 15,
-    borderRadius: 10
+    height:20,
+    borderRadius: 10,
+    marginTop:30,
+    marginRight:10
   },
 
   image: {

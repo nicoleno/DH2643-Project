@@ -19,7 +19,7 @@ const IngredientCountIcon = () => {
 
 const styles = StyleSheet.create({
     itemCountContainer: {
-        position: 'absolute',
+        alignContent: 'flex-start',
         height: 30,
         width: 30,
         borderRadius: 15,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 2000,
-        alignSelf: 'center',
+    
     },
     itemCountText: {
         color: 'white',
