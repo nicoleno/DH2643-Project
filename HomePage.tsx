@@ -10,6 +10,8 @@ import { Hamburger } from './components/menuButton';
 import SearchIngredient, { newMatches } from './searchingredient';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 export const HomePage = ({ navigation }) => {
     let shaker = new ShakerModel;
@@ -36,7 +38,16 @@ export const HomePage = ({ navigation }) => {
     console.log(newMatches)
   
     return (
+        
         <GestureHandlerRootView style={styles.background}>
+            
+      <LinearGradient
+        // Background Linear Gradient
+        start={{x: 0.0, y: 0.55}} end={{x: 0.5, y: 1.0}}
+        colors={['#414141', '#171717']}
+        style={styles.background}
+      >
+            
             <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
                 <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 <View style={styles.shakerArea}>
@@ -64,7 +75,12 @@ export const HomePage = ({ navigation }) => {
                 </View>
                 <FlatList style={{ overflow: "visible" }} horizontal data={ingredients} renderItem={renderItem} keyExtractor={item => item.id} />
             </View>
+            </LinearGradient>  
         </GestureHandlerRootView >
+       
+
+        
+
     )
 };
 
@@ -124,7 +140,7 @@ const styles = StyleSheet.create({
     bottomBar: {
         flex: 2,
         alignSelf: 'stretch',
-        backgroundColor: '#414191',
+  
         justifyContent: 'space-between',
     },
     header: {
