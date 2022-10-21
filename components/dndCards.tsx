@@ -21,8 +21,6 @@ const DraggableCard = (props) => {
         console.log(store.getState());
     };
 
-
-
     const panGestureEvent = useAnimatedGestureHandler
         <PanGestureHandlerGestureEvent, ContextType>
         ({

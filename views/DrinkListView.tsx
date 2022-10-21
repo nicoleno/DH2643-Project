@@ -1,27 +1,15 @@
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Button, ImageBackground } from 'react-native';
-import { Hamburger } from './components/menuButton';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import React from 'react';
+import { Hamburger } from '../components/menuButton';
 import Animated from 'react-native-reanimated';
-import React, { useEffect } from 'react';
-import GestureFlipView from 'react-native-gesture-flip-card';
+import { DrinkListItem } from '../models/model';
 
-const DrinkList = ({ navigation }) => {
-    const [drinks, setDrinks] = React.useState([]);
 
-    useEffect(() => {
-        fetch("http://130.229.145.164:3000/drinks", {
-            method: "get",
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
-        }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
-    }, []);
 
+const DrinkListView = ({ navigation, dataList }) => {
+    const data = dataList as DrinkListItem[];
     const scrollX = React.useRef(new Animated.Value(0)).current;
-
-    const Data = [...(Array(30).keys())].map(i => ({ label: `${i + 1}  of 30`, value: `${i + 1}`, have: "Vodka", need: "Redbull", name: "Tommys Margharita" }));
     const card_width = 300;
-    const card_height = 500;
 
     return (
         <View style={{ flex: 1, backgroundColor: '#262626' }}>
@@ -31,7 +19,7 @@ const DrinkList = ({ navigation }) => {
             </View>
             <Animated.FlatList
                 contentContainerStyle={{ alignItems: 'center', paddingHorizontal: 50 }}
-                horizontal data={Data}
+                horizontal data={data}
                 showsHorizontalScrollIndicator={false}
                 onScroll={Animated.event(
                     [{ nativeEvent: { contentOffset: { x: scrollX } } }],
@@ -46,18 +34,19 @@ const DrinkList = ({ navigation }) => {
                     const scale = scrollX.interpolate({
                         inputRange, outputRange: [0.75, 1, 0.75]
                     })
+
                     return <Animated.View style={{ transform: [{ scale }], }}>
 
                         <View style={styles.cardContainer}>
-                            <ImageBackground style={styles.backgroundimg} imageStyle={{ borderRadius: 30 }} source={require('./assets/images/Tommys-margharita.png')}>
+                            <ImageBackground style={styles.backgroundimg} imageStyle={{ borderRadius: 30 }} source={require('../assets/images/Tommys-margharita.png')}>
                                 <View style={styles.cardText}>
                                     <Text style={{ color: '#fff', fontSize: 10, padding: 10 }}>{item.label}</Text>
                                     <Text style={{ color: '#fff', fontSize: 24, padding: 10 }}>{item.name}</Text>
 
                                     <View style={styles.ing_list}>
-                                        <Image style={{ height: 25, width: 25, }} source={require('./assets/images/check-mark.png')}></Image>
+                                        <Image style={{ height: 25, width: 25, }} source={require('../assets/images/check-mark.png')}></Image>
                                         <Text style={{ color: '#fff' }}>You have:{"\n"} {item.have}</Text>
-                                        <Image style={{ height: 25, width: 25, }} source={require('./assets/images/carts.png')}></Image>
+                                        <Image style={{ height: 25, width: 25, }} source={require('../assets/images/carts.png')}></Image>
                                         <Text style={{ color: '#fff' }}> You need:{"\n"} {item.need}</Text>
                                     </View>
                                 </View>
@@ -68,8 +57,6 @@ const DrinkList = ({ navigation }) => {
                             </ImageBackground>
                         </View>
                     </Animated.View>
-
-
                 }}>
             </Animated.FlatList>
             <View style={{ alignItems: 'center', }}>
@@ -145,4 +132,4 @@ const styles = StyleSheet.create({
 
 
 })
-export default DrinkList;
+export default DrinkListView;
