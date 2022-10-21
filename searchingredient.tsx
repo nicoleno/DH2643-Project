@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Button, TextInput } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -32,25 +32,18 @@ const styles = StyleSheet.create({
 
 const SearchIngredient = () => {
   const data = require("./assets/ingredients.json")
-  const [matches, setMatches] = useState([]);
-
-    const [search, setSearch] = useState("");
-    // const [matches, setMatches] = useState([]);
-
-    const searchIngr = (list, substring) => {
+  const [search, setSearch] = useState("");
+    
+  const searchIngr = (list, substring) => {
         const newMatches = []
         for (let i = 0; i < list.length; i++) {
             list.find(element => {
                 if (element.name.includes(substring) && (newMatches.includes(element) === false)) {
-                    newMatches.push(element)
-                }
-            })
+                    newMatches.push(element)}})
         }
         if (newMatches.length == 0) {
             newMatches.push("No ingredients were found...")
         };
-        // dispatch(matchedItems(newMatches))
-        console.log('matched', newMatches);
     }
     return (<View><TextInput style={styles.searchBar} placeholder="Search drink..."
         onChangeText={((search) => setSearch(search))} editable={true} />

@@ -1,23 +1,16 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
 import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
 import alcohol from './assets/alcohol.json';
-import SearchDrink from './search';
-import store from './store/store';
-import { addIngredient, matchedItems, removeIngredient } from './store/actions';
-import { RenderIngredients } from './components/renderIngredients';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from './store/reducers';
 
 export const HomePage = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
@@ -169,16 +162,13 @@ const styles = StyleSheet.create({
 
     image3: {
         height: 450,
-
     },
 
     image4: {
         height: 80,
         width: 440,
         alignSelf: 'center'
-
     },
-
     shakeit: {
         fontFamily: "Carter",
         textAlign: "center",
@@ -186,9 +176,7 @@ const styles = StyleSheet.create({
         top: 40,
         fontSize: 30,
         color: "rgba(255,255,255,1)",
-
     },
-
     poppins: {
         fontFamily: "Poppins",
         weight: "Light",
@@ -200,7 +188,6 @@ const styles = StyleSheet.create({
         color: "rgba(255, 255, 255,1)",
     },
 
-
     poppins2: {
         fontFamily: "Poppins",
         textAlign: "left",
@@ -209,7 +196,6 @@ const styles = StyleSheet.create({
         top: 30,
         fontSize: 10,
         color: "rgba(255, 255, 255,1)",
-
     },
 
     shakerReal: {
