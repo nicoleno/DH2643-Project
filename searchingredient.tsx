@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-<<<<<<< HEAD
   searchBar: {
     color: '#666',
     alignItems: 'center',
@@ -22,18 +21,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop:30,
     marginRight:10
+  
   },
-=======
-    searchBar: {
-        color: '#666',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderWidth: 2,
-        borderColor: 'black',
-        padding: 15,
-        borderRadius: 10
-    },
->>>>>>> master
 
     image: {
         width: 120,
@@ -43,8 +32,8 @@ const styles = StyleSheet.create({
 });
 
 const SearchIngredient = () => {
-    const data = require("./assets/ingredients.json")
-    const dispatch = useDispatch();
+  const data = require("./assets/ingredients.json")
+  const [matches, setMatches] = useState([]);
 
     const [search, setSearch] = useState("");
     // const [matches, setMatches] = useState([]);
@@ -61,7 +50,7 @@ const SearchIngredient = () => {
         if (newMatches.length == 0) {
             newMatches.push("No ingredients were found...")
         };
-        dispatch(matchedItems(newMatches))
+        // dispatch(matchedItems(newMatches))
         console.log('matched', newMatches);
     }
     return (<View><TextInput style={styles.searchBar} placeholder="Search drink..."

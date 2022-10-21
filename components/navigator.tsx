@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Touchable } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { HomePage } from "../HomePage";
@@ -10,16 +10,18 @@ import DrinkList from "../drinkList";
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
-// Nästa grej, addera details utan att den syns i listan 
+
 
 const Sidebar = () => {
+   
     return (
         <NavigationContainer>
             <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />} screenOptions={{
                 headerShown: false,
                 drawerActiveTintColor: 'white',
-                drawerActiveBackgroundColor: '#aa18ea',
-                drawerLabelStyle: { marginLeft: -25, fontSize: 15 }
+                drawerActiveBackgroundColor: '#798777',
+                drawerLabelStyle: { marginLeft: -15, fontSize: 15 },
+    
             }}
                 initialRouteName="Home">
                 <Drawer.Screen name="Home" component={HomePage} options={{
@@ -35,8 +37,6 @@ const Sidebar = () => {
 
                 <Drawer.Screen name="DrinkList" component={DrinkList} options={{
                     drawerItemStyle: { height: 0 },
-
-
                 }} />
 
                 <Drawer.Screen name="Details" component={Details} options={{

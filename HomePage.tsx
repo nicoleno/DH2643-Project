@@ -8,7 +8,6 @@ import ingredients from './assets/ingredients.json';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
-import SearchIngredient, { newMatches } from './searchingredient';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -57,7 +56,6 @@ export const HomePage = ({ navigation }) => {
         navigation.navigate('DrinkList');
     })
 
-
     const Item = ({ ingredient }) => {
         return (
             <View style={styles.cardContainer}>
@@ -69,39 +67,43 @@ export const HomePage = ({ navigation }) => {
         <Item ingredient={item} />
     );
 
-    return (
-        <GestureHandlerRootView style={styles.background}>
-            <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
+    const [showIngredient, setToggleValue] = useState(true);
 
-                <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
-                    <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
-                    <View style={styles.shakerArea}>
-                        <View style={styles.topsection} >
-                            <IngredientCountIcon />
-                            <Image style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
+    const childToParent = (showIngredient) => {
+        setToggleValue(showIngredient)
+    }
+
+    return (
+    <GestureHandlerRootView style={styles.background}>   
+      <LinearGradient start={{x: 0.0, y: 0.55}} end={{x: 0.5, y: 1.0}} colors={['#414141', '#171717']} style={styles.background}>
+            <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
+                <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
+                <View style={styles.shakerArea}>
+                    <View style={styles.topsection} >
+                    <IngredientCountIcon/>
+                        <ImageBackground style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;
                                     console.log("layout", layout);
                                     shaker.setHeight(layout.height);
                                     shaker.setWidth(layout.width);
                                     shaker.setPosX(layout.x);
-                                    shaker.setPosY(layout.y);
-                                }} />
-                        </View>
-                        <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
+                            shaker.setPosY(layout.y);
+                            }}/>                   
                     </View>
-                </ImageBackground>
-
-                <View style={styles.bottomBar}>
-                    <Text style={styles.poppins} >Add items</Text>
-                    <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
-                    <View style={styles.header}>
-                        <ToggleComponent />
-                        <SearchIngredient />
-                    </View >
-                    <FlatList style={{ overflow: "visible" }} horizontal data={ingredientButtonEnabled ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
-                </View >
-            </LinearGradient >
+                    <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
+                </View>
+            </ImageBackground>
+            
+            <View style={styles.bottomBar}>
+            <Text style={styles.poppins} >Add items</Text>
+            <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
+                <View style={styles.header}>
+                <ToggleComponent childToParent= {childToParent}/>
+                </View>
+                <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
+            </View>
+            </LinearGradient>  
         </GestureHandlerRootView >
 
     )
@@ -167,7 +169,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     header: {
-        marginTop: 25,
+        marginTop: 45,
         marginLeft: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -217,7 +219,7 @@ const styles = StyleSheet.create({
         textAlign: "left",
         marginLeft: 25,
         flexDirection: 'row',
-        top: 40,
+        top: 25,
         fontSize: 20,
         color: "rgba(255, 255, 255,1)",
 

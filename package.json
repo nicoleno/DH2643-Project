@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "@expo-google-fonts/carter-one": "^0.2.2",
+    "@rneui/themed": "^4.0.0-rc.6",
     "@react-navigation/drawer": "^6.5.0",
     "@react-navigation/native": "^6.0.13",
     "@reduxjs/toolkit": "^1.8.5",
-    "@rneui/themed": "^4.0.0-rc.6",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
     "@types/react-redux": "^7.1.24",
