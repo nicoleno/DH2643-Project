@@ -10,6 +10,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
+<<<<<<< HEAD
+  searchBar: {
+    color: '#666',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth : 2,
+    borderColor: 'black',
+    padding: 15,
+    height:20,
+    borderRadius: 10,
+    marginTop:30,
+    marginRight:10
+  },
+=======
     searchBar: {
         color: '#666',
         alignItems: 'center',
@@ -19,6 +33,7 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 10
     },
+>>>>>>> master
 
     image: {
         width: 120,

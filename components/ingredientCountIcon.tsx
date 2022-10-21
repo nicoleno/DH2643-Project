@@ -65,16 +65,15 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     itemCountContainer: {
-        position: 'absolute',
+        alignContent: 'flex-start',
         height: 30,
         width: 30,
         borderRadius: 15,
         backgroundColor: '#FF7D7D',
-        right: 22,
-        bottom: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: 2000
+        zIndex: 2000,
+    
     },
     itemCountText: {
         color: 'white',
