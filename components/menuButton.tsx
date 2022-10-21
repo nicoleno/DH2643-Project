@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         height: 25,
         width: 25,
         margin: 5,
-        alignSelf: 'flex-end',
+        alignSelf: 'flex-start',
         flexDirection: 'row',
         marginLeft: 200,
         marginRight: 50,

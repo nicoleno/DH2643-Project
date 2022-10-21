@@ -23,8 +23,8 @@ const Sidebar = () => {
                 drawerLabelStyle: { marginLeft: -15, fontSize: 15 },
 
             }}
-                initialRouteName="Home">
-                <Drawer.Screen name="Home" component={HomePage} options={{
+                initialRouteName="DrinkList">
+                <Drawer.Screen name="Home" component={HomePage} initialParams={{ prop }} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
                     )

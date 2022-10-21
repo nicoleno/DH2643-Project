@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Button } from 'react-native';
 import { Hamburger } from './components/menuButton';
 import Animated from 'react-native-reanimated';
+import React from 'react';
 import React, { useEffect } from 'react';
 import GestureFlipView from 'react-native-gesture-flip-card';
 

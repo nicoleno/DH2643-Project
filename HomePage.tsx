@@ -5,6 +5,11 @@ import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
+import alcohol from './assets/alcohol.json';
+import SearchDrink from './search';
+import store from './store/store';
+import { addIngredient, matchedItems, removeIngredient } from './store/actions';
+import { RenderIngredients } from './components/renderIngredients';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
@@ -13,7 +18,6 @@ import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './store/reducers';
-import alcohol from './assets/alcohol.json';
 
 export const HomePage = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
@@ -56,15 +60,15 @@ export const HomePage = ({ navigation }) => {
         navigation.navigate('DrinkList');
     })
 
-    const Item = ({ ingredient }) => {
+    const Item = ({ alcohol }) => {
         return (
             <View style={styles.cardContainer}>
-                <DraggableCard ingredient={ingredient} />
+                <DraggableCard alcohol={alcohol} />
             </View>
         );
     }
     const renderItem = ({ item }) => (
-        <Item ingredient={item} />
+        <Item alcohol={item} />
     );
 
     const [showIngredient, setToggleValue] = useState(true);
