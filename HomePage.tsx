@@ -1,6 +1,6 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button } from 'react-native';
 import ShakerModel from './models/shaker';
@@ -13,13 +13,23 @@ import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
 import SearchIngredient from './searchingredient';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './store/reducers';
 import alcohol from './assets/alcohol.json';
 
 
 export const HomePage = ({ navigation }) => {
+    const [drinks, setDrinks] = React.useState([]);
+
+    useEffect(() => {
+        fetch("http://130.229.145.164:3000/drinks", {
+            method: "get",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
+    }, []);
 
     console.log(store.getState());
     let shaker = new ShakerModel;
@@ -27,7 +37,7 @@ export const HomePage = ({ navigation }) => {
     // dispatch(matchedItems(ingredients));
     console.log(store.getState());
 
-    const ingredientsToShow = useSelector((state: RootState) => state.matched);
+    // const ingredientsToShow = useSelector((state: RootState) => state.matched);
     const [ingredientButtonEnabled, setIngredientButtonEnabled] = useState(true);
     const [alcoholButtonEnabled, setAlcoholButtonEnabled] = useState(false);
 
