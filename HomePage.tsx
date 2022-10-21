@@ -1,7 +1,8 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import React, {useState} from 'react';
+import { StatusBar } from 'expo-status-bar';
+import React, { useState, useEffect } from 'react';
 import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, FlatList, ImageBackground} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
 import IngredientCountIcon from './components/ingredientCountIcon';
@@ -11,15 +12,46 @@ import SearchIngredient, { newMatches } from './searchingredient';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from './store/reducers';
 import alcohol from './assets/alcohol.json';
 
 export const HomePage = ({ navigation }) => {
-    let shaker = new ShakerModel;
+    const [drinks, setDrinks] = React.useState([]);
 
+    useEffect(() => {
+        fetch("http://130.229.145.164:3000/drinks", {
+            method: "get",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
+    }, []);
     const [loaded] = useFonts({
         Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
         Carter: require('./assets/fonts/CarterOne-Regular.ttf')
-      });
+    });
+
+    // console.log(store.getState());
+    let shaker = new ShakerModel;
+    // const dispatch = useDispatch();
+    // dispatch(matchedItems(ingredients));
+
+    // const ingredientsToShow = useSelector((state: RootState) => state.matched);
+    const [ingredientButtonEnabled, setIngredientButtonEnabled] = useState(true);
+    const [alcoholButtonEnabled, setAlcoholButtonEnabled] = useState(false);
+
+    const handleIngredientButtonPressed = () => {
+        setIngredientButtonEnabled(true);
+        setAlcoholButtonEnabled(false);
+        console.log("ingredient button pressed!")
+    }
+    const handleAlcoholButtonPressed = () => {
+        setIngredientButtonEnabled(false);
+        setAlcoholButtonEnabled(true);
+        console.log("alcohol button pressed!")
+    }
 
     ShakeEventExpo.addListener(() => {
         navigation.navigate('DrinkList');
@@ -74,27 +106,27 @@ export const HomePage = ({ navigation }) => {
             </View>
             </LinearGradient>  
         </GestureHandlerRootView >
-    
+
     )
 };
 
 const styles = StyleSheet.create({
 
 
-    background:{
+    background: {
         flex: 1,
-        color: "rgba(255,255,1,1)" 
+        color: "rgba(255,255,1,1)"
     },
-    
-    topsection:{
-        flex:1,
+
+    topsection: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column'
 
     },
 
-    topsection2:{
+    topsection2: {
         alignContent: 'flex-end',
     },
 
@@ -134,7 +166,7 @@ const styles = StyleSheet.create({
     bottomBar: {
         flex: 2,
         alignSelf: 'stretch',
-  
+
         justifyContent: 'space-between',
     },
     header: {
@@ -162,7 +194,7 @@ const styles = StyleSheet.create({
 
     image3: {
         height: 450,
-       
+
     },
 
     image4: {
@@ -172,17 +204,17 @@ const styles = StyleSheet.create({
 
     },
 
-    shakeit : {
+    shakeit: {
         fontFamily: "Carter",
         textAlign: "center",
         flexDirection: 'row',
         top: 40,
         fontSize: 30,
         color: "rgba(255,255,255,1)",
-      
-      },
 
-      poppins : {
+    },
+
+    poppins: {
         fontFamily: "Poppins",
         weight: "Light",
         textAlign: "left",
@@ -191,11 +223,11 @@ const styles = StyleSheet.create({
         top: 25,
         fontSize: 20,
         color: "rgba(255, 255, 255,1)",
-      
-      },
+
+    },
 
 
-      poppins2 : {
+    poppins2: {
         fontFamily: "Poppins",
         textAlign: "left",
         marginLeft: 25,
@@ -203,12 +235,12 @@ const styles = StyleSheet.create({
         top: 40,
         fontSize: 10,
         color: "rgba(255, 255, 255,1)",
-      
-      },
 
-      shakerReal : {
+    },
+
+    shakerReal: {
         height: 300,
         width: 230,
         alignSelf: 'center',
-      },
+    },
 });
