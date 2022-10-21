@@ -5,6 +5,7 @@ import DraggableCard from './components/dndCards';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
+import alcohol from './assets/alcohol.json';
 import SearchDrink from './search';
 import store from './store/store';
 import { addIngredient, matchedItems, removeIngredient } from './store/actions';
@@ -16,10 +17,11 @@ import SearchIngredient from './searchingredient';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/reducers';
-import alcohol from './assets/alcohol.json';
 
 
-export const HomePage = ({ navigation }) => {
+
+export const HomePage = ({ route, navigation }) => {
+    console.log(route.params.prop);
 
     console.log(store.getState());
     let shaker = new ShakerModel;
@@ -48,15 +50,15 @@ export const HomePage = ({ navigation }) => {
     })
 
 
-    const Item = ({ ingredient }) => {
+    const Item = ({ alcohol }) => {
         return (
             <View style={styles.cardContainer}>
-                <DraggableCard ingredient={ingredient} />
+                <DraggableCard alcohol={alcohol} />
             </View>
         );
     }
     const renderItem = ({ item }) => (
-        <Item ingredient={item} />
+        <Item alcohol={item} />
     );
 
     return (

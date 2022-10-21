@@ -17,12 +17,22 @@ import Sidebar from './components/navigator';
 
 export default function App() {
     const shaker = new ShakerModel;
+    const send =
+        [{
+            name: "Jeff",
+            text: "My name is"
+        },
+        {
+            name: "Cox",
+            text: "Joe"
+
+        }]
 
     let ingr = store.getState().ingredients;
 
     return (
         <Provider store={store}>
-            <Sidebar />
+            <Sidebar test={send} />
         </Provider>
     )
 }

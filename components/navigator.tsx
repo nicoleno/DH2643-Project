@@ -12,7 +12,7 @@ import { Hamburger } from "./menuButton";
 const Drawer = createDrawerNavigator();
 // Nästa grej, addera details utan att den syns i listan 
 
-const Sidebar = () => {
+const Sidebar = (prop) => {
     return (
         <NavigationContainer>
             <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />} screenOptions={{
@@ -21,8 +21,8 @@ const Sidebar = () => {
                 drawerActiveBackgroundColor: '#aa18ea',
                 drawerLabelStyle: { marginLeft: -25, fontSize: 15 }
             }}
-                initialRouteName="Home">
-                <Drawer.Screen name="Home" component={HomePage} options={{
+                initialRouteName="DrinkList">
+                <Drawer.Screen name="Home" component={HomePage} initialParams={{ prop }} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
                     )

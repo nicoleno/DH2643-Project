@@ -2,7 +2,6 @@ import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Button }
 import { Hamburger } from './components/menuButton';
 import Animated from 'react-native-reanimated';
 import React from 'react';
-import GestureFlipView from 'react-native-gesture-flip-card';
 
 const DrinkList = ({ navigation }) => {
     const scrollX = React.useRef(new Animated.Value(0)).current;

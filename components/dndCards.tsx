@@ -1,9 +1,9 @@
 import { GestureHandlerRootView, PanGestureHandler, PanGestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, withTiming, runOnJS, useDerivedValue } from 'react-native-reanimated';
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, TextInput, ImageBackground } from 'react-native';
 import store from '../store/store';
-import { addIngredient } from '../store/actions'
+import { addIngredient } from '../store/actions';
 import { useDispatch } from 'react-redux';
 type ContextType = {
     translateX: number;
@@ -20,6 +20,7 @@ const DraggableCard = (props) => {
         dispatch(addIngredient(ingredient.id, ingredient.name));
         console.log(store.getState());
     };
+
 
 
     const panGestureEvent = useAnimatedGestureHandler
@@ -79,9 +80,11 @@ const DraggableCard = (props) => {
     return (
         <PanGestureHandler onGestureEvent={panGestureEvent}>
             <Animated.View style={[styles.square, rStyle]}>
-                <Text>{props.ingredient.name}</Text>
+                <Image style={styles.images} source={{ uri: "https://drive.google.com/uc?export=view&id=" + props.alcohol.image_id }} />
+                <Text style={{ fontSize: 10 }}>{props.alcohol.name}</Text>
+
             </Animated.View>
-        </PanGestureHandler>)
+        </PanGestureHandler >)
 
 }
 
@@ -92,6 +95,16 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgb(225, 255, 177)',
         borderRadius: 20,
         margin: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+    images: {
+        justifyContent: 'center',
+        alignSelf: 'center',
+        width: 80,
+        height: 80,
+        resizeMode: 'contain',
     }
 })
 
