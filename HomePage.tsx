@@ -8,7 +8,6 @@ import ingredients from './assets/ingredients.json';
 import IngredientCountIcon from './components/ingredientCountIcon';
 import ShakeEventExpo from './accelerometer';
 import { Hamburger } from './components/menuButton';
-import SearchIngredient, { newMatches } from './searchingredient';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
