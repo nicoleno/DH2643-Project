@@ -37,17 +37,7 @@ export const HomePage = ({ navigation }) => {
         Carter: require('./assets/fonts/CarterOne-Regular.ttf')
     });
 
-    // console.log(store.getState());
     let shaker = new ShakerModel;
-    // const dispatch = useDispatch();
-    // dispatch(matchedItems(ingredients));
-
-    // const ingredientsToShow = (itemList) => {
-    //     const ingredientsInShaker = useSelector((state: RootState) => state.ingredients);
-    //     const result = itemList.filter(ingr => ingredientsInShaker.some(item => item.id !== ingr.id));
-    //     return result;
-    // }
-
 
     ShakeEventExpo.addListener(() => {
         navigation.navigate('DrinkList');
@@ -107,25 +97,19 @@ export const HomePage = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-
-
     background: {
         flex: 1,
         color: "rgba(255,255,1,1)"
     },
-
     topsection: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column'
-
     },
-
     topsection2: {
         alignContent: 'flex-end',
     },
-
     container: {
         flex: 1,
         backgroundColor: '#fff',
@@ -133,13 +117,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         display: 'flex',
     },
-
     navbuttons: {
         margin: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-
     searchBar: {
         color: '#fff',
         alignItems: 'center',
@@ -148,28 +130,25 @@ const styles = StyleSheet.create({
         borderColor: 'blue',
         borderRadius: 10
     },
-
     image: {
         width: 200,
         height: 200,
         margin: 20,
     },
-
     shakerArea: {
         flex: 1,
     },
-
     bottomBar: {
         flex: 2,
         alignSelf: 'stretch',
-
         justifyContent: 'space-between',
     },
     header: {
-        marginTop: 45,
+        marginTop: 40,
         marginLeft: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
+        marginBottom:20
     },
     cardContainer: {
         backgroundColor: '#414141',
@@ -216,10 +195,9 @@ const styles = StyleSheet.create({
         textAlign: "left",
         marginLeft: 25,
         flexDirection: 'row',
-        top: 25,
+        top: 30,
         fontSize: 20,
         color: "rgba(255, 255, 255,1)",
-
     },
 
 
@@ -228,7 +206,7 @@ const styles = StyleSheet.create({
         textAlign: "left",
         marginLeft: 25,
         flexDirection: 'row',
-        top: 40,
+        top: 30,
         fontSize: 10,
         color: "rgba(255, 255, 255,1)",
 

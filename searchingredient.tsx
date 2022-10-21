@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
-import { useDispatch } from 'react-redux';
-import { matchedItems } from './store/actions';
+
 const styles = StyleSheet.create({
     container: {
         flex: 0.8,

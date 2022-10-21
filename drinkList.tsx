@@ -1,8 +1,7 @@
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Button, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { Hamburger } from './components/menuButton';
 import Animated from 'react-native-reanimated';
 import React, { useEffect } from 'react';
-import GestureFlipView from 'react-native-gesture-flip-card';
 
 const DrinkList = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
