@@ -1,21 +1,45 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
-import { DrawerContentScrollView, DrawerItem, DrawerItemList } from "@react-navigation/drawer";
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
 
 export const CustomDrawer = (props) => {
+    
     return (
         <View style={{ flex: 1 }}>
-            <DrawerContentScrollView {...props} contentContainerStyle={{ backgroundColor: '#aa18ea' }}>
-                <ImageBackground source={require('../assets/images/alcoholic-drink.png')} style={{ padding: 20 }}>
-                    <Image source={require('../assets/images/shaker.png')} style={{ height: 100, width: 100, borderRadius: 40, marginBottom: 10 }} />
+            <DrawerContentScrollView {...props} contentContainerStyle={{ backgroundColor: '#262626' }}>
+                <ImageBackground source={require('../assets/images/Group15.png')} style={{ height: 200 }}>
+                    <View style={styles.container}><Text style={styles.shakeit} >Shakeit</Text>
+                    <Text style={styles.poppins}>Be your own Bartender</Text></View>
                 </ImageBackground>
-                <Text style={{ color: 'white', fontSize: 18, marginLeft: 10 }}>Thirsty</Text>
-                <Text style={{ color: 'white', marginLeft: 10 }}>Be Your own Bartender</Text>
                 <View style={{ backgroundColor: 'white' }}>
                     <DrawerItemList {...props} />
                 </View>
-
             </DrawerContentScrollView>
         </View >
     )
 }
+const styles = StyleSheet.create({
+
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+
+    },
+
+    shakeit : {
+        fontFamily: "Carter",
+        textAlign: "center",
+        fontSize: 30,
+        color: "rgba(255,255,255,1)",
+      },
+
+      poppins : {
+        fontFamily: "Poppins",
+        weight: "Light",
+        textAlign: "center",
+        fontSize: 15,
+        color: "rgba(255, 255, 255,1)",
+      },
+});

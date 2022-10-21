@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop:30,
     marginRight:10
+  
   },
 
   image: {
@@ -30,7 +31,6 @@ const styles = StyleSheet.create({
 
 const SearchIngredient = () => {{
   const data = require("./assets/ingredients.json")
-  const [search, setSearch] = useState("");
   const [matches, setMatches] = useState([]);
 
   const searchIngr = (list, substring) => {
@@ -48,8 +48,8 @@ const SearchIngredient = () => {{
       };
 
     return (<View><TextInput style={styles.searchBar} placeholder="Search drink..." 
-    onChangeText = {((search)=> setSearch(search))} editable={true}/>
-    <Button title="Search" onPress={() => searchIngr (data, search)}></Button>
+    onChangeText = {(search)=> searchIngr (data, search)} editable={true}/>
+    {/* <Button title="Search" onPress={() => searchIngr (data, search)}></Button> */}
     {matches.map((match) => <Text key={match.id}>{match.name}</Text>)}</View>)
     }};
   
