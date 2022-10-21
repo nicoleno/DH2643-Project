@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
     square: {
         width: 100,
         height: 100,
-        backgroundColor: 'rgb(225, 255, 177)',
+        backgroundColor: 'white',
+        stroke: 2,
         borderRadius: 20,
         margin: 10,
         justifyContent: 'center',

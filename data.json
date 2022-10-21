@@ -17,5 +17,15 @@
     { 
 	"UUID": "fwe",
     "name": "Rom utan cola"
+    },
+
+    { 
+	"UUID": "fwe",
+    "name": "Mojito"
+    },
+
+    { 
+	"UUID": "fwe",
+    "name": "Daquiri"
     }
 ]

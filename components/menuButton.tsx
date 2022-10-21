@@ -13,13 +13,13 @@ export const Hamburger = ({ navigation }) => {
 const styles = StyleSheet.create({
 
     menu: {
-        height: 50,
-        width: 50,
-        borderRadius: 30,
+        height: 25,
+        width: 25,
         margin: 5,
         alignSelf: 'flex-start',
         flexDirection: 'row',
-        marginLeft: 300,
-        marginTop: 30,
+        marginLeft: 200,
+        marginRight: 50,
+        marginTop: 5,
     }
 })

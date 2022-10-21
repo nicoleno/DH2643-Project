@@ -1,25 +1,27 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Touchable } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { HomePage } from "../HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import DrinkList from "../drinkList";
+import DrinkList from "../DrinkList"
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
-// Nästa grej, addera details utan att den syns i listan 
 
-const Sidebar = (prop) => {
+
+const Sidebar = () => {
+
     return (
         <NavigationContainer>
             <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />} screenOptions={{
                 headerShown: false,
                 drawerActiveTintColor: 'white',
-                drawerActiveBackgroundColor: '#aa18ea',
-                drawerLabelStyle: { marginLeft: -25, fontSize: 15 }
+                drawerActiveBackgroundColor: '#798777',
+                drawerLabelStyle: { marginLeft: -15, fontSize: 15 },
+
             }}
                 initialRouteName="DrinkList">
                 <Drawer.Screen name="Home" component={HomePage} initialParams={{ prop }} options={{
@@ -35,8 +37,6 @@ const Sidebar = (prop) => {
 
                 <Drawer.Screen name="DrinkList" component={DrinkList} options={{
                     drawerItemStyle: { height: 0 },
-
-
                 }} />
 
                 <Drawer.Screen name="Details" component={Details} options={{

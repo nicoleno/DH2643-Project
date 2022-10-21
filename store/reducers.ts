@@ -1,11 +1,12 @@
 import ingredientsReducer from "./reducers/ingredientsReducer";
-import alcoholReducer from "./reducers/alcoholReducer";
 import searchedItemReducer from "./reducers/searchedItemReducer";
 import { combineReducers } from "redux";
+// import drinksReducer from "./reducers/drinksReducer";
+
 
 const reducers = combineReducers({
     ingredients: ingredientsReducer,
-    alcohols: alcoholReducer,
+    // drinks: drinksReducer,
     matched: searchedItemReducer,
     
   });

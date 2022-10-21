@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import ShakerModel from './models/shaker';
 import { Provider } from 'react-redux';
@@ -7,6 +7,9 @@ import store from './store/store';
 import { addIngredient } from './store/actions';
 import { RenderIngredients } from './components/renderIngredients';
 import Sidebar from './components/navigator';
+import { useDispatch } from 'react-redux';
+
+
 
 // import { configureStore } from '@reduxjs/toolkit';
 
@@ -29,6 +32,7 @@ export default function App() {
         }]
 
     let ingr = store.getState().ingredients;
+
 
     return (
         <Provider store={store}>

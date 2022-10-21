@@ -1,9 +1,22 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image, Button, ImageBackground } from 'react-native';
 import { Hamburger } from './components/menuButton';
 import Animated from 'react-native-reanimated';
-import React from 'react';
+import React, { useEffect } from 'react';
+import GestureFlipView from 'react-native-gesture-flip-card';
 
 const DrinkList = ({ navigation }) => {
+    const [drinks, setDrinks] = React.useState([]);
+
+    useEffect(() => {
+        fetch("http://130.229.145.164:3000/drinks", {
+            method: "get",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
+    }, []);
+
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
     const Data = [...(Array(30).keys())].map(i => ({ label: `${i + 1}  of 30`, value: `${i + 1}`, have: "Vodka", need: "Redbull", name: "Tommys Margharita" }));
