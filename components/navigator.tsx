@@ -6,7 +6,7 @@ import { HomePage } from "../HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import DrinkList from "../DrinkList"
+import DrinkList from "../drinkList"
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
@@ -23,8 +23,8 @@ const Sidebar = () => {
                 drawerLabelStyle: { marginLeft: -15, fontSize: 15 },
 
             }}
-                initialRouteName="DrinkList">
-                <Drawer.Screen name="Home" component={HomePage} initialParams={{ prop }} options={{
+                initialRouteName="Home">
+                <Drawer.Screen name="Home" component={HomePage} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
                     )

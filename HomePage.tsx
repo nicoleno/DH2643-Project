@@ -31,6 +31,7 @@ export const HomePage = ({ navigation }) => {
             },
         }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
     }, []);
+
     const [loaded] = useFonts({
         Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
         Carter: require('./assets/fonts/CarterOne-Regular.ttf')
@@ -41,37 +42,29 @@ export const HomePage = ({ navigation }) => {
     // const dispatch = useDispatch();
     // dispatch(matchedItems(ingredients));
 
-    // const ingredientsToShow = useSelector((state: RootState) => state.matched);
-    const [ingredientButtonEnabled, setIngredientButtonEnabled] = useState(true);
-    const [alcoholButtonEnabled, setAlcoholButtonEnabled] = useState(false);
+    // const ingredientsToShow = (itemList) => {
+    //     const ingredientsInShaker = useSelector((state: RootState) => state.ingredients);
+    //     const result = itemList.filter(ingr => ingredientsInShaker.some(item => item.id !== ingr.id));
+    //     return result;
+    // }
 
-    const handleIngredientButtonPressed = () => {
-        setIngredientButtonEnabled(true);
-        setAlcoholButtonEnabled(false);
-        console.log("ingredient button pressed!")
-    }
-    const handleAlcoholButtonPressed = () => {
-        setIngredientButtonEnabled(false);
-        setAlcoholButtonEnabled(true);
-        console.log("alcohol button pressed!")
-    }
 
     ShakeEventExpo.addListener(() => {
         navigation.navigate('DrinkList');
     })
 
-    const Item = ({ alcohol }) => {
+    const Item = ({ item }) => {
         return (
             <View style={styles.cardContainer}>
-                <DraggableCard alcohol={alcohol} />
+                <DraggableCard item={item} />
             </View>
         );
     }
     const renderItem = ({ item }) => (
-        <Item alcohol={item} />
+        <Item item={item} />
     );
 
-    const [showIngredient, setToggleValue] = useState(true);
+    const [showIngredient, setToggleValue] = useState(false);
 
     const childToParent = (showIngredient) => {
         setToggleValue(showIngredient)

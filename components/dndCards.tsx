@@ -44,7 +44,7 @@ const DraggableCard = (props) => {
                     && (170 < event.absoluteY) && (event.absoluteY < 400)) {
 
                     console.log("i shakern");
-                    runOnJS(saveIngredient)(props.ingredient);
+                    runOnJS(saveIngredient)(props.item);
                     shrink.value = 0;
 
 
@@ -80,8 +80,8 @@ const DraggableCard = (props) => {
     return (
         <PanGestureHandler onGestureEvent={panGestureEvent}>
             <Animated.View style={[styles.square, rStyle]}>
-                <Image style={styles.images} source={{ uri: "https://drive.google.com/uc?export=view&id=" + props.alcohol.image_id }} />
-                <Text style={{ fontSize: 10 }}>{props.alcohol.name}</Text>
+                <Image style={styles.images} source={{ uri: "https://drive.google.com/uc?export=view&id=" + props.item.image_id }} />
+                <Text style={{ fontSize: 10 }}>{props.item.name}</Text>
 
             </Animated.View>
         </PanGestureHandler >)
