@@ -6,14 +6,14 @@ import { HomePage } from "../HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import DrinkList from "../drinkList";
+import DrinkList from "../DrinkList"
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
 
 
 const Sidebar = () => {
-   
+
     return (
         <NavigationContainer>
             <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />} screenOptions={{
@@ -21,7 +21,7 @@ const Sidebar = () => {
                 drawerActiveTintColor: 'white',
                 drawerActiveBackgroundColor: '#798777',
                 drawerLabelStyle: { marginLeft: -15, fontSize: 15 },
-    
+
             }}
                 initialRouteName="Home">
                 <Drawer.Screen name="Home" component={HomePage} options={{

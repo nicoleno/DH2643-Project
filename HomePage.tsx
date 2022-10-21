@@ -74,36 +74,36 @@ export const HomePage = ({ navigation }) => {
     }
 
     return (
-    <GestureHandlerRootView style={styles.background}>   
-      <LinearGradient start={{x: 0.0, y: 0.55}} end={{x: 0.5, y: 1.0}} colors={['#414141', '#171717']} style={styles.background}>
-            <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
-                <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
-                <View style={styles.shakerArea}>
-                    <View style={styles.topsection} >
-                    <IngredientCountIcon/>
-                        <ImageBackground style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
+        <GestureHandlerRootView style={styles.background}>
+            <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
+                <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
+                    <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
+                    <View style={styles.shakerArea}>
+                        <View style={styles.topsection} >
+                            <IngredientCountIcon />
+                            <ImageBackground style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;
                                     console.log("layout", layout);
                                     shaker.setHeight(layout.height);
                                     shaker.setWidth(layout.width);
                                     shaker.setPosX(layout.x);
-                            shaker.setPosY(layout.y);
-                            }}/>                   
+                                    shaker.setPosY(layout.y);
+                                }} />
+                        </View>
+                        <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
                     </View>
-                    <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
+                </ImageBackground>
+
+                <View style={styles.bottomBar}>
+                    <Text style={styles.poppins} >Add items</Text>
+                    <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
+                    <View style={styles.header}>
+                        <ToggleComponent childToParent={childToParent} />
+                    </View>
+                    <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
                 </View>
-            </ImageBackground>
-            
-            <View style={styles.bottomBar}>
-            <Text style={styles.poppins} >Add items</Text>
-            <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
-                <View style={styles.header}>
-                <ToggleComponent childToParent= {childToParent}/>
-                </View>
-                <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
-            </View>
-            </LinearGradient>  
+            </LinearGradient>
         </GestureHandlerRootView >
 
     )
