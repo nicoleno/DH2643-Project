@@ -12,7 +12,7 @@ function ingredientsReducer(ingredients = [], action: any) {
           },
         ];
       case REMOVE_INGREDIENT:
-        return ingredients.filter((ingredient, index) => index != action.id);
+        return ingredients.filter((ingredient) => ingredient.id != action.id);
 
     default:
       return ingredients;
