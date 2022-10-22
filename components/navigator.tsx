@@ -6,7 +6,7 @@ import { HomePage } from "../HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import DrinkList from "../DrinkList"
+import DrinkList from "../drinkList"
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
