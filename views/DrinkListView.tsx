@@ -4,8 +4,6 @@ import { Hamburger } from '../components/menuButton';
 import Animated from 'react-native-reanimated';
 import { DrinkListItem } from '../models/model';
 
-
-
 const DrinkListView = ({ navigation, dataList }) => {
     const data = dataList as DrinkListItem[];
     const scrollX = React.useRef(new Animated.Value(0)).current;
@@ -51,7 +49,7 @@ const DrinkListView = ({ navigation, dataList }) => {
                                     </View>
                                 </View>
                                 <TouchableOpacity
-                                    style={styles.recipeButton} onPress={() => { navigation.navigate("Details") }}>
+                                    style={styles.recipeButton} onPress={() => { navigation.navigate("Details", { item }) }}>
                                     <Text style={{ color: '#fff', fontSize: 16 }}>Recipe</Text>
                                 </TouchableOpacity>
                             </ImageBackground>

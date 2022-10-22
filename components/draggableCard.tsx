@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, Image, Button, TextInput, ImageBackground } fro
 import store from '../store/store';
 import { addIngredient } from '../store/actions';
 import { useDispatch } from 'react-redux';
+
 type ContextType = {
     translateX: number;
     translateY: number;

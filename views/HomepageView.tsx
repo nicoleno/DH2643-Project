@@ -6,7 +6,7 @@ import IngredientCountIcon from '../components/ingredientCountIcon';
 import { Hamburger } from '../components/menuButton';
 import ShakerModel from '../models/shaker';
 import { useState } from 'react';
-import { IngredientScroll } from '../presenters/ingredientScroll';
+import { IngredientScrollView } from './ingredientScrollView';
 
 
 export const HomepageView = ({ navigation }) => {
@@ -44,7 +44,7 @@ export const HomepageView = ({ navigation }) => {
                     <View style={styles.header}>
                         <ToggleComponent childToParent={childToParent} />
                     </View>
-                    <IngredientScroll showIngredient={showIngredient}></IngredientScroll>
+                    <IngredientScrollView showIngredient={showIngredient}></IngredientScrollView>
                 </View>
             </LinearGradient>
         </GestureHandlerRootView >

@@ -17,7 +17,7 @@ export type Drink = {
 export type DrinkListItem = {
     label: string;
     value: string;
-    have: string;
-    need: string;
+    have: string[];
+    need: string[];
     name: string;
 }

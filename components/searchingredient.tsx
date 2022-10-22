@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { matchedItems } from './store/actions';
+import { matchedItems } from '../store/actions';
 const styles = StyleSheet.create({
     container: {
         flex: 0.8,
@@ -10,19 +10,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-  searchBar: {
-    color: '#666',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth : 2,
-    borderColor: 'black',
-    padding: 15,
-    height:20,
-    borderRadius: 10,
-    marginTop:30,
-    marginRight:10
-  
-  },
+    searchBar: {
+        color: '#666',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 2,
+        borderColor: 'black',
+        padding: 15,
+        height: 20,
+        borderRadius: 10,
+        marginTop: 30,
+        marginRight: 10
+
+    },
 
     image: {
         width: 120,
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
 });
 
 const SearchIngredient = () => {
-  const data = require("./assets/ingredients.json")
-  const [matches, setMatches] = useState([]);
+    const data = require("./assets/ingredients.json")
+    const [matches, setMatches] = useState([]);
 
     const [search, setSearch] = useState("");
     // const [matches, setMatches] = useState([]);

@@ -1,42 +1,46 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import ShakerModel from './models/shaker';
 import { Provider } from 'react-redux';
-import { HomePage } from './HomePage';
+import { HomePage } from './presenters/HomePage';
 import store from './store/store';
 import { addIngredient } from './store/actions';
 import { RenderIngredients } from './components/renderIngredients';
 import Sidebar from './components/navigator';
 import { useDispatch } from 'react-redux';
 
-
-
-// import { configureStore } from '@reduxjs/toolkit';
-
 //för att köra: npm start
 
-
-// const store = configureStore
-
 export default function App() {
-    const shaker = new ShakerModel;
-    const send =
-        [{
-            name: "Jeff",
-            text: "My name is"
-        },
-        {
-            name: "Cox",
-            text: "Joe"
-
-        }]
-
     let ingr = store.getState().ingredients;
 
+    const [isLoading, setLoading] = useState(true);
+    const [data, setData] = useState([]);
+
+    const getDrinks = async () => {
+        fetch("http://192.168.127.216:3000/drinks", {
+            method: "get",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => setData(data.drinks))
+            .then(() => setLoading(false))
+            .catch((err) => err);
+
+    }
+
+    useEffect(() => {
+        getDrinks();
+    }, []);
+
+    // console.log(data);
 
     return (
         <Provider store={store}>
-            <Sidebar />
+            <Sidebar drinks={data} />
         </Provider>
     )
 }
