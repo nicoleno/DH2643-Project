@@ -27,7 +27,7 @@ const DrinkList = ({ navigation }) => {
     const card_width = 300;
 
     return (
-        <View style={{ flex: 1}}>
+        <View style={{ flex: 1 }}>
             <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
                 <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 <Animated.FlatList
@@ -52,13 +52,19 @@ const DrinkList = ({ navigation }) => {
                                         <Text style={{ color: '#fff', fontFamily: 'Poppins', fontSize: 24, padding: 10 }}>{item.name}</Text>
                                         <View style={styles.ing_list}>
                                             <Image style={{ height: 25, width: 25, }} source={require('./assets/images/check-mark.png')}></Image>
-                                            <Text style={{ color: '#fff', fontFamily: 'Poppins'}}>You have:{"\n"} {item.have}</Text>
+                                            <Text style={{ color: '#fff', fontFamily: 'Poppins' }}>You have:{"\n"} {item.have}</Text>
                                             <Image style={{ height: 25, width: 25, }} source={require('./assets/images/carts.png')}></Image>
                                             <Text style={{ color: '#fff', fontFamily: 'Poppins' }}> You need:{"\n"} {item.need}</Text>
                                         </View>
                                     </View>
                                     <TouchableOpacity
-                                        style={styles.recipeButton} onPress={() => { navigation.navigate("Details") }}>
+                                        style={styles.recipeButton} onPress={() => {
+                                            navigation.navigate("Details", {
+                                                name: item.name,
+                                                have: item.have,
+                                                need: item.need,
+                                            })
+                                        }}>
                                         <Text style={{ color: '#fff', fontSize: 16, fontFamily: 'Poppins' }}>Recipe</Text>
                                     </TouchableOpacity>
                                 </ImageBackground>
@@ -68,12 +74,12 @@ const DrinkList = ({ navigation }) => {
 
                     }}>
                 </Animated.FlatList>
-            <View style={{ alignItems: 'center', }}>
-                <TouchableOpacity style={styles.backbutton}
-                    onPress={() => navigation.navigate('Home')}>
-                    <Text style={{ color: '#fff', fontSize: 12, fontFamily: 'Poppins' }}>Back to Shaker</Text>
-                </TouchableOpacity></View>
-                </LinearGradient>
+                <View style={{ alignItems: 'center', }}>
+                    <TouchableOpacity style={styles.backbutton}
+                        onPress={() => navigation.navigate('Home')}>
+                        <Text style={{ color: '#fff', fontSize: 12, fontFamily: 'Poppins' }}>Back to Shaker</Text>
+                    </TouchableOpacity></View>
+            </LinearGradient>
         </View >
     )
 }

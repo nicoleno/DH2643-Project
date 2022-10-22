@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom:20
+        marginBottom: 20
     },
     cardContainer: {
         backgroundColor: '#414141',

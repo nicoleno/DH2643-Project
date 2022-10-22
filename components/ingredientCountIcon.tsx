@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 2000,
-    
+
     },
     itemCountText: {
         color: 'white',
