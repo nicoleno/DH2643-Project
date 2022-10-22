@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import React from 'react';
+import {Text, StyleSheet, ImageBackground } from 'react-native';
 import SearchDrink from "./search.jsx";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from './components/menuButton';
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 
 });
 
-export const Cocktails = ({ navigation } ) => {
+export const Cocktails = ({navigation } ) => {
 
     return (
           <LinearGradient start={{x: 0.0, y: 0}} end={{x: 0.5, y: 1.0}} colors={['#414141', '#171717']} style={styles.background}>
@@ -70,7 +70,7 @@ export const Cocktails = ({ navigation } ) => {
             <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
             <Text style={styles.poppins2} >Want some inspiration? Browse cocktails here!</Text>
             </ImageBackground>
-            <SearchDrink/>
+            <SearchDrink />
           </LinearGradient>
        
     )
