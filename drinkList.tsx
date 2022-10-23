@@ -58,13 +58,7 @@ const DrinkList = ({ navigation }) => {
                                         </View>
                                     </View>
                                     <TouchableOpacity
-                                        style={styles.recipeButton} onPress={() => {
-                                            navigation.navigate("Details", {
-                                                name: item.name,
-                                                have: item.have,
-                                                need: item.need,
-                                            })
-                                        }}>
+                                        style={styles.recipeButton} onPress={() => { navigation.navigate("Details") }}>
                                         <Text style={{ color: '#fff', fontSize: 16, fontFamily: 'Poppins' }}>Recipe</Text>
                                     </TouchableOpacity>
                                 </ImageBackground>
