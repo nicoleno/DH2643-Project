@@ -23,11 +23,11 @@ const IngredientCountIcon = () => {
     const Item = ({ ing }) => {
         return (
             <Text style={styles.listItem}>
-            <Text  key={ing.id}> {ing.name}
-                <Pressable onPress={() => deleteIngredient(ing.id)}>
-                    <Image style={{ width: 15, height: 15, marginLeft: 10 }} source={require('../assets/x-mark.png')} />
-                </Pressable>
-            </Text>
+                <Text key={ing.id}> {ing.name}
+                    <Pressable onPress={() => deleteIngredient(ing.id)}>
+                        <Image style={{ width: 15, height: 15, marginLeft: 10 }} source={require('../assets/x-mark.png')} />
+                    </Pressable>
+                </Text>
             </Text>
         );
     }
@@ -38,8 +38,8 @@ const IngredientCountIcon = () => {
     return (
         <View>
             <Modal visible={modalVisible} transparent={true}>
-                <View 
-                style={styles.modalView}>
+                <View
+                    style={styles.modalView}>
                     <Pressable
                         style={[styles.button, styles.buttonClose]}
                         onPress={() => setModalVisible(!modalVisible)}>
@@ -49,14 +49,14 @@ const IngredientCountIcon = () => {
                 </View>
             </Modal>
 
-            { ingredients.length!=0?
+            {ingredients.length != 0 ?
 
-            <TouchableOpacity
-                onPress={() => setModalVisible(true)}>
-                <View style={styles.itemCountContainer}>
-                    <Text style={styles.itemCountText}>{ingredients.length}</Text>
-                </View>
-            </TouchableOpacity> : null
+                <TouchableOpacity
+                    onPress={() => setModalVisible(true)}>
+                    <View style={styles.itemCountContainer}>
+                        <Text style={styles.itemCountText}>{ingredients.length}</Text>
+                    </View>
+                </TouchableOpacity> : null
             }
         </View>
     )
@@ -64,7 +64,7 @@ const IngredientCountIcon = () => {
 
 const styles = StyleSheet.create({
     listItem: {
-        flex:1,
+        flex: 1,
         justifyContent: 'space-evenly',
         fontFamily: 'Poppins'
     },
@@ -77,19 +77,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         alignItems: 'center',
         justifyContent: 'center',
-<<<<<<< HEAD
-        zIndex: 2000,
-
-=======
         zIndex: 3000,
-    
->>>>>>> 395ec87f52c56fa2c9d4eb89bb181dd22b1621c7
+
     },
     itemCountText: {
         color: 'black',
         fontWeight: 'bold',
         fontFamily: 'Poppins',
-        fontSize:20
+        fontSize: 20
     },
     modalView: {
         margin: 20,
@@ -107,7 +102,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 4,
-       
+
     },
     button: {
         borderRadius: 45,
