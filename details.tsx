@@ -32,7 +32,7 @@ export const Details = ({ route, navigation }) => {
                         <Text style={styles.bold}>Ingredients </Text>
                         {measurements.map((ing: String) => {
                             return (
-                                <Text key={ing[0]} style={{ fontSize: 12 }}> {ing}</Text>
+                                <Text key={ing[0]} style={{ fontSize: 12 }}>{ing}</Text>
                             )
                         })}
                         <Text style={styles.bold}>Type of Glass</Text>

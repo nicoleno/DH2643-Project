@@ -21,22 +21,22 @@
     },
     {
         "id": 105,
-        "name": "Soda water",
+        "name": "Soda Water",
         "image_id": "1QYJga9XxkxUZJwBpOI1O-NSxfq6AJsbY"
     },
     {
         "id": 106,
-        "name": "Ginger ale",
+        "name": "Ginger Ale",
         "image_id": "1n1tJ-lqwdNXRtP3HIC_shDnzFBHm1FLD"
     },
     {
         "id": 107,
-        "name": "Cranberry juice",
+        "name": "Cranberry Juice",
         "image_id": "1iQVmaBD5gRgtuq4SOjqkuMhMFRlpVUxQ"
     },
     {
         "id": 108,
-        "name": "Agave syrup",
+        "name": "Agave Syrup",
         "image_id": "1Lukge1e_lhAb3HgKWldZ153NPBUkn8Ep"
     },
     {
@@ -46,12 +46,12 @@
     },
     {
         "id": 1011,
-        "name": "Sugar cube",
+        "name": "Sugar Cube",
         "image_id": "1C4foUc-p6l0l-7KdN2-NUPdITxh4swct"
     },
     {
         "id": 1012,
-        "name": "Brown sugar",
+        "name": "Brown Sugar",
         "image_id": "1jQ1lRrOtQi6ScrBa0LkLcybbLO6S9Nhw"
     },
     {
@@ -91,17 +91,17 @@
     },
     {
         "id": 1020,
-        "name": "Mint leaves",
+        "name": "Mint Leaves",
         "image_id": "1a-tgOYlMU3RLVmBPHkQIWLErgSmmENbN"
     },
     {
         "id": 1021,
-        "name": "Orange juice",
+        "name": "Orange Juice",
         "image_id": "1JtbKVg9xhBOuNIHCB1grJyJEqBykrjAz"
     },
     {
         "id": 1022,
-        "name": "Tomato juice",
+        "name": "Tomato Juice",
         "image_id": "1paTdAzoRgHqjzFeZByUhZ9QDD7RkvEU9"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "id": 1024,
-        "name": "Peach puré",
+        "name": "Peach Puré",
         "image_id": "1rGFaHg74xECyCEPSkACsb8GsoAB-LTuA"
     },
     {
@@ -133,10 +133,15 @@
         "id": 1028,
         "name": "Coconut Cream",
         "image_id": "1uF9hJeO1pBXZjyAQA52ankuVDgvFzFRN"
-    }, 
+    },
     {
         "id": 1029,
         "name": "Orange Bitter",
         "image_id": "1ptfdo-G4v7FcpstIV3wX707-dGH-33A-"
+    },
+    {
+        "id": 1030,
+        "name": "Ginger Juice",
+        "image_id": "1SlRoQmDBMeIuxw5StiiOEfH0vzVQJadM"
     }
 ]
