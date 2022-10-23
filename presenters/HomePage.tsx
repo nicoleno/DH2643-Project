@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ShakeEventExpo from '../accelerometer';
-import { useFonts } from '@expo-google-fonts/carter-one';
+import { useFonts, CarterOne_400Regular } from '@expo-google-fonts/carter-one';
+import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import * as Font from 'expo-font';
 import { HomepageView } from '../views/HomepageView';
 

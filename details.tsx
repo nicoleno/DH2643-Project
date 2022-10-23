@@ -17,7 +17,7 @@ export const Details = ({ route, navigation }) => {
                 </ImageBackground>
                 <View style={styles.recipeContainer}>
 
-                    <Text style={styles.name}>{name}</Text>
+                    <Text style={styles.name}></Text>
                     <ScrollView style={styles.textContainer}>
                         <Text style={styles.bold}>Ingredients </Text>
                         <Text style={styles.textList}>5cl Tequila {"\n"}{"\n"}{"\n"}</Text>

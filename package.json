@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/carter-one": "^0.2.2",
+    "@expo-google-fonts/poppins": "^0.2.2",
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.10.9",
     "@react-navigation/drawer": "^6.5.0",
@@ -19,7 +20,9 @@
     "@types/react-redux": "^7.1.24",
     "expo": "~46.0.13",
     "expo-animated-linear-gradient": "github:evertoont/expo-animated-linear-gradient",
+    "expo-app-loading": "~2.1.0",
     "expo-cli": "^6.0.6",
+    "expo-font": "~10.2.0",
     "expo-linear-gradient": "^11.4.0",
     "expo-sensors": "^11.4.0",
     "expo-splash-screen": "~0.16.2",
@@ -49,9 +52,7 @@
     "react-redux": "^8.0.4",
     "redux": "^4.2.0",
     "typescript": "^4.6.3",
-    "use-fonts": "^0.0.0",
-    "expo-font": "~10.2.0",
-    "expo-app-loading": "~2.1.0"
+    "use-fonts": "^0.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
