@@ -11,7 +11,7 @@ const DrinkListView = ({ navigation, dataList }) => {
     const card_width = 300;
 
     const renderItem = ({ item }) => {
-        return (<Text style={{ color: '#fff' }}>{`\u2022 ${item}`}</Text>);
+        return (<Text style={{ color: '#fff', marginLeft: 35 }}>{`\u2022 ${item}`}</Text>);
 
     }
 
@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     cardContainer: {
-        justifyContent: 'center', alignItems: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
         height: 500,
         width: 300,
         backgroundColor: '#262626', borderRadius: 30,
@@ -120,7 +121,8 @@ const styles = StyleSheet.create({
     },
     ing_list: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around',
+        marginLeft: 25,
     },
     backgroundimg: {
         height: "100%",

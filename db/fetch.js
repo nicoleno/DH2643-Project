@@ -2,6 +2,20 @@ import { FETCH_DRINKS } from '../store/actions';
 
 const { useDispatch } = require('react-redux');
 
+export const getDrinks = async () => {
+    fetch("http://192.168.127.216:3000/drinks", {
+        method: "get",
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+        },
+    })
+        .then((res) => res.json())
+        .then((data) => setData(data.drinks))
+        .then(() => setLoading(false))
+        .catch((err) => err);
+}
+
 // var axios = require('axios');
 
 // var data = JSON.stringify({
@@ -33,20 +47,20 @@ const { useDispatch } = require('react-redux');
 //     });
 
 
-const [drinks, setDrinks] = React.useState([]);
+// const [drinks, setDrinks] = React.useState([]);
 
 
-const fetchDrinkList = () => {
+// const fetchDrinkList = () => {
 
-    const dispatch = useDispatch();
+//     const dispatch = useDispatch();
 
-    fetch("http://192.168.1.69:3000/drinks", {
-        method: "get",
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-        },
-    }).then((res) => res.json()).then((data) => dispatch({ type: 'FETCH_DRINKS', list: data }).catch((err) => err);
-}
+//     fetch("http://192.168.1.69:3000/drinks", {
+//         method: "get",
+//         headers: {
+//             Accept: 'application/json',
+//             'Content-Type': 'application/json'
+//         },
+//     }).then((res) => res.json()).then((data) => dispatch({ type: 'FETCH_DRINKS', list: data }).catch((err) => err);
+// }
 
-export default fetchDrinkList;
+// export default fetchDrinkList;
