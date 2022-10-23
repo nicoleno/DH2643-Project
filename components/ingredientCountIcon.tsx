@@ -8,8 +8,7 @@ import { useFonts } from '@expo-google-fonts/carter-one';
 
 const IngredientCountIcon = () => {
     const [loaded] = useFonts({
-        Poppins: require('../assets/fonts/Poppins-Regular.ttf'),
-        Carter: require('../assets/fonts/CarterOne-Regular.ttf')
+        Poppins: require('../assets/fonts/Poppins-Black.ttf'),
     });
     const ingredients = useSelector((state: RootState) => state.ingredients);
     const [modalVisible, setModalVisible] = useState(false);
@@ -19,16 +18,15 @@ const IngredientCountIcon = () => {
         console.log("ingredient removed: ", index);
         dispatch(removeIngredient(index));
     }
-    const deleteIcon = require('../assets/x-mark.png')
+
     const Item = ({ ing }) => {
         return (
-            <Text style={styles.listItem}>
-                <Text key={ing.id}> {ing.name}
-                    <Pressable onPress={() => deleteIngredient(ing.id)}>
-                        <Image style={{ width: 15, height: 15, marginLeft: 10 }} source={require('../assets/x-mark.png')} />
-                    </Pressable>
-                </Text>
-            </Text>
+            <View style={styles.listItem}>
+            <Text style={{marginTop:2}} key={ing.id}> {ing.name}</Text>
+                <Pressable onPress={() => deleteIngredient(ing.id)}>
+                    <Image style={{ width: 20, height: 20, marginLeft: 15, marginBottom:2 }} source={require('../assets/images/delete.png')} />
+                </Pressable>
+            </View>
         );
     }
     const renderItem = ({ item }) => (
@@ -38,25 +36,28 @@ const IngredientCountIcon = () => {
     return (
         <View>
             <Modal visible={modalVisible} transparent={true}>
-                <View
-                    style={styles.modalView}>
+                <View 
+                style={{position: 'absolute', left:85, right: 0, bottom: 380, justifyContent: 'center', alignItems: 'center', backgroundColor: "white", opacity: 0.95,
+                borderRadius: 10, paddingBottom: 20, width: 250,  shadowColor: "#000", shadowOffset: { width: 0, height: 3},
+                shadowOpacity: 0.25,
+                shadowRadius: 4,}}>
                     <Pressable
                         style={[styles.button, styles.buttonClose]}
                         onPress={() => setModalVisible(!modalVisible)}>
-                        <Text style={styles.textStyle}>x</Text>
+                    <Image style={{height: 20, width: 20, marginLeft: 75, marginTop: 6}} source={require('../assets/images/closeme.png')}></Image>
                     </Pressable>
+                    <Text style={{fontFamily: "Poppins",marginRight: 60, fontSize: 18}}>Ingredients</Text>
+                    <View style={{backgroundColor: '#A2A2A2', height: 0.5, width: 180, marginBottom: 5}}></View>
                     <FlatList data={ingredients} renderItem={renderItem} keyExtractor={item => item.id}></FlatList>
-                </View>
+                </View>       
             </Modal>
-
-            {ingredients.length != 0 ?
-
-                <TouchableOpacity
-                    onPress={() => setModalVisible(true)}>
-                    <View style={styles.itemCountContainer}>
-                        <Text style={styles.itemCountText}>{ingredients.length}</Text>
-                    </View>
-                </TouchableOpacity> : null
+            { ingredients.length!=0?
+            <TouchableOpacity
+                onPress={() => setModalVisible(true)}>
+                <View style={styles.itemCountContainer}>
+                    <Text style={styles.itemCountText}>{ingredients.length}</Text>
+                </View>
+            </TouchableOpacity> : null
             }
         </View>
     )
@@ -64,8 +65,10 @@ const IngredientCountIcon = () => {
 
 const styles = StyleSheet.create({
     listItem: {
-        flex: 1,
-        justifyContent: 'space-evenly',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
         fontFamily: 'Poppins'
     },
     itemCountContainer: {
@@ -78,21 +81,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 3000,
-
+    
     },
     itemCountText: {
         color: 'black',
         fontWeight: 'bold',
         fontFamily: 'Poppins',
-        fontSize: 20
+        fontSize:20
     },
     modalView: {
-        margin: 20,
-        marginTop: 320,
+        marginTop: 300,
         backgroundColor: "white",
         opacity: 0.95,
         borderRadius: 15,
-        padding: 35,
+        padding: 25,
         width: 250,
         alignItems: "center",
         shadowColor: "#000",
@@ -102,28 +104,22 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 4,
-
+       
     },
     button: {
         borderRadius: 45,
-        paddingLeft: 8,
+        paddingLeft: 150,
         paddingRight: 8,
-        paddingTop: 2,
-        paddingBottom: 3,
-        elevation: 2,
-        backgroundColor: '#798777',
-        marginBottom: 4
     },
     buttonOpen: {
-        backgroundColor: '#798777',
+
     },
     buttonClose: {
-        backgroundColor: '#798777',
+    
     },
     textStyle: {
-        color: "white",
+        color: "black",
         fontWeight: "bold",
-        textAlign: "center",
         fontFamily: "Poppins"
     },
     modalText: {
