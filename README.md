@@ -21,6 +21,6 @@ Setup
         }
     ```
 5. Run ```node ./db/server.js``` to start the server
-6. Run ```npm start```
+6. In a separate terminal window, run ```npm start```
 7. Scan QR code in terminal with camera on mobile device
 
