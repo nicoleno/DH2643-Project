@@ -12,7 +12,7 @@ export default function App() {
     const [data, setData] = useState([]);
 
     const getDrinks = () => {
-        fetch("http://192.168.127.216:3000/drinks", {
+        fetch("https://drinks-db-server.herokuapp.com/drinks", {
             method: "get",
             headers: {
                 Accept: 'application/json',
