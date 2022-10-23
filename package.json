@@ -39,6 +39,7 @@
     "react-native-screens": "~3.15.0",
     "react-native-toggle-element": "^2.0.1",
     "react-native-vector-icons": "^9.2.0",
+    "react-native-view-overflow": "^0.0.5",
     "react-native-web": "~0.18.7",
     "react-redux": "^8.0.4",
     "redux": "^4.2.0",

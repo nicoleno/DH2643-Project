@@ -1,7 +1,7 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground, Platform } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
 import alcohol from './assets/alcohol.json';
@@ -11,6 +11,7 @@ import { Hamburger } from './components/menuButton';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
+import ViewOverflow from 'react-native-view-overflow';
 
 export const HomePage = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
@@ -75,14 +76,14 @@ export const HomePage = ({ navigation }) => {
                     </View>
                 </ImageBackground>
 
-                <View style={styles.bottomBar}>
+                <ViewOverflow useViewOverflow={false} style={styles.bottomBar}>
                     <Text style={styles.poppins} >Add items</Text>
                     <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
                     <View style={styles.header}>
                         <ToggleComponent childToParent={childToParent} />
                     </View>
                     <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
-                </View>
+                </ViewOverflow>
             </LinearGradient>
         </GestureHandlerRootView >
 
