@@ -1,9 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
+import { useFonts } from '@expo-google-fonts/carter-one';
 
 export const CustomDrawer = (props) => {
-    
+    const [loaded] = useFonts({
+        Poppins: require('../assets/fonts/Poppins-Regular.ttf'),
+        Carter: require('../assets/fonts/CarterOne-Regular.ttf')
+    });
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props} contentContainerStyle={{ backgroundColor: '#262626' }}>

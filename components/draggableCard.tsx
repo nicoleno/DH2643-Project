@@ -28,12 +28,10 @@ const DraggableCard = (props) => {
             onStart: (event, context) => {
                 context.translateX = translateX.value;
                 context.translateY = translateY.value;
-
             },
             onActive: (event, context) => {
                 translateX.value = event.translationX + context.translateX
                 translateY.value = event.translationY + context.translateY
-
             },
             onEnd: (event, context) => {
                 // console.log("x: ", event.absoluteX);
@@ -41,41 +39,25 @@ const DraggableCard = (props) => {
                 // NÄSTA steg, hitta koordinater av shakern och gör en if sats.
                 if ((120 < event.absoluteX) && (event.absoluteX < 280)
                     && (170 < event.absoluteY) && (event.absoluteY < 400)) {
-
                     console.log("i shakern");
                     runOnJS(saveIngredient)(props.item);
                     shrink.value = 0;
-
-
                 }
-
                 else {
                     translateX.value = withSpring(0);
                     translateY.value = withSpring(0);
                 }
-
-
             },
         })
 
     const rStyle = useAnimatedStyle(() => {
         return {
-            transform: [
-                {
-                    translateX: translateX.value,
-                },
-                {
-                    translateY: translateY.value,
-                },
-                {
-                    scale: withTiming(shrink.value, {
+            transform: [{
+                    translateX: translateX.value,},
+                {translateY: translateY.value,},
+                {scale: withTiming(shrink.value, {
                         duration: 1000,
-                    })
-                }
-            ]
-        }
-    })
-
+                    })}]}})
     return (
         <PanGestureHandler onGestureEvent={panGestureEvent}>
             <Animated.View style={[styles.square, rStyle]}>

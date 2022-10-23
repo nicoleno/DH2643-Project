@@ -81,6 +81,19 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         textAlign: 'center',
     },
+    background: {
+        flex: 1,
+        color: "rgba(255,255,1,1)"
+    },
+    shakeit: {
+        fontFamily: "Carter",
+        textAlign: "center",
+        flexDirection: 'row',
+        top: 40,
+        fontSize: 30,
+        color: "rgba(255,255,255,1)",
+    },
+
     cardContainer: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -89,7 +102,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#262626', borderRadius: 30,
         shadowColor: 'black',
         elevation: 10,
-        shadowOpacity: 1,
+        shadowOpacity: 0.5,
         shadowRadius: 30
     },
     header: {
@@ -114,7 +127,7 @@ const styles = StyleSheet.create({
         width: 200,
         borderRadius: 30,
         justifyContent: 'center',
-        marginBottom: 100,
+        marginBottom: 50,
         alignItems: 'center',
         borderWidth: 1,
         borderColor: '#fff'

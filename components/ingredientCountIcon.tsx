@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Alert, Modal, Button, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity, FlatList, Modal, Pressable } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
 import { removeIngredient } from '../store/actions';
 import { RootState } from "../store/reducers";
-import { RenderIngredients } from './renderIngredients';
-
+import { useFonts } from '@expo-google-fonts/carter-one';
 
 const IngredientCountIcon = () => {
+    const [loaded] = useFonts({
+        Poppins: require('../assets/fonts/Poppins-Regular.ttf'),
+        Carter: require('../assets/fonts/CarterOne-Regular.ttf')
+    });
     const ingredients = useSelector((state: RootState) => state.ingredients);
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -17,17 +20,14 @@ const IngredientCountIcon = () => {
         dispatch(removeIngredient(index));
     }
     const deleteIcon = require('../assets/x-mark.png')
-
-    // const renderItem = (item) => {
-    //     {ingredients.map(ing => <Text key={ing.id}> {ing.name} <Button title="X" onPress={() => deleteIngredient(ing.id)}></Button></Text>)}
-    // }
-
     const Item = ({ ing }) => {
         return (
-            <Text style={styles.listItem} key={ing.id}> {ing.name}
+            <Text style={styles.listItem}>
+            <Text  key={ing.id}> {ing.name}
                 <Pressable onPress={() => deleteIngredient(ing.id)}>
-                    <Image style={{ width: 20, height: 20 }} source={require('../assets/x-mark.png')} />
+                    <Image style={{ width: 15, height: 15, marginLeft: 10 }} source={require('../assets/x-mark.png')} />
                 </Pressable>
+            </Text>
             </Text>
         );
     }
@@ -35,81 +35,101 @@ const IngredientCountIcon = () => {
         <Item ing={item} />
     );
 
-
     return (
         <View>
             <Modal visible={modalVisible} transparent={true}>
-                <View style={styles.modalView}>
+                <View 
+                style={styles.modalView}>
                     <Pressable
                         style={[styles.button, styles.buttonClose]}
-                        onPress={() => setModalVisible(!modalVisible)}
-                    >
+                        onPress={() => setModalVisible(!modalVisible)}>
                         <Text style={styles.textStyle}>x</Text>
                     </Pressable>
                     <FlatList data={ingredients} renderItem={renderItem} keyExtractor={item => item.id}></FlatList>
                 </View>
             </Modal>
+
+            { ingredients.length!=0?
+
             <TouchableOpacity
                 onPress={() => setModalVisible(true)}>
                 <View style={styles.itemCountContainer}>
                     <Text style={styles.itemCountText}>{ingredients.length}</Text>
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> : null
+            }
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     listItem: {
-        flex: 1,
-        justifyContent: 'space-between'
+        flex:1,
+        justifyContent: 'space-evenly',
+        fontFamily: 'Poppins'
     },
     itemCountContainer: {
-        alignContent: 'flex-start',
-        height: 30,
-        width: 30,
-        borderRadius: 15,
-        backgroundColor: '#FF7D7D',
+        position: 'absolute',
+        alignContent: 'center',
+        height: 50,
+        width: 50,
+        borderRadius: 30,
+        backgroundColor: '#FFFFFF',
         alignItems: 'center',
         justifyContent: 'center',
+<<<<<<< HEAD
         zIndex: 2000,
 
+=======
+        zIndex: 3000,
+    
+>>>>>>> 395ec87f52c56fa2c9d4eb89bb181dd22b1621c7
     },
     itemCountText: {
-        color: 'white',
-        fontWeight: 'bold'
+        color: 'black',
+        fontWeight: 'bold',
+        fontFamily: 'Poppins',
+        fontSize:20
     },
     modalView: {
         margin: 20,
-        marginTop: 400,
+        marginTop: 320,
         backgroundColor: "white",
-        borderRadius: 20,
+        opacity: 0.95,
+        borderRadius: 15,
         padding: 35,
+        width: 250,
         alignItems: "center",
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 2
+            height: 3
         },
         shadowOpacity: 0.25,
         shadowRadius: 4,
-        elevation: 5
+       
     },
     button: {
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2
+        borderRadius: 45,
+        paddingLeft: 8,
+        paddingRight: 8,
+        paddingTop: 2,
+        paddingBottom: 3,
+        elevation: 2,
+        backgroundColor: '#798777',
+        marginBottom: 4
     },
     buttonOpen: {
-        backgroundColor: "#F194FF",
+        backgroundColor: '#798777',
     },
     buttonClose: {
-        backgroundColor: "#2196F3",
+        backgroundColor: '#798777',
     },
     textStyle: {
         color: "white",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+        fontFamily: "Poppins"
     },
     modalText: {
         marginBottom: 15,

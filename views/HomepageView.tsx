@@ -33,12 +33,16 @@ export const HomepageView = ({ navigation }) => {
                                     shaker.setPosX(layout.x);
                                     shaker.setPosY(layout.y);
                                 }} />
+                            <View style={{ position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center' }}>
+                                <IngredientCountIcon />
+                            </View>
                         </View>
                         <Image style={styles.image4} source={require('../assets/images/shaketomix.png')}></Image>
                     </View>
                 </ImageBackground>
 
                 <View style={styles.bottomBar}>
+
                     <Text style={styles.poppins} >Add items</Text>
                     <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
                     <View style={styles.header}>
@@ -56,19 +60,15 @@ const styles = StyleSheet.create({
         flex: 1,
         color: "rgba(255,255,1,1)"
     },
-
     topsection: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column'
-
     },
-
     topsection2: {
         alignContent: 'flex-end',
     },
-
     container: {
         flex: 1,
         backgroundColor: '#fff',
@@ -76,13 +76,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         display: 'flex',
     },
-
     navbuttons: {
         margin: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-
     searchBar: {
         color: '#fff',
         alignItems: 'center',
@@ -91,28 +89,25 @@ const styles = StyleSheet.create({
         borderColor: 'blue',
         borderRadius: 10
     },
-
     image: {
         width: 200,
         height: 200,
         margin: 20,
     },
-
     shakerArea: {
         flex: 1,
     },
-
     bottomBar: {
         flex: 2,
         alignSelf: 'stretch',
-
         justifyContent: 'space-between',
     },
     header: {
-        marginTop: 45,
+        marginTop: 40,
         marginLeft: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
+        marginBottom: 20
     },
     cardContainer: {
         backgroundColor: '#414141',
@@ -133,16 +128,13 @@ const styles = StyleSheet.create({
 
     image3: {
         height: 450,
-
     },
 
     image4: {
-        height: 80,
+        height: 60,
         width: 440,
         alignSelf: 'center'
-
     },
-
     shakeit: {
         fontFamily: "Carter",
         textAlign: "center",
@@ -150,31 +142,26 @@ const styles = StyleSheet.create({
         top: 40,
         fontSize: 30,
         color: "rgba(255,255,255,1)",
-
     },
-
     poppins: {
         fontFamily: "Poppins",
         weight: "Light",
         textAlign: "left",
         marginLeft: 25,
         flexDirection: 'row',
-        top: 25,
+        top: 30,
         fontSize: 20,
         color: "rgba(255, 255, 255,1)",
-
     },
-
 
     poppins2: {
         fontFamily: "Poppins",
         textAlign: "left",
         marginLeft: 25,
         flexDirection: 'row',
-        top: 40,
+        top: 30,
         fontSize: 10,
         color: "rgba(255, 255, 255,1)",
-
     },
 
     shakerReal: {

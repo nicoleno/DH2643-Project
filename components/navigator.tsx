@@ -22,7 +22,6 @@ const Sidebar = (props) => {
                 drawerActiveTintColor: 'white',
                 drawerActiveBackgroundColor: '#798777',
                 drawerLabelStyle: { marginLeft: -15, fontSize: 15 },
-
             }}
                 initialRouteName="Home">
                 <Drawer.Screen name="Home" component={HomePage} options={{

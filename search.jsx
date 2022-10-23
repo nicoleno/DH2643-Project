@@ -49,30 +49,31 @@ const SearchDrink = () => {{
   const [loaded] = useFonts({
     Poppins: require('./assets/fonts/Poppins-Regular.ttf')
   });
-  const data = require("./data.json")
+  const data = require("./assets/Drinks.json")
   const results = []
   
   for (let i = 0; i < data.length; i++) {
-  results.push(data[i].name)}
+  results.push(data[i])}
   const [matches, setMatches] = useState([]);
 
   const searchfun = (list, substring) => {
     const newMatches = []
     for (let i = 0; i < list.length; i++) {
       list.find(element => {
-        if (element.includes(substring) && (newMatches.includes(element)=== false) ){
+        if (element.name.includes(substring) && (newMatches.includes(element.name)=== false) ){
           newMatches.push(element)}})
         }
         if (newMatches.length == 0){
           newMatches.push("No drinks were found...")
         }
         setMatches(newMatches)};
-
-    return (<View><TextInput style={styles.searchBar} placeholder="Search driiink..." 
+    
+    return (<View><TextInput style={styles.searchBar} placeholder="Search drink..." 
     onChangeText = {(search)=> searchfun (results, search)} editable={true}/>
     
-    <View style={styles.container}>{matches.map((match) => <ImageBackground style={styles.image} source={require('./assets/images/margharita.png')}>
-      <Text style={styles.subcontainer} key={match}>{match}</Text></ImageBackground>)}</View>
+    <View style={styles.container}>{matches.map((match) => <ImageBackground style={styles.image} source={{ uri: "https://drive.google.com/file/d/" + match.imageid + "/view" }}>
+      <Text style={styles.subcontainer} key={match.name}>{match.name}</Text></ImageBackground>)}</View>
+
     </View>)
     }};
   
