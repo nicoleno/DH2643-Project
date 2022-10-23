@@ -18,7 +18,7 @@ export default function App() {
         "Carter": require('./assets/fonts/CarterOne-Regular.ttf')
     };
 
-    const getDrinks = async () => {
+    const getDrinks = () => {
         fetch("https://drinks-db-server.herokuapp.com/drinks", {
             method: "get",
             headers: {

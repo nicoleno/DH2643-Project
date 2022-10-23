@@ -11,7 +11,7 @@ const ToggleComponent = ({ childToParent }) => {
 
     return (
         <Toggle onPress={(newState) => childToParent(newState)}
-            leftComponent={<Icon name="wine-bottle"  size={20} color="#FFFFFF" />}
+            leftComponent={<Icon name="wine-bottle" style={{transform: [{rotateZ: '315deg'}]}}  size={20} color="#FFFFFF" />}
             rightComponent={<Icon name="lemon" size={20} color="#FFFFFF" />}
             trackBar={{
                 activeBackgroundColor: "#101010",
