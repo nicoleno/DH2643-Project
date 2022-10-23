@@ -12,8 +12,13 @@ import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
 
+
 export const HomePage = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
+    const [loaded] = useFonts({
+        Carter: require('../assets/fonts/CarterOne-Regular.ttf'),
+        Poppins: require('../assets/fonts/Poppins-Regular.ttf'),
+    });
 
     useEffect(() => {
         fetch("http://130.229.145.164:3000/drinks", {
@@ -25,13 +30,8 @@ export const HomePage = ({ navigation }) => {
         }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
     }, []);
 
-    const [loaded] = useFonts({
-        Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
-        Carter: require('./assets/fonts/CarterOne-Regular.ttf')
-    });
 
     let shaker = new ShakerModel;
-
     ShakeEventExpo.addListener(() => {
         navigation.navigate('DrinkList');
     })
