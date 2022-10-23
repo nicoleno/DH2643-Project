@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    marginTop: 20,
-    height: 150,
+    marginTop: 10,
+    height: 180,
     width: 120,
     borderRadius: 30
   },
@@ -85,7 +85,7 @@ const SearchDrink = (drinks) => {
         <View style={styles.container}>{matches.map((match) =>
           <TouchableOpacity>
             <ImageBackground style={styles.image} imageStyle={{ borderRadius: 30 }} source={require('./assets/images/Tommys-margharita.png')}>
-              <Text key={match.name} style={styles.subcontainer} key={match.name}>{match.name}</Text>
+              <Text style={styles.subcontainer} key={match.name}>{match.name}</Text>
             </ImageBackground>
           </TouchableOpacity>
         )}</View>

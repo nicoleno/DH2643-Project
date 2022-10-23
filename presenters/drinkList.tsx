@@ -48,22 +48,36 @@ const DrinkList = ({ navigation, route }) => {
 
     const createDrinkList = (matchedDrinks) => {
         const drinkList: DrinkListItem[] = [];
+        console.log(matchedDrinks);
 
         for (let i = 0; i < matchedDrinks.length; i++) {
+            if (alcoholIngredientsHave(matchedDrinks[i], shakerIngredients).length < 1) {
+                //console.log(matchedDrinks[i]);
+                matchedDrinks.splice(i, 1);
+
+            }
+        }
+
+        for (let i = 0; i < matchedDrinks.length; i++) {
+
             const need = alcoholIngredientsNeeded(matchedDrinks[i], shakerIngredients).concat(nonAlcoholngredientsNeeded(matchedDrinks[i], shakerIngredients));
             const have = alcoholIngredientsHave(matchedDrinks[i], shakerIngredients).concat(nonAlcoholngredientsHave(matchedDrinks[i], shakerIngredients));
-            console.log(need);
+
+
             const drink: DrinkListItem = {
                 label: `${i + 1}  of ${matchedDrinks.length}`,
-                value: `${i + 1}`,
+                value: `${(i + 1)}`,
                 have: have,
                 need: need,
                 name: matchedDrinks[i].name,
                 imageid: matchedDrinks[i].imageid,
+
             };
-            // console.log('drink', drink);
             drinkList.push(drink);
         }
+
+        // console.log('drink', drink);
+
         return drinkList;
     }
 
