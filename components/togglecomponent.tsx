@@ -1,17 +1,11 @@
 import Toggle from "react-native-toggle-element";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-//import Icon from 'react-native-ico-material-design'
-//import Icon from 'react-native-ico';
-//fruit-citrus
-//liquor
-// import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-// const Icon = createIconSetFromIcoMoon(require("../selection.json"));
 
 const ToggleComponent = ({ childToParent }) => {
 
     return (
         <Toggle onPress={(newState) => childToParent(newState)}
-            leftComponent={<Icon name="wine-bottle"  size={20} color="#FFFFFF" />}
+            leftComponent ={<Icon  name="wine-bottle" size={20} color="#FFFFFF" />}
             rightComponent={<Icon name="lemon" size={20} color="#FFFFFF" />}
             trackBar={{
                 activeBackgroundColor: "#101010",

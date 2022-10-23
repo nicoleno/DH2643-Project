@@ -57,6 +57,7 @@ const DraggableCard = (props) => {
                 {scale: withTiming(shrink.value, {
                         duration: 1000,
                     })}]}})
+
     return (
         <PanGestureHandler onGestureEvent={panGestureEvent}>
             <Animated.View style={[styles.square, rStyle]}>

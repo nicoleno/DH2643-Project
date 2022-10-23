@@ -56,11 +56,11 @@ export const HomePage = ({ navigation }) => {
     return (
         <GestureHandlerRootView style={styles.background}>
             <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
-                <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
+                <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>  
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                     <View style={styles.shakerArea}>
                         <View style={styles.topsection} >
-                            <ImageBackground style={styles.shakerReal} source={require('./assets/images/shakeitgood.png')}
+                            <ImageBackground style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;
                                     console.log("layout", layout);
@@ -69,16 +69,16 @@ export const HomePage = ({ navigation }) => {
                                     shaker.setPosX(layout.x);
                                     shaker.setPosY(layout.y);
                                 }} />
-                            <View style={{position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
-                            <IngredientCountIcon/>
-                            </View>
-                        </View>
+                        <View style={{position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+                        <IngredientCountIcon />
+                        </View>             
+                        </View>         
                         <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
                     </View>
                 </ImageBackground>
                 <View style={styles.bottomBar}>
                     <Text style={styles.poppins} >Add items</Text>
-                    <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
+                    <Text style={styles.poppins2} >What items do you have at home? Drag and drop to the shaker!</Text>
                     <View style={styles.header}>
                         <ToggleComponent childToParent={childToParent} />
                     </View>
@@ -86,6 +86,7 @@ export const HomePage = ({ navigation }) => {
                 </View>
             </LinearGradient>
         </GestureHandlerRootView >
+
     )
 };
 
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 20
+        marginBottom:20
     },
     cardContainer: {
         backgroundColor: '#414141',
@@ -165,7 +166,7 @@ const styles = StyleSheet.create({
     },
 
     image4: {
-        height: 60,
+        height: 50,
         width: 440,
         alignSelf: 'center'
     },
