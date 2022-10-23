@@ -13,7 +13,7 @@ const Drawer = createDrawerNavigator();
 
 
 const Sidebar = (props) => {
-    // console.log('sidebar', props.drinks[0]);
+    //console.log('sidebar', props.drinks[0]);
 
     return (
         <NavigationContainer>
@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
                     )
                 }} />
-                <Drawer.Screen name="Browse Cocktails" component={Cocktails} options={{
+                <Drawer.Screen name="Browse Cocktails" component={Cocktails} initialParams={{ props }} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/cocktail.png')} style={{ height: 15, width: 15, }} />
                     )
