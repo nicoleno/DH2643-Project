@@ -24,7 +24,7 @@ export const HomepageView = ({ navigation }) => {
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                     <View style={styles.shakerArea}>
                         <View style={styles.topsection} >
-                            <ImageBackground style={styles.shakerReal} source={require('../assets/images/shaker-real.png')}
+                            <ImageBackground style={styles.shakerReal} source={require('../assets/images/shakeitgood.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;
                                     shaker.setHeight(layout.height);
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     },
 
     image4: {
-        height: 60,
+        height: 50,
         width: 440,
         alignSelf: 'center'
     },

@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         margin: 10,
         justifyContent: 'center',
         alignItems: 'center',
-
+        shadowColor: 'black'
     },
     images: {
         justifyContent: 'center',
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
         width: 80,
         height: 80,
         resizeMode: 'contain',
+
     }
 })
 
