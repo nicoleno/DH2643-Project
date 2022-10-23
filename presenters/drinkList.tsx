@@ -6,8 +6,11 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/reducers';
 
 const DrinkList = ({ navigation, route }) => {
+    const allDrinks = route.params.props.drinks;
     const shakerIngredients = useSelector((state: RootState) => state.ingredients);
-    const matchedDrinks = checkAllDrinks(shakerIngredients, route.params.props.drinks);
+    const matchedDrinks = checkAllDrinks(shakerIngredients, allDrinks);
+    console.log('drinks', allDrinks[0])
+    console.log('matched', matchedDrinks);
 
     const alcoholIngredientsNeeded = (drinkIngredients, shakerIngredients) => {
         if (drinkIngredients.alcoholIngredients !== null) {

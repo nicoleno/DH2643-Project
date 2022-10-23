@@ -3,11 +3,17 @@ import React from 'react';
 import { Hamburger } from '../components/menuButton';
 import Animated from 'react-native-reanimated';
 import { DrinkListItem } from '../models/model';
+import { FlatList } from 'react-native-gesture-handler';
 
 const DrinkListView = ({ navigation, dataList }) => {
     const data = dataList as DrinkListItem[];
     const scrollX = React.useRef(new Animated.Value(0)).current;
     const card_width = 300;
+
+    const renderItem = ({ item }) => {
+        return (<Text style={{ color: '#fff' }}>{`\u2022 ${item}`}</Text>);
+
+    }
 
     return (
         <View style={{ flex: 1, backgroundColor: '#262626' }}>
@@ -40,16 +46,17 @@ const DrinkListView = ({ navigation, dataList }) => {
                                 <View style={styles.cardText}>
                                     <Text style={{ color: '#fff', fontSize: 10, padding: 10 }}>{item.label}</Text>
                                     <Text style={{ color: '#fff', fontSize: 24, padding: 10 }}>{item.name}</Text>
-
                                     <View style={styles.ing_list}>
-                                        <Image style={{ height: 25, width: 25, }} source={require('../assets/images/check-mark.png')}></Image>
-                                        <Text style={{ color: '#fff' }}>You have:{"\n"} {item.have}</Text>
-                                        <Image style={{ height: 25, width: 25, }} source={require('../assets/images/carts.png')}></Image>
-                                        <Text style={{ color: '#fff' }}> You need:{"\n"} {item.need}</Text>
+                                        <FlatList data={(item.have)}
+                                            ListHeaderComponent={() => <Text style={{ color: '#fff' }}><Image style={{ height: 25, width: 25, }} source={require('../assets/images/check-mark.png')}></Image>You have:</Text>}
+                                            renderItem={renderItem} />
+                                        <FlatList data={(item.need)}
+                                            ListHeaderComponent={() => <Text style={{ color: '#fff' }}><Image style={{ height: 25, width: 25, }} source={require('../assets/images/carts.png')}></Image>You need:</Text>}
+                                            renderItem={renderItem} />
                                     </View>
                                 </View>
                                 <TouchableOpacity
-                                    style={styles.recipeButton} onPress={() => { navigation.navigate("Details", { item }) }}>
+                                    style={styles.recipeButton} onPress={() => { navigation.navigate("Details") }}>
                                     <Text style={{ color: '#fff', fontSize: 16 }}>Recipe</Text>
                                 </TouchableOpacity>
                             </ImageBackground>

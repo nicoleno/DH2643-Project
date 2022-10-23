@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ShakeEventExpo from '../accelerometer';
 import { useFonts } from '@expo-google-fonts/carter-one';
+import * as Font from 'expo-font';
 import { HomepageView } from '../views/HomepageView';
 
 export const HomePage = ({ navigation }) => {

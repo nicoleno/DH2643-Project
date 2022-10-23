@@ -13,7 +13,7 @@ const Drawer = createDrawerNavigator();
 
 
 const Sidebar = (props) => {
-    console.log('sidebar', props.drinks[0]);
+    // console.log('sidebar', props.drinks[0]);
 
     return (
         <NavigationContainer>

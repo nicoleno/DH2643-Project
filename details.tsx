@@ -4,8 +4,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from './components/menuButton';
 
 export const Details = ({ route, navigation }) => {
-    const name = route.params.item;
-    console.log(name);
     return (
         <View style={{ flex: 1 }}>
             <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>

@@ -36,8 +36,8 @@ const DraggableCard = (props) => {
 
             },
             onEnd: (event, context) => {
-                console.log("x: ", event.absoluteX);
-                console.log("y: ", event.absoluteY);
+                // console.log("x: ", event.absoluteX);
+                // console.log("y: ", event.absoluteY);
                 // NÄSTA steg, hitta koordinater av shakern och gör en if sats.
                 if ((120 < event.absoluteX) && (event.absoluteX < 280)
                     && (170 < event.absoluteY) && (event.absoluteY < 400)) {
