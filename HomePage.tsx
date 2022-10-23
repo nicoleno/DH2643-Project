@@ -1,7 +1,7 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, FlatList, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground, Platform } from 'react-native';
 import ShakerModel from './models/shaker';
 import ingredients from './assets/ingredients.json';
 import alcohol from './assets/alcohol.json';
@@ -76,7 +76,9 @@ export const HomePage = ({ navigation }) => {
                         <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
                     </View>
                 </ImageBackground>
+
                 <View style={styles.bottomBar}>
+
                     <Text style={styles.poppins} >Add items</Text>
                     <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
                     <View style={styles.header}>
