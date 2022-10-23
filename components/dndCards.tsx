@@ -78,15 +78,14 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         margin: 10,
         justifyContent: 'center',
-        alignItems: 'center',
-
+        alignItems: 'center',      
     },
     images: {
         justifyContent: 'center',
         alignSelf: 'center',
         width: 80,
         height: 80,
-        resizeMode: 'contain',
+        resizeMode: 'contain',  
     }
 })
 

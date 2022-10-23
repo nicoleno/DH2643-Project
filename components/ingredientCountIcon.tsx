@@ -44,7 +44,7 @@ const IngredientCountIcon = () => {
                     <Pressable
                         style={[styles.button, styles.buttonClose]}
                         onPress={() => setModalVisible(!modalVisible)}>
-                    <Image style={{height: 20, width: 20, marginLeft: 75, marginTop: 6}} source={require('../assets/images/closeme.png')}></Image>
+                    <Image style={{height: 20, width: 20, marginLeft: 65, marginTop: 10}} source={require('../assets/images/closeme.png')}></Image>
                     </Pressable>
                     <Text style={{fontFamily: "Poppins", fontSize: 18}}>Ingredients</Text>
                     <View style={{backgroundColor: '#A2A2A2', height: 0.5, width: 180, marginBottom: 5}}></View>
