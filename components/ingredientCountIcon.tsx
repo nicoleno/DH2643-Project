@@ -77,8 +77,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         alignItems: 'center',
         justifyContent: 'center',
+<<<<<<< HEAD
+        zIndex: 2000,
+
+=======
         zIndex: 3000,
     
+>>>>>>> 395ec87f52c56fa2c9d4eb89bb181dd22b1621c7
     },
     itemCountText: {
         color: 'black',

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:components/searchingredient.tsx
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { matchedItems } from '../store/actions';
+=======
 import { StyleSheet, View, Button, TextInput } from 'react-native';
 
+>>>>>>> 395ec87f52c56fa2c9d4eb89bb181dd22b1621c7:searchingredient.tsx
 const styles = StyleSheet.create({
     container: {
         flex: 0.8,
@@ -9,19 +15,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-  searchBar: {
-    color: '#666',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth : 2,
-    borderColor: 'black',
-    padding: 15,
-    height:20,
-    borderRadius: 10,
-    marginTop:30,
-    marginRight:10
-  
-  },
+    searchBar: {
+        color: '#666',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 2,
+        borderColor: 'black',
+        padding: 15,
+        height: 20,
+        borderRadius: 10,
+        marginTop: 30,
+        marginRight: 10
+
+    },
 
     image: {
         width: 120,
@@ -31,10 +37,20 @@ const styles = StyleSheet.create({
 });
 
 const SearchIngredient = () => {
+<<<<<<< HEAD:components/searchingredient.tsx
+    const data = require("./assets/ingredients.json")
+    const [matches, setMatches] = useState([]);
+
+    const [search, setSearch] = useState("");
+    // const [matches, setMatches] = useState([]);
+
+    const searchIngr = (list, substring) => {
+=======
   const data = require("./assets/ingredients.json")
   const [search, setSearch] = useState("");
     
   const searchIngr = (list, substring) => {
+>>>>>>> 395ec87f52c56fa2c9d4eb89bb181dd22b1621c7:searchingredient.tsx
         const newMatches = []
         for (let i = 0; i < list.length; i++) {
             list.find(element => {

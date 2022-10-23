@@ -1,52 +1,16 @@
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import React, { useState, useEffect } from 'react';
-import DraggableCard from './components/dndCards';
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground, Platform } from 'react-native';
-import ShakerModel from './models/shaker';
-import ingredients from './assets/ingredients.json';
-import alcohol from './assets/alcohol.json';
-import IngredientCountIcon from './components/ingredientCountIcon';
-import ShakeEventExpo from './accelerometer';
-import { Hamburger } from './components/menuButton';
-import { useFonts } from '@expo-google-fonts/carter-one';
-import ToggleComponent from './components/togglecomponent';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Button, ImageBackground } from 'react-native';
+import ToggleComponent from '../components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import IngredientCountIcon from '../components/ingredientCountIcon';
+import { Hamburger } from '../components/menuButton';
+import ShakerModel from '../models/shaker';
+import { useState } from 'react';
+import { IngredientScrollView } from './ingredientScrollView';
 
-export const HomePage = ({ navigation }) => {
-    const [drinks, setDrinks] = React.useState([]);
 
-    useEffect(() => {
-        fetch("http://130.229.145.164:3000/drinks", {
-            method: "get",
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
-        }).then((res) => res.json()).then((data) => setDrinks(data.drinks)).catch((err) => err);
-    }, []);
-
-    const [loaded] = useFonts({
-        Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
-        Carter: require('./assets/fonts/CarterOne-Regular.ttf')
-    });
-
+export const HomepageView = ({ navigation }) => {
     let shaker = new ShakerModel;
-
-    ShakeEventExpo.addListener(() => {
-        navigation.navigate('DrinkList');
-    })
-
-    const Item = ({ item }) => {
-        return (
-            <View style={styles.cardContainer}>
-                <DraggableCard item={item} />
-            </View>
-        );
-    }
-    const renderItem = ({ item }) => (
-        <Item item={item} />
-    );
-
     const [showIngredient, setToggleValue] = useState(false);
 
     const childToParent = (showIngredient) => {
@@ -56,24 +20,24 @@ export const HomePage = ({ navigation }) => {
     return (
         <GestureHandlerRootView style={styles.background}>
             <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
-                <ImageBackground style={styles.image3} source={require('./assets/images/table.png')}>
+                <ImageBackground style={styles.image3} source={require('../assets/images/table.png')}>
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                     <View style={styles.shakerArea}>
                         <View style={styles.topsection} >
-                            <ImageBackground style={styles.shakerReal} source={require('./assets/images/shakeitgood.png')}
+                            <IngredientCountIcon />
+                            <ImageBackground style={styles.shakerReal} source={require('../assets/images/shaker-real.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;
-                                    console.log("layout", layout);
                                     shaker.setHeight(layout.height);
                                     shaker.setWidth(layout.width);
                                     shaker.setPosX(layout.x);
                                     shaker.setPosY(layout.y);
                                 }} />
-                            <View style={{position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
-                            <IngredientCountIcon/>
+                            <View style={{ position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center' }}>
+                                <IngredientCountIcon />
                             </View>
                         </View>
-                        <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
+                        <Image style={styles.image4} source={require('../assets/images/shaketomix.png')}></Image>
                     </View>
                 </ImageBackground>
 
@@ -84,12 +48,12 @@ export const HomePage = ({ navigation }) => {
                     <View style={styles.header}>
                         <ToggleComponent childToParent={childToParent} />
                     </View>
-                    <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
+                    <IngredientScrollView showIngredient={showIngredient}></IngredientScrollView>
                 </View>
             </LinearGradient>
         </GestureHandlerRootView >
     )
-};
+}
 
 const styles = StyleSheet.create({
     background: {

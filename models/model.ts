@@ -13,3 +13,11 @@ export type Drink = {
     garnish: string;
     typeOfGlass: string;
 }
+
+export type DrinkListItem = {
+    label: string;
+    value: string;
+    have: string[];
+    need: string[];
+    name: string;
+}

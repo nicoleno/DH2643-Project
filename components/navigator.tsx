@@ -2,17 +2,18 @@ import React from "react";
 import { StyleSheet, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { HomePage } from "../HomePage";
+import { HomePage } from "../presenters/HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../details"
-import DrinkList from "../drinkList"
+import DrinkList from "../presenters/drinkList"
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
 
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    // console.log('sidebar', props.drinks[0]);
 
     return (
         <NavigationContainer>
@@ -34,11 +35,11 @@ const Sidebar = () => {
                     )
                 }} />
 
-                <Drawer.Screen name="DrinkList" component={DrinkList} options={{
+                <Drawer.Screen name="DrinkList" component={DrinkList} initialParams={{ props }} options={{
                     drawerItemStyle: { height: 0 },
                 }} />
 
-                <Drawer.Screen name="Details" component={Details} options={{
+                <Drawer.Screen name="Details" component={Details} initialParams={{ props }} options={{
                     drawerItemStyle: { height: 0 },
                 }} />
                 <Drawer.Screen name="Hamburger" component={Hamburger} options={{
