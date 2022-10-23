@@ -12,7 +12,8 @@
             "Lime"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lime/Orange Zest"
+        "garnish": "Lime/Orange Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "El Diablo",
@@ -28,7 +29,8 @@
             "Ginger ale"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lime Wedge/Wheel"
+        "garnish": "Lime Wedge/Wheel",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Margharita",
@@ -43,7 +45,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Salt Rim"
+        "garnish": "Salt Rim",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Tommy's Margharita",
@@ -57,7 +60,8 @@
             "Agave"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Lime wheel"
+        "garnish": "Lime wheel",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Gin Sour",
@@ -72,7 +76,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Bitters, Lemon Zest or none at all "
+        "garnish": "Bitters, Lemon Zest or none at all ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Tom Collins",
@@ -87,7 +92,8 @@
             "Soda Water"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lemon Wedge"
+        "garnish": "Lemon Wedge",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "White Lady",
@@ -103,7 +109,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest or none at all"
+        "garnish": "Lemon Zest or none at all",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Pink Lady",
@@ -119,7 +126,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest or none at all"
+        "garnish": "Lemon Zest or none at all",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Aviation",
@@ -135,7 +143,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Maraschino Berry"
+        "garnish": "Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Clover Club",
@@ -150,7 +159,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Raspberries on a cocktail pick"
+        "garnish": "Raspberries on a cocktail pick",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Negroni",
@@ -163,7 +173,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest"
+        "garnish": "Orange Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Old Fashioned",
@@ -177,7 +188,8 @@
             "Sugar Cube"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest, Maraschino Berry"
+        "garnish": "Orange Zest, Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Dry Martini",
@@ -189,7 +201,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest or Olive"
+        "garnish": "Lemon Zest or Olive",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Vodka Martini",
@@ -201,7 +214,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest or Olive"
+        "garnish": "Lemon Zest or Olive",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Vodka Sour",
@@ -216,7 +230,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Bitters, Lemon Zest or none at all "
+        "garnish": "Bitters, Lemon Zest or none at all ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Whiskey Sour",
@@ -231,7 +246,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Bitters, Lemon Zest or none at all "
+        "garnish": "Bitters, Lemon Zest or none at all ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Amaretto Sour",
@@ -246,7 +262,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Bitters, Lemon Zest or none at all "
+        "garnish": "Bitters, Lemon Zest or none at all ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Lynchburg Lemonade",
@@ -262,7 +279,8 @@
             "Soda Water"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lemon Wedge "
+        "garnish": "Lemon Wedge ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Penicilin ",
@@ -276,7 +294,8 @@
             "Honey"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Lemon Zest"
+        "garnish": "Lemon Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Irish Coffee",
@@ -291,7 +310,8 @@
             "Cream"
         ],
         "typeOfGlass": "Irish Coffee Glass",
-        "garnish": "Coffee Beans"
+        "garnish": "Coffee Beans",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Kaffe Karlsson",
@@ -306,7 +326,8 @@
             "Cream"
         ],
         "typeOfGlass": "Irish Coffee Glass",
-        "garnish": "Coffee Beans"
+        "garnish": "Coffee Beans",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Spanish Coffee",
@@ -319,7 +340,8 @@
             "Coffee, Cream"
         ],
         "typeOfGlass": "Irish Coffee Glass",
-        "garnish": "Coffee Beans"
+        "garnish": "Coffee Beans",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Espresso Martini ",
@@ -333,7 +355,8 @@
             "Espresso"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Coffee Beans"
+        "garnish": "Coffee Beans",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "White Russian",
@@ -347,7 +370,8 @@
             "Milk"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Black Russian",
@@ -359,7 +383,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Colorado Bulldog ",
@@ -374,7 +399,8 @@
             "Cream"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Bramble",
@@ -389,7 +415,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Lemon Zest"
+        "garnish": "Lemon Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Last Word",
@@ -404,7 +431,8 @@
             "Lime"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lime Zest or Maraschino Berry"
+        "garnish": "Lime Zest or Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Final Ward",
@@ -419,7 +447,8 @@
             "Lemon"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest or Maraschino Berry"
+        "garnish": "Lemon Zest or Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Daquiri ",
@@ -433,7 +462,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lime Zest, Maraschino Berry"
+        "garnish": "Lime Zest, Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Dark & Stormy",
@@ -448,7 +478,8 @@
             "Ginger Juice"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lime Wedge"
+        "garnish": "Lime Wedge",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Gin Fizz",
@@ -464,7 +495,8 @@
             "Soda Water"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lemon Zest or none at all"
+        "garnish": "Lemon Zest or none at all",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Manhattan",
@@ -478,7 +510,8 @@
             "Angostura Bitters"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Orange Zest, Maraschino Berry"
+        "garnish": "Orange Zest, Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Sex on the Beach",
@@ -493,7 +526,8 @@
             "Cranberry Juice"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Orange Wedge or Zest, Maraschino Berry"
+        "garnish": "Orange Wedge or Zest, Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Pisco Sour",
@@ -508,7 +542,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Bitters, Lime Zest or none at all "
+        "garnish": "Bitters, Lime Zest or none at all ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Between the Sheets",
@@ -524,7 +559,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest"
+        "garnish": "Lemon Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Moscow Mule",
@@ -539,7 +575,8 @@
             "Ginger Beer"
         ],
         "typeOfGlass": "Copper Mug",
-        "garnish": "Lime Wedge or Wheel"
+        "garnish": "Lime Wedge or Wheel",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Pornstar Martini ",
@@ -555,7 +592,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Quarter of a Passionfruit"
+        "garnish": "Quarter of a Passionfruit",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Sidecar",
@@ -570,7 +608,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lemon Zest or none at all"
+        "garnish": "Lemon Zest or none at all",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "French 75 ",
@@ -585,7 +624,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Champagne Glass",
-        "garnish": "Lemon Zest or none at all"
+        "garnish": "Lemon Zest or none at all",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Godfather",
@@ -597,7 +637,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Godmother ",
@@ -609,7 +650,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Orgasm",
@@ -622,7 +664,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass ",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Boulevardier",
@@ -635,7 +678,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest"
+        "garnish": "Orange Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Americano",
@@ -649,7 +693,8 @@
             "Soda Water"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest"
+        "garnish": "Orange Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Sbagliato ",
@@ -662,7 +707,8 @@
         ],
         "nonAlcoholIngredients": null,
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest"
+        "garnish": "Orange Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Old Cuban",
@@ -678,7 +724,8 @@
             "Mint Leaves"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Mint Leaves or Lime Zest"
+        "garnish": "Mint Leaves or Lime Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Southside ",
@@ -693,7 +740,8 @@
             "Mint Leaves"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Mint Leaves or Lemon Zest"
+        "garnish": "Mint Leaves or Lemon Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Piña Colada",
@@ -708,7 +756,8 @@
             "Lime"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lime Zest, Pineapple wedge, Maraschino Berry"
+        "garnish": "Lime Zest, Pineapple wedge, Maraschino Berry",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Pink Panther",
@@ -722,7 +771,8 @@
             "Grenadine"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": null
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "After Eight",
@@ -737,7 +787,8 @@
             "Milk"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Chocolate Flakes"
+        "garnish": "Chocolate Flakes",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Grasshopper ",
@@ -751,7 +802,8 @@
             "Cream"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Chocolate Flakes"
+        "garnish": "Chocolate Flakes",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Strawberry Daquiri ",
@@ -765,7 +817,8 @@
             "Strawberry Sugar"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Strawberries"
+        "garnish": "Strawberries",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Long Island Ice Tea ",
@@ -784,7 +837,8 @@
             "Coca Cola"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lemon Wedge"
+        "garnish": "Lemon Wedge",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Hemingway Daquiri ",
@@ -799,7 +853,8 @@
             "Grapefruit Juice"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": "Grapefruit Zest"
+        "garnish": "Grapefruit Zest",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Paloma",
@@ -813,7 +868,8 @@
             "Pink Grapefruit Soda"
         ],
         "typeOfGlass": "Highball Glass",
-        "garnish": "Lime Wedge or Wheel"
+        "garnish": "Lime Wedge or Wheel",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Caipirinha",
@@ -827,7 +883,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Lime Wedge or Wheel"
+        "garnish": "Lime Wedge or Wheel",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Capiroska",
@@ -841,7 +898,8 @@
             "Sugar"
         ],
         "typeOfGlass": "Whiskey Glass",
-        "garnish": "Lime Wedge or Wheel"
+        "garnish": "Lime Wedge or Wheel",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Hugo",
@@ -856,7 +914,8 @@
             "Mint Leaves"
         ],
         "typeOfGlass": "Wine Glass",
-        "garnish": "Lime Wheel, Mint Leaves"
+        "garnish": "Lime Wheel, Mint Leaves",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "Aperol Spritz",
@@ -871,7 +930,8 @@
             "Mint Leaves"
         ],
         "typeOfGlass": "Wine Glass",
-        "garnish": "Orange Wedge "
+        "garnish": "Orange Wedge ",
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     },
     {
         "name": "New York Sour",
@@ -887,288 +947,8 @@
             "Eggwhite"
         ],
         "typeOfGlass": "Cocktail Glass",
-        "garnish": null
-    },
-    {
-        "name": "Mint Julep",
-        "instructions": "Add all ingredients to the Copper Mug, fill it up with crushed ice or icecubes",
-        "measurements": "5cl Bourbon Whiskey, 2cl Sugar, Mint Leaves",
-        "alcoholIngredients": [
-            "Bourbon Whiskey"
-        ],
-        "nonAlcoholIngredients": [
-            "Sugar",
-            "Mint Leaves"
-        ],
-        "typeOfGlass": "Copper Mug",
-        "garnish": "Mint Leaves"
-    },
-    {
-        "name": "Mojito",
-        "instructions": "Add all ingredient to the desired glass, flatten the Mint Leaves in your hand first to open their pores. Fill the glass with crushed ice and top with Soda Water",
-        "measurements": "5cl White Rum, 3cl Lime, 2cl Sugar, Mint Leaves, Sodawater",
-        "alcoholIngredients": [
-            "White Rum"
-        ],
-        "nonAlcoholIngredients": [
-            "Lime",
-            "Sugar",
-            "Mint Leaves",
-            "Sodawater"
-        ],
-        "typeOfGlass": "Highball Glass",
-        "garnish": "Lime Wheel, Mint Leaves"
-    },
-    {
-        "name": "Kir Royale",
-        "instructions": "Pour the spirit into the desired glass, fill it up with Sparkling Whine",
-        "measurements": "4cl Creme de Cassis, Sparkling Wine",
-        "alcoholIngredients": [
-            "Creme de Cassis",
-            "Sparkling Wine"
-        ],
-        "nonAlcoholIngredients": null,
-        "typeOfGlass": "Champagne Glass",
-        "garnish": "Lemon Zest or none at all"
-    },
-    {
-        "name": "Gimlet",
-        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass. This drink can be done with Lime Cordial instead of regular sugar and Lime Juice, which is a sugar that is infused with Lime Zest",
-        "measurements": "5cl Gin, 3cl Lime, 2cl Sugar",
-        "alcoholIngredients": [
-            "Gin"
-        ],
-        "nonAlcoholIngredients": [
-            "Lime",
-            "Sugar"
-        ],
-        "typeOfGlass": "Cockail Glass",
-        "garnish": "Lime Zest"
-    },
-    {
-        "name": "Pimms Cup",
-        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and top with Ginger Ale",
-        "measurements": "5cl Pimm's No.1, 2cl Lemon, Ginger Ale",
-        "alcoholIngredients": [
-            "Pimm's No.1"
-        ],
-        "nonAlcoholIngredients": [
-            "Lemon",
-            "Ginger Ale"
-        ],
-        "typeOfGlass": "Highball Glass",
-        "garnish": "Apple Slice, Cucumber, Orange Wedge, Strawberries "
-    },
-    {
-        "name": "Harvey Wallbanger",
-        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and top with Orange Juice ",
-        "measurements": "4cl Vodka, 1,5cl Galliano, Orange Juice",
-        "alcoholIngredients": [
-            "Vodka",
-            "Galliano"
-        ],
-        "nonAlcoholIngredients": [
-            "Orange Juice"
-        ],
-        "typeOfGlass": "Highball Glass",
-        "garnish": "Orange Wedge"
-    },
-    {
-        "name": "Sazerac",
-        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "measurements": "4cl Cognac, 1cl Absinthe, 3 Dash Angostura Bitters, 1 Sugar Cube",
-        "alcoholIngredients": [
-            "Cognac",
-            "Absinthe"
-        ],
-        "nonAlcoholIngredients": [
-            "Angostura Bitters",
-            "Sugar Cube"
-        ],
-        "typeOfGlass": "Cocktail Glass",
-        "garnish": "Orange Zest or none at all "
-    },
-    {
-        "name": "Martinez ",
-        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Maraschino Liquer, 3 Dash Orange Bitters",
-        "alcoholIngredients": [
-            "Gin",
-            "Sweet Vermouth",
-            "Maraschino Liquer"
-        ],
-        "nonAlcoholIngredients": [
-            "Orange Bitters"
-        ],
-        "typeOfGlass": "Cocktail Glass",
-        "garnish": "Orange Zest or none at all "
-    },
-    {
-        "name": "Bloody Mary",
-        "instructions": "Add all ingredients to the desired glass, fill it up with ice and stir. PS. Add Tabasco, Worchestershire Sauce and Black Pepper according to your own preference, can have regular salt instead of Celery salt",
-        "measurements": "5cl Vodka",
-        "alcoholIngredients": [
-            "Vodka"
-        ],
-        "nonAlcoholIngredients": [
-            "Tomato Juice",
-            "Lemon",
-            "Celery Salt",
-            "Tabasco",
-            "Worchestershire Sauce",
-            "Black Pepper"
-        ],
-        "typeOfGlass": "Whiskey Glass",
-        "garnish": "Cucumber, Selleri,  Lemon Wedge "
-    },
-    {
-        "name": "Mai Tai",
-        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass with big icecube ",
-        "measurements": "2cl White Rum, 2cl Dark Rum, 1cl Cointreau (Triple Sec)",
-        "alcoholIngredients": [
-            "White Rum",
-            "Dark Rum",
-            "Cointreau (Triple Sec)"
-        ],
-        "nonAlcoholIngredients": [
-            "Lime",
-            "Orgeat Syrup"
-        ],
-        "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest, Maraschino Berry"
-    },
-    {
-        "name": "Bellini",
-        "instructions": "Pour the puré in the desired glass, fill it up with Sparkling Wine",
-        "measurements": "Sparkling Wine, 3cl Peach Puré",
-        "alcoholIngredients": [
-            "Sparkling Wine"
-        ],
-        "nonAlcoholIngredients": [
-            "Peach Puré"
-        ],
-        "typeOfGlass": "Champagne Glass",
-        "garnish": null
-    },
-    {
-        "name": "Mimosa",
-        "instructions": "Pour Sparkling Wine in the desired glass, fill it up with Orange Juice after preference",
-        "measurements": "Sparkling Wine, Orange Juice",
-        "alcoholIngredients": [
-            "Sparkling Wine"
-        ],
-        "nonAlcoholIngredients": [
-            "Orange Juice"
-        ],
-        "typeOfGlass": "Champagne Glass",
-        "garnish": "Orange Zest"
-    },
-    {
-        "name": "Vesper Martini",
-        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "measurements": "4cl Gin, 2cl Vodka, 1cl Lillet Blanc",
-        "alcoholIngredients": [
-            "Gin",
-            "Vodka",
-            "Lillet Blanc"
-        ],
-        "nonAlcoholIngredients": null,
-        "typeOfGlass": "Cocktail Glass",
-        "garnish": "Lime or Lemon Zest"
-    },
-    {
-        "name": "Appletini",
-        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "measurements": "3cl Vodka, 2cl Apple Liquer, 3cl Lemon, 2cl Sugar",
-        "alcoholIngredients": [
-            "Vodka",
-            "Apple Liquer"
-        ],
-        "nonAlcoholIngredients": [
-            "Lemon",
-            "Sugar"
-        ],
-        "typeOfGlass": "Cocktail Glass",
-        "garnish": "Apple Wedge"
-    },
-    {
-        "name": "Tequila Sunrise",
-        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and Orange Juice, pour the Grenadine on top and stir",
-        "measurements": "5cl Tequila, 2cl Grenadine, Orange Juice",
-        "alcoholIngredients": [
-            "Tequila"
-        ],
-        "nonAlcoholIngredients": [
-            "Grenadine",
-            "Orange Juice"
-        ],
-        "typeOfGlass": "Highball Glass",
-        "garnish": "Orange Zest or Wedge"
-    },
-    {
-        "name": "Screwdriver",
-        "instructions": "Add the spirit to the desired glass, fill it up with icecubes and Orange Juice",
-        "measurements": "5cl Vodka, Orange Juice",
-        "alcoholIngredients": [
-            "Vodka"
-        ],
-        "nonAlcoholIngredients": [
-            "Orange Juice"
-        ],
-        "typeOfGlass": "Highball Glass",
-        "garnish": "Orange Zest or Wedge"
-    },
-    {
-        "name": "Rusty Nail",
-        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass with a big icecube",
-        "measurements": "5cl Scotch Whiskey, 1cl Drambuie",
-        "alcoholIngredients": [
-            "Scotch Whiskey",
-            "Drambuie"
-        ],
-        "nonAlcoholIngredients": null,
-        "typeOfGlass": "Whiskey Glass",
-        "garnish": "Orange Zest"
-    },
-    {
-        "name": "Brandy Alexander",
-        "instructions": "Add all ingredients in the shaker, shake it with ice and strain into desired glass",
-        "measurements": "4 cl Cognac, 1.5cl Creme de Cacao, 3cl Cream",
-        "alcoholIngredients": [
-            "Cognac",
-            "Creme de Cacao"
-        ],
-        "nonAlcoholIngredients": [
-            "Cream"
-        ],
-        "typeOfGlass": "Cocktail Glass",
-        "garnish": "Chocolate Flakes"
-    },
-    {
-        "name": "Rob Roy",
-        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass ",
-        "measurements": "4cl Scotch Whiskey, 1.5cl Sweet Vermouth, 3 Dash Angostura Bitters",
-        "alcoholIngredients": [
-            "Scotch Whiskey",
-            "Sweet Vermouth"
-        ],
-        "nonAlcoholIngredients": [
-            "Angostura Bitters"
-        ],
-        "typeOfGlass": "Cocktail Glass",
-        "garnish": "Orange Zest or Maraschino Berry"
-    },
-    {
-        "name": "Hanky Panky",
-        "instructions": "Add all ingredients to a glass, stir it and then pour into desired glass",
-        "measurements": "2cl Gin, 2cl Sweet Vermouth, 2cl Fernet Branca",
-        "alcoholIngredients": [
-            "Gin",
-            "Sweet Vermouth",
-            "Fernet Branca"
-        ],
-        "nonAlcoholIngredients": null,
-        "typeOfGlass": "Cockail Glass",
-        "garnish": "Orange Zest"
+        "garnish": null,
+        "imageid": "1Xx8svb3PzemT1YaKaWoFtEYDKfFnY0xP"
     }
+    
 ]

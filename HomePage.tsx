@@ -11,7 +11,6 @@ import { Hamburger } from './components/menuButton';
 import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
-import ViewOverflow from 'react-native-view-overflow';
 
 export const HomePage = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
@@ -61,8 +60,7 @@ export const HomePage = ({ navigation }) => {
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                     <View style={styles.shakerArea}>
                         <View style={styles.topsection} >
-                            <IngredientCountIcon />
-                            <ImageBackground style={styles.shakerReal} source={require('./assets/images/shaker-real.png')}
+                            <ImageBackground style={styles.shakerReal} source={require('./assets/images/shakeitgood.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;
                                     console.log("layout", layout);
@@ -71,22 +69,25 @@ export const HomePage = ({ navigation }) => {
                                     shaker.setPosX(layout.x);
                                     shaker.setPosY(layout.y);
                                 }} />
+                            <View style={{position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+                            <IngredientCountIcon/>
+                            </View>
                         </View>
                         <Image style={styles.image4} source={require('./assets/images/shaketomix.png')}></Image>
                     </View>
                 </ImageBackground>
 
-                <ViewOverflow useViewOverflow={false} style={styles.bottomBar}>
+                <View style={styles.bottomBar}>
+
                     <Text style={styles.poppins} >Add items</Text>
                     <Text style={styles.poppins2} >What items do you have at home? Drag and drop to  the shaker!</Text>
                     <View style={styles.header}>
                         <ToggleComponent childToParent={childToParent} />
                     </View>
                     <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
-                </ViewOverflow>
+                </View>
             </LinearGradient>
         </GestureHandlerRootView >
-
     )
 };
 
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
     },
 
     image4: {
-        height: 80,
+        height: 60,
         width: 440,
         alignSelf: 'center'
     },
