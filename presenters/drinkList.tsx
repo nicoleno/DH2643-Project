@@ -70,7 +70,7 @@ const DrinkList = ({ navigation, route }) => {
 
 
     return (
-        <DrinkListView navigation={navigation} dataList={drinkList} />
+        <DrinkListView navigation={navigation} dataList={drinkList} allDrinks={allDrinks} />
     )
 }
 export default DrinkList;

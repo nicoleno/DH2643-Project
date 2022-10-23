@@ -5,7 +5,7 @@ import Animated from 'react-native-reanimated';
 import { DrinkListItem } from '../models/model';
 import { FlatList } from 'react-native-gesture-handler';
 
-const DrinkListView = ({ navigation, dataList }) => {
+const DrinkListView = ({ navigation, dataList, allDrinks }) => {
     const data = dataList as DrinkListItem[];
     const scrollX = React.useRef(new Animated.Value(0)).current;
     const card_width = 300;
@@ -56,7 +56,7 @@ const DrinkListView = ({ navigation, dataList }) => {
                                     </View>
                                 </View>
                                 <TouchableOpacity
-                                    style={styles.recipeButton} onPress={() => { navigation.navigate("Details") }}>
+                                    style={styles.recipeButton} onPress={() => { navigation.navigate("Details", { item: item, allDrinks: allDrinks }) }}>
                                     <Text style={{ color: '#fff', fontSize: 16 }}>Recipe</Text>
                                 </TouchableOpacity>
                             </ImageBackground>

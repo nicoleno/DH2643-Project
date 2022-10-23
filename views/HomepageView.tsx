@@ -24,7 +24,6 @@ export const HomepageView = ({ navigation }) => {
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                     <View style={styles.shakerArea}>
                         <View style={styles.topsection} >
-                            <IngredientCountIcon />
                             <ImageBackground style={styles.shakerReal} source={require('../assets/images/shaker-real.png')}
                                 onLayout={(event) => {
                                     const layout = event.nativeEvent.layout;

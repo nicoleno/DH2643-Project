@@ -4,6 +4,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from './components/menuButton';
 
 export const Details = ({ route, navigation }) => {
+    const chosenDrink = route.params.item.name;
+    const allDrinks = route.params.allDrinks;
+    console.log(chosenDrink)
+    console.log(allDrinks[0])
     return (
         <View style={{ flex: 1 }}>
             <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
@@ -11,7 +15,7 @@ export const Details = ({ route, navigation }) => {
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 </ImageBackground>
                 <View style={styles.recipeContainer}>
-                    <Text style={{ fontSize: 30 }}>{route.params}</Text>
+                    <Text style={{ fontSize: 30 }}></Text>
                     <Text>tjo</Text>
                     <Text>tjo</Text>
 
