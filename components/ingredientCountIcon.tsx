@@ -48,12 +48,16 @@ const IngredientCountIcon = () => {
                     <FlatList data={ingredients} renderItem={renderItem} keyExtractor={item => item.id}></FlatList>
                 </View>
             </Modal>
+
+            { ingredients.length!=0?
+
             <TouchableOpacity
                 onPress={() => setModalVisible(true)}>
                 <View style={styles.itemCountContainer}>
                     <Text style={styles.itemCountText}>{ingredients.length}</Text>
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> : null
+            }
         </View>
     )
 }
@@ -70,7 +74,7 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 30,
-        backgroundColor: '#798777',
+        backgroundColor: '#FFFFFF',
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 3000,
@@ -79,7 +83,8 @@ const styles = StyleSheet.create({
     itemCountText: {
         color: 'black',
         fontWeight: 'bold',
-        fontFamily: 'Poppins'
+        fontFamily: 'Poppins',
+        fontSize:20
     },
     modalView: {
         margin: 20,
