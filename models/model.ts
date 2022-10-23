@@ -20,4 +20,5 @@ export type DrinkListItem = {
     have: string[];
     need: string[];
     name: string;
+    imageid: string;
 }

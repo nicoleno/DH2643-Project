@@ -9,8 +9,8 @@ const DrinkList = ({ navigation, route }) => {
     const allDrinks = route.params.props.drinks;
     const shakerIngredients = useSelector((state: RootState) => state.ingredients);
     const matchedDrinks = checkAllDrinks(shakerIngredients, allDrinks);
-    console.log('drinks', allDrinks[0])
-    console.log('matched', matchedDrinks);
+    //console.log('drinks', allDrinks[0])
+    //console.log('matched', matchedDrinks);
 
     const alcoholIngredientsNeeded = (drinkIngredients, shakerIngredients) => {
         if (drinkIngredients.alcoholIngredients !== null) {
@@ -58,9 +58,10 @@ const DrinkList = ({ navigation, route }) => {
                 value: `${i + 1}`,
                 have: have,
                 need: need,
-                name: matchedDrinks[i].name
+                name: matchedDrinks[i].name,
+                imageid: matchedDrinks[i].imageid,
             };
-            console.log('drink', drink);
+            // console.log('drink', drink);
             drinkList.push(drink);
         }
         return drinkList;

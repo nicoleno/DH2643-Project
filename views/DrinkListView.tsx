@@ -42,7 +42,7 @@ const DrinkListView = ({ navigation, dataList, allDrinks }) => {
                     return <Animated.View style={{ transform: [{ scale }], }}>
 
                         <View style={styles.cardContainer}>
-                            <ImageBackground style={styles.backgroundimg} imageStyle={{ borderRadius: 30 }} source={require('../assets/images/Tommys-margharita.png')}>
+                            <ImageBackground style={styles.backgroundimg} imageStyle={{ borderRadius: 30 }} source={{ uri: "https://drive.google.com/uc?export=view&id=" + item.imageid }}>
                                 <View style={styles.cardText}>
                                     <Text style={{ color: '#fff', fontSize: 10, padding: 10 }}>{item.label}</Text>
                                     <Text style={{ color: '#fff', fontSize: 24, padding: 10 }}>{item.name}</Text>

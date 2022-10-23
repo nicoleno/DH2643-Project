@@ -3,7 +3,7 @@ import { FETCH_DRINKS } from '../store/actions';
 const { useDispatch } = require('react-redux');
 
 export const getDrinks = () => {
-    fetch("http://192.168.127.216:3000/drinks", {
+    fetch("http://192.168.0.37:3000/drinks", {
         method: "get",
         headers: {
             Accept: 'application/json',

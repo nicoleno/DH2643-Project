@@ -3,32 +3,44 @@ import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react
 import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from './components/menuButton';
 import { ScrollView } from "react-native-gesture-handler";
+import { DrinkListItem } from "./models/model";
+import { measure } from "react-native-reanimated";
 
 export const Details = ({ route, navigation }) => {
-    const chosenDrink = route.params.item.name;
+    const drinkName = route.params.item.name;
     const allDrinks = route.params.allDrinks;
-    console.log(chosenDrink)
-    console.log(allDrinks[0])
+
+    const findDrink = (all, chosen) => {
+        return all.filter(name => name.name === chosen)[0]
+    }
+
+    const chosenDrink = findDrink(allDrinks, drinkName);
+
+
+    const measurements = chosenDrink.measurements.split(", ");
+
     return (
         <View style={{ flex: 1 }}>
             <LinearGradient start={{ x: 0.0, y: 0.55 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
-                <ImageBackground style={styles.topimage} source={require('./assets/images/Tommys-margharita.png')}>
+                <ImageBackground style={styles.topimage} source={{ uri: "https://drive.google.com/uc?export=view&id=" + chosenDrink.imageid }}>
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 </ImageBackground>
                 <View style={styles.recipeContainer}>
 
-                    <Text style={styles.name}>{name}</Text>
+                    <Text style={styles.name}>{chosenDrink.name}</Text>
                     <ScrollView style={styles.textContainer}>
                         <Text style={styles.bold}>Ingredients </Text>
-                        <Text style={styles.textList}>5cl Tequila {"\n"}{"\n"}{"\n"}</Text>
-
+                        {measurements.map((ing: String) => {
+                            return (
+                                <Text key={ing[0]} style={{ fontSize: 12 }}> {ing}</Text>
+                            )
+                        })}
                         <Text style={styles.bold}>Type of Glass</Text>
-                        <Text style={styles.textList}>Whiskey Glass </Text>
+                        <Text style={styles.textList}>{chosenDrink.typeOfGlass}</Text>
                         <Text style={styles.bold}>Garnish</Text>
-                        <Text style={styles.textList}>Lime Wheel </Text>
+                        <Text style={styles.textList}>{chosenDrink.garnish}</Text>
                         <Text style={styles.bold}>Instructions</Text>
-                        <Text style={styles.textList}>Add all ingredients in the shaker, shake it with ice and strain into desired glass.
-                            Fill the glass with a big icecube if possible, otherwise regular icecubes </Text>
+                        <Text style={styles.textList}>{chosenDrink.instructions}</Text>
                     </ScrollView>
                     <View style={{ alignItems: 'center', }}>
                         <TouchableOpacity style={styles.backbutton}
@@ -55,10 +67,10 @@ const styles = StyleSheet.create({
         color: "rgba(255,255,1,1)"
     },
     topimage: {
-        height: 250,
+        height: 300,
     },
     recipeContainer: {
-        height: 500,
+        height: 450,
         backgroundColor: '#fff',
         alignContent: 'center',
         justifyContent: 'flex-start',
@@ -66,7 +78,7 @@ const styles = StyleSheet.create({
 
     textContainer: {
         padding: 20,
-        height: 400,
+        height: 350,
     },
 
     bold: {
