@@ -11,7 +11,7 @@ const DrinkListView = ({ navigation, dataList, allDrinks }) => {
     const scrollX = React.useRef(new Animated.Value(0)).current;
     const card_width = 300;
     const renderItem = ({ item }) => {
-        return (<Text style={{ color: '#fff', marginRight: 10, marginLeft:35 }}>{`\u2022 ${item}`}</Text>);}
+        return (<Text style={{ color: '#fff', marginRight: 10, marginLeft:35 }}>{item}</Text>);}
 
     return (
         <LinearGradient start={{ x: 0.0, y: 0.0 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#000000']} style={styles.background}>
