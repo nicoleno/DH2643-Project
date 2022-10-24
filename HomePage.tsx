@@ -12,12 +12,12 @@ import { useFonts } from '@expo-google-fonts/carter-one';
 import ToggleComponent from './components/togglecomponent';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 export const HomePage = ({ navigation }) => {
     const [drinks, setDrinks] = React.useState([]);
     const [loaded] = useFonts({
         Carter: require('../assets/fonts/CarterOne-Regular.ttf'),
         Poppins: require('../assets/fonts/Poppins-Regular.ttf'),
+        PoppinsBold: require('../assets/fonts/Poppins-Bold.ttf'),
     });
 
     useEffect(() => {
@@ -48,7 +48,6 @@ export const HomePage = ({ navigation }) => {
     );
 
     const [showIngredient, setToggleValue] = useState(false);
-
     const childToParent = (showIngredient) => {
         setToggleValue(showIngredient)
     }
@@ -82,7 +81,7 @@ export const HomePage = ({ navigation }) => {
                     <View style={styles.header}>
                         <ToggleComponent childToParent={childToParent} />
                     </View>
-                    <FlatList style={{ overflow: "visible" }} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
+                    <FlatList style={{ overflow: "visible"}} horizontal data={showIngredient ? ingredients : alcohol} renderItem={renderItem} keyExtractor={item => item.id} />
                 </View>
             </LinearGradient>
         </GestureHandlerRootView >

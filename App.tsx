@@ -1,10 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, SafeAreaView, Text } from 'react-native';
+import React, { useEffect, useState } from 'react';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import Sidebar from './components/navigator';
-import { useFonts } from 'expo-font';
-import { getDrinks } from './db/fetch';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
@@ -15,7 +12,8 @@ export default function App() {
     const [data, setData] = useState([]);
     const customFonts = {
         "Poppins": require('./assets/fonts/Poppins-Regular.ttf'),
-        "Carter": require('./assets/fonts/CarterOne-Regular.ttf')
+        "Carter": require('./assets/fonts/CarterOne-Regular.ttf'),
+        "PoppinsBold":  require('./assets/fonts/Poppins-Bold.ttf'),
     };
 
     const getDrinks = () => {
