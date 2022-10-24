@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, StyleSheet, ImageBackground } from 'react-native';
-import SearchDrink from "./search.jsx";
+import SearchDrink from "./search";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from './components/menuButton';
 
@@ -66,6 +66,33 @@ export const Cocktails = ({ navigation, route }) => {
 
     console.log(route.params.drinks);
 
+    const [data, setData] = useState([]);
+
+    const getDrinks = () => {
+        fetch("https://drinks-db-server.herokuapp.com/drinks", {
+            method: "get",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => setData(data.drinks))
+            .catch((err) => err);
+    }
+
+    useEffect(() => {
+        (async () => {
+            try {
+                await getDrinks();
+            }
+            catch (e) {
+                console.warn(e);
+            }
+        })();
+    }, []);
+    // console.log(data);
+
 
     return (
         <LinearGradient start={{ x: 0.0, y: 0 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#171717']} style={styles.background}>
@@ -73,7 +100,7 @@ export const Cocktails = ({ navigation, route }) => {
                 <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 <Text style={styles.poppins2} >Want some inspiration? Browse cocktails here!</Text>
             </ImageBackground>
-            <SearchDrink drinks={route.params} />
+            <SearchDrink drinks={data} />
         </LinearGradient>
 
     )
