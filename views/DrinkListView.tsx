@@ -11,7 +11,7 @@ const DrinkListView = ({ navigation, dataList, allDrinks }) => {
     const card_width = 300;
 
     const renderItem = ({ item }) => {
-        return (<Text style={{ color: '#fff', marginLeft: 35 }}>{`\u2022 ${item}`}</Text>);
+        return (<Text style={{ color: '#fff', marginLeft: 35 }}>{item}</Text>);
 
     }
 

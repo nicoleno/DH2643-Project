@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { HomePage } from "../presenters/HomePage";
 import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
-import { Details } from "../details"
+import { Details } from "../presenters/details"
 import DrinkList from "../presenters/drinkList"
 import { Hamburger } from "./menuButton";
 
@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
                     )
                 }} />
-                <Drawer.Screen name="Browse Cocktails" component={Cocktails} initialParams={{ props }} options={{
+                <Drawer.Screen name="Browse Cocktails" component={Cocktails} initialParams={{ drinks: props.drinks }} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/cocktail.png')} style={{ height: 15, width: 15, }} />
                     )
