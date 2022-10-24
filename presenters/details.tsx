@@ -18,7 +18,6 @@ export const Details = ({ route, navigation }) => {
     const chosenDrink = findDrink(allDrinks, drinkName);
 
 
-
     return (
         <DetailsView navigation={navigation} chosenDrink={chosenDrink} />
     )
