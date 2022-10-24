@@ -48,29 +48,24 @@ const DrinkList = ({ navigation, route }) => {
 
     const createDrinkList = (matchedDrinks) => {
         const drinkList: DrinkListItem[] = [];
-        console.log(matchedDrinks);
 
-        for (let i = 0; i < matchedDrinks.length; i++) {
-            if (alcoholIngredientsHave(matchedDrinks[i], shakerIngredients).length < 1) {
-                //console.log(matchedDrinks[i]);
-                matchedDrinks.splice(i, 1);
+        const filteredDrinks = matchedDrinks.filter((drink) => {
+            return (alcoholIngredientsHave(drink, shakerIngredients).length !== 0);
 
-            }
-        }
+        })
 
-        for (let i = 0; i < matchedDrinks.length; i++) {
+        for (let i = 0; i < filteredDrinks.length; i++) {
 
-            const need = alcoholIngredientsNeeded(matchedDrinks[i], shakerIngredients).concat(nonAlcoholngredientsNeeded(matchedDrinks[i], shakerIngredients));
-            const have = alcoholIngredientsHave(matchedDrinks[i], shakerIngredients).concat(nonAlcoholngredientsHave(matchedDrinks[i], shakerIngredients));
-
+            const need = alcoholIngredientsNeeded(filteredDrinks[i], shakerIngredients).concat(nonAlcoholngredientsNeeded(filteredDrinks[i], shakerIngredients));
+            const have = alcoholIngredientsHave(filteredDrinks[i], shakerIngredients).concat(nonAlcoholngredientsHave(filteredDrinks[i], shakerIngredients));
 
             const drink: DrinkListItem = {
-                label: `${i + 1}  of ${matchedDrinks.length}`,
+                label: `${i + 1}  of ${filteredDrinks.length}`,
                 value: `${(i + 1)}`,
                 have: have,
                 need: need,
-                name: matchedDrinks[i].name,
-                imageid: matchedDrinks[i].imageid,
+                name: filteredDrinks[i].name,
+                imageid: filteredDrinks[i].imageid,
 
             };
             drinkList.push(drink);
