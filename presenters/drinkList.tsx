@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { DrinkListItem } from '../models/model';
 import DrinkListView from '../views/DrinkListView';
 import { checkAllDrinks } from '../components/findingDrinks';
@@ -9,8 +9,6 @@ const DrinkList = ({ navigation, route }) => {
     const allDrinks = route.params.props.drinks;
     const shakerIngredients = useSelector((state: RootState) => state.ingredients);
     const matchedDrinks = checkAllDrinks(shakerIngredients, allDrinks);
-    //console.log('drinks', allDrinks[0])
-    //console.log('matched', matchedDrinks);
 
     const alcoholIngredientsNeeded = (drinkIngredients, shakerIngredients) => {
         if (drinkIngredients.alcoholIngredients !== null) {
@@ -61,15 +59,12 @@ const DrinkList = ({ navigation, route }) => {
                 name: matchedDrinks[i].name,
                 imageid: matchedDrinks[i].imageid,
             };
-            // console.log('drink', drink);
             drinkList.push(drink);
         }
         return drinkList;
     }
 
     const drinkList = createDrinkList(matchedDrinks);
-
-
     return (
         <DrinkListView navigation={navigation} dataList={drinkList} allDrinks={allDrinks} />
     )

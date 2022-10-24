@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
 });
 
 const SearchDrink = (drinks) => {
-  //console.log(drinks);
   {
     const [loaded] = useFonts({
       Poppins: require('./assets/fonts/Poppins-Regular.ttf')
@@ -69,7 +68,6 @@ const SearchDrink = (drinks) => {
         list.find(element => {
           if (element.name.includes(substring) && (newMatches.includes(element.name) === false)) {
             newMatches.push(element)
-
           }
         })
       }
@@ -85,7 +83,7 @@ const SearchDrink = (drinks) => {
         <View style={styles.container}>{matches.map((match) =>
           <TouchableOpacity>
             <ImageBackground style={styles.image} imageStyle={{ borderRadius: 30 }} source={require('./assets/images/Tommys-margharita.png')}>
-              <Text key={match.name} style={styles.subcontainer} key={match.name}>{match.name}</Text>
+              <Text key={match.name} style={styles.subcontainer}>{match.name}</Text>
             </ImageBackground>
           </TouchableOpacity>
         )}</View>
