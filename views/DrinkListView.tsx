@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, SectionList, ImageBackground } from 'react-native';
 import React from 'react';
 import { Hamburger } from '../components/menuButton';
 import Animated from 'react-native-reanimated';
 import { DrinkListItem } from '../models/model';
-import { FlatList} from 'react-native-gesture-handler';
+import { FlatList } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const DrinkListView = ({ navigation, dataList, allDrinks }) => {
@@ -15,49 +15,50 @@ const DrinkListView = ({ navigation, dataList, allDrinks }) => {
 
     return (
         <LinearGradient start={{ x: 0.0, y: 0.0 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#000000']} style={styles.background}>
-            <View style={{ flex: 1}}>
+            <View style={{ flex: 1 }}>
                 <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 <Animated.FlatList contentContainerStyle={{ alignItems: 'center', paddingHorizontal: 50 }} horizontal data={data}
                     showsHorizontalScrollIndicator={false}
-                    onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: scrollX } } }],{ useNativeDriver: true })}
+                    onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: scrollX } } }], { useNativeDriver: true })}
                     keyExtractor={item => item.value}
                     renderItem={({ item, index }) => {
                         const inputRange = [card_width * (index - 1), card_width * index, card_width * (index + 1)]
-                        const scale = scrollX.interpolate({inputRange, outputRange: [0.75, 1, 0.75]})
+                        const scale = scrollX.interpolate({ inputRange, outputRange: [0.75, 1, 0.75] })
 
-            return <Animated.View style={{ transform: [{ scale }], } }>
-                <View style={styles.cardContainer}>
-                    <ImageBackground style={styles.backgroundimg} imageStyle={{ borderRadius: 30}} source={{ uri: "https://drive.google.com/uc?export=view&id=" + item.imageid }}>
-                        <View style={styles.cardText}>
-                            <Text style={{ color: '#fff', fontSize: 10, padding: 5 }}>{item.label}</Text>
-                            <Text style={styles.poppins}>{item.name}</Text>
-                            <View style={styles.poppins2}>
-                                <FlatList style={{marginHorizontal: -5}} data={(item.have)}
-                                    ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft:35 }}><Text><Text style={{fontFamily: 'PoppinsBold', fontSize: 14}}>You have</Text></Text></Text>}
-                                    renderItem={renderItem} />
-                                <FlatList data={(item.need)}
-                                    ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft:35  }}><Text><Text style={{fontFamily: 'PoppinsBold', fontSize: 14}}>You need</Text></Text></Text>}
-                                    renderItem={renderItem} />
+                        return <Animated.View style={{ transform: [{ scale }], }}>
+                            <View style={styles.cardContainer}>
+                                <ImageBackground style={styles.backgroundimg} imageStyle={{ borderRadius: 30 }} source={{ uri: "https://drive.google.com/uc?export=view&id=" + item.imageid }}>
+                                    <View style={styles.cardText}>
+                                        <Text style={{ color: '#fff', fontSize: 10, padding: 5 }}>{item.label}</Text>
+                                        <Text style={styles.poppins}>{item.name}</Text>
+                                        <View style={styles.poppins2}>
+                                            <FlatList style={{ marginHorizontal: -5 }} data={(item.have)}
+                                                ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft: 40 }}><Text><Text style={{ fontFamily: 'PoppinsBold', fontSize: 14 }}>You have</Text></Text></Text>}
+                                                renderItem={renderItem} />
+                                            <FlatList data={(item.need)}
+                                                ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft: 35 }}><Text><Text style={{ fontFamily: 'PoppinsBold', fontSize: 14 }}>You need</Text></Text></Text>}
+                                                renderItem={renderItem} />
+                                        </View>
+                                    </View>
+                                    <TouchableOpacity
+                                        style={styles.recipeButton} onPress={() => { navigation.navigate("Details", { item: item, allDrinks: allDrinks, routeName: "DrinkList" }) }}>
+                                        <Text style={{ color: '#fff', fontSize: 12, fontFamily: 'Poppins' }}>Recipe</Text>
+                                    </TouchableOpacity>
+                                </ImageBackground>
                             </View>
-                        </View>
-                        <TouchableOpacity
-                            style={styles.recipeButton} onPress={() => { navigation.navigate("Details", { item: item, allDrinks: allDrinks }) }}>
-                            <Text style={{ color: '#fff', fontSize: 12, fontFamily: 'Poppins' }}>Recipe</Text>
-                        </TouchableOpacity>
-                    </ImageBackground>
-                </View>
-                    </Animated.View>}}>
+                        </Animated.View>
+                    }}>
                 </Animated.FlatList>
                 <View style={{ alignItems: 'center', }}>
-                    <TouchableOpacity style={styles.backbutton}onPress={() => navigation.navigate('Home')}>
-                    <ImageBackground style={{height:25, width:25}}source={require('../assets/images/back.png')}>
-                    </ImageBackground>
-                    <Text style={{color: "rgba(255,255,255,1)", marginTop:5, fontFamily:'Poppins', fontSize:10}}>Back to shaker</Text>
+                    <TouchableOpacity style={styles.backbutton} onPress={() => navigation.navigate('Home')}>
+                        <ImageBackground style={{ height: 25, width: 25 }} source={require('../assets/images/back.png')}>
+                        </ImageBackground>
+                        <Text style={{ color: "rgba(255,255,255,1)", marginTop: 5, fontFamily: 'Poppins', fontSize: 10 }}>Back to shaker</Text>
                     </TouchableOpacity>
                 </View>
             </View >
         </LinearGradient>
-)
+    )
 }
 
 const styles = StyleSheet.create({
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: 480,
         width: 300,
-        marginLeft:8,
+        marginLeft: 8,
         backgroundColor: '#262626', borderRadius: 30,
         shadowColor: 'black',
         elevation: 10,
