@@ -7,7 +7,7 @@ import { DrinkListItem } from "../models/model";
 import { measure } from "react-native-reanimated";
 import { DetailsView } from '../views/DetailsView';
 
-export const Details = ({ route, navigation }) => {
+export const Details = ({ route, navigation, }) => {
     const drinkName = route.params.item.name;
     const allDrinks = route.params.allDrinks;
 
@@ -19,7 +19,7 @@ export const Details = ({ route, navigation }) => {
 
 
     return (
-        <DetailsView navigation={navigation} chosenDrink={chosenDrink} />
+        <DetailsView navigation={navigation} chosenDrink={chosenDrink} routeName={route.params.routeName} />
     )
 }
 

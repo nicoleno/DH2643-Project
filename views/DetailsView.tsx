@@ -4,7 +4,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from '../components/menuButton';
 import { ScrollView } from "react-native-gesture-handler";
 
-export const DetailsView = ({ navigation, chosenDrink }) => {
+export const DetailsView = ({ navigation, chosenDrink, routeName }) => {
+
 
     const measurements = chosenDrink.measurements.split(", ");
 
@@ -19,9 +20,9 @@ export const DetailsView = ({ navigation, chosenDrink }) => {
                     <Text style={styles.name}>{chosenDrink.name}</Text>
                     <ScrollView style={styles.textContainer}>
                         <Text style={styles.bold}>Ingredients </Text>
-                        {measurements.map((ing: String) => {
+                        {measurements.map((ing) => {
                             return (
-                                <Text key={ing[0]} style={{ fontSize: 12 }}>{ing}</Text>
+                                <Text key={ing} style={{ fontSize: 12 }}>{ing}</Text>
                             )
                         })}
                         <Text style={styles.bold}>Type of Glass</Text>
@@ -30,13 +31,17 @@ export const DetailsView = ({ navigation, chosenDrink }) => {
                         <Text style={styles.textList}>{chosenDrink.garnish}</Text>
                         <Text style={styles.bold}>Instructions</Text>
                         <Text style={styles.textList}>{chosenDrink.instructions}</Text>
+                        <View style={{ marginBottom: 20 }}></View>
                     </ScrollView>
-                    <View style={{ alignItems: 'center', }}>
-                        <TouchableOpacity style={styles.backbutton}
-                            onPress={() => navigation.navigate('DrinkList')}>
-                            <Text style={{ color: '#fff', fontSize: 12, fontFamily: 'Poppins' }}>Back to Drinks</Text>
-                        </TouchableOpacity></View>
+
                 </View>
+                <View style={{ alignItems: 'center', }}>
+                    <TouchableOpacity style={styles.backbutton}
+                        onPress={() => navigation.navigate(routeName)}>
+                        <ImageBackground style={{ height: 25, width: 25 }} source={require('../assets/images/back.png')}>
+                        </ImageBackground>
+                        <Text style={{ color: '#fff', fontSize: 12, fontFamily: 'Poppins' }}>Back to Drinks</Text>
+                    </TouchableOpacity></View>
             </LinearGradient>
         </View>
     )
@@ -67,13 +72,14 @@ const styles = StyleSheet.create({
 
     textContainer: {
         padding: 20,
-        height: 350,
+        height: 400,
     },
 
     bold: {
         fontSize: 15,
         fontWeight: 'bold',
-        fontFamily: 'Poppins'
+        fontFamily: 'Poppins',
+        marginTop: 5,
 
     },
 
@@ -90,14 +96,11 @@ const styles = StyleSheet.create({
     },
 
     backbutton: {
-        backgroundColor: 'black',
         height: 40,
         width: 200,
         borderRadius: 30,
         justifyContent: 'center',
         margin: 20,
         alignItems: 'center',
-        borderWidth: 1,
-        borderColor: '#fff'
     },
 })

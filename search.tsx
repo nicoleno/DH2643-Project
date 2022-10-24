@@ -4,7 +4,7 @@ import { useFonts } from '@expo-google-fonts/carter-one';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import * as SplashScreen from 'expo-splash-screen';
 
-const SearchDrink = ({ drinks }) => {
+const SearchDrink = ({ drinks, navigation }) => {
     // const [loaded] = useFonts({
     //     Poppins: require('./assets/fonts/Poppins-Regular.ttf')
     // });
@@ -21,7 +21,7 @@ const SearchDrink = ({ drinks }) => {
 
     const searchfun = (drinkList, searchString) => {
         const newMatches = []
-        console.log(drinkList.length)
+        //console.log(drinkList.length)
         for (let i = 0; i < drinkList.length; i++) {
             drinkList.find(drinkElement => {
                 // console.log(drinkElement.name)
@@ -44,9 +44,9 @@ const SearchDrink = ({ drinks }) => {
             onChangeText={(search) => searchfun(drinks, search)} editable={true} />
             <ScrollView>
                 <View style={styles.container}>{matches.map((match) =>
-                    <TouchableOpacity>
+                    <TouchableOpacity key={match.name} onPress={() => { navigation.navigate("Details", { item: match, allDrinks: drinks, routeName: "Browse Cocktails" }) }}>
                         <ImageBackground style={styles.image} imageStyle={{ borderRadius: 30 }} source={{ uri: "https://drive.google.com/uc?export=view&id=" + match.imageid }}>
-                            <Text style={styles.subcontainer} key={match.name}>{match.name}</Text>
+                            <Text style={styles.subcontainer} >{match.name}</Text>
                         </ImageBackground>
                     </TouchableOpacity>
                 )}</View>

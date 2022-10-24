@@ -100,7 +100,7 @@ export const Cocktails = ({ navigation, route }) => {
                 <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                 <Text style={styles.poppins2} >Want some inspiration? Browse cocktails here!</Text>
             </ImageBackground>
-            <SearchDrink drinks={data} />
+            <SearchDrink drinks={data} navigation={navigation} />
         </LinearGradient>
 
     )
