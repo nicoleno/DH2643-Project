@@ -47,20 +47,30 @@ const DrinkList = ({ navigation, route }) => {
     const createDrinkList = (matchedDrinks) => {
         const drinkList: DrinkListItem[] = [];
 
-        for (let i = 0; i < matchedDrinks.length; i++) {
-            const need = alcoholIngredientsNeeded(matchedDrinks[i], shakerIngredients).concat(nonAlcoholngredientsNeeded(matchedDrinks[i], shakerIngredients));
-            const have = alcoholIngredientsHave(matchedDrinks[i], shakerIngredients).concat(nonAlcoholngredientsHave(matchedDrinks[i], shakerIngredients));
-            console.log(need);
+        const filteredDrinks = matchedDrinks.filter((drink) => {
+            return (alcoholIngredientsHave(drink, shakerIngredients).length !== 0);
+
+        })
+
+        for (let i = 0; i < filteredDrinks.length; i++) {
+
+            const need = alcoholIngredientsNeeded(filteredDrinks[i], shakerIngredients).concat(nonAlcoholngredientsNeeded(filteredDrinks[i], shakerIngredients));
+            const have = alcoholIngredientsHave(filteredDrinks[i], shakerIngredients).concat(nonAlcoholngredientsHave(filteredDrinks[i], shakerIngredients));
+
             const drink: DrinkListItem = {
-                label: `${i + 1}  of ${matchedDrinks.length}`,
-                value: `${i + 1}`,
+                label: `${i + 1}  of ${filteredDrinks.length}`,
+                value: `${(i + 1)}`,
                 have: have,
                 need: need,
-                name: matchedDrinks[i].name,
-                imageid: matchedDrinks[i].imageid,
+                name: filteredDrinks[i].name,
+                imageid: filteredDrinks[i].imageid,
+
             };
             drinkList.push(drink);
         }
+
+        // console.log('drink', drink);
+
         return drinkList;
     }
 

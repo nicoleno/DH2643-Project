@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 
 export const Cocktails = ({ navigation, route }) => {
 
-    console.log(route.params.props);
+    console.log(route.params.drinks);
 
 
     return (
