@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
 
     searchBar: {
         marginTop: 10,
-        marginLeft: 15,
-        width: 250,
+        marginLeft: 30,
+        width: 350,
         height: 40,
         backgroundColor: 'white',
         opacity: 0.95,

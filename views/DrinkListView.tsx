@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, SectionList, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 import React from 'react';
 import { Hamburger } from '../components/menuButton';
 import Animated from 'react-native-reanimated';
@@ -11,7 +11,7 @@ const DrinkListView = ({ navigation, dataList, allDrinks }) => {
     const scrollX = React.useRef(new Animated.Value(0)).current;
     const card_width = 300;
     const renderItem = ({ item }) => {
-        return (<Text style={{ color: '#fff', marginRight: 10, marginLeft:35 }}>{`\u2022 ${item}`}</Text>);}
+        return (<Text style={{ color: '#fff', marginRight: 10, marginLeft:35 }}>{item}</Text>);}
 
     return (
         <LinearGradient start={{ x: 0.0, y: 0.0 }} end={{ x: 0.5, y: 1.0 }} colors={['#414141', '#000000']} style={styles.background}>
@@ -33,7 +33,7 @@ const DrinkListView = ({ navigation, dataList, allDrinks }) => {
                             <Text style={styles.poppins}>{item.name}</Text>
                             <View style={styles.poppins2}>
                                 <FlatList style={{marginHorizontal: -5}} data={(item.have)}
-                                    ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft:40 }}><Text><Text style={{fontFamily: 'PoppinsBold', fontSize: 14}}>You have</Text></Text></Text>}
+                                    ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft:35 }}><Text><Text style={{fontFamily: 'PoppinsBold', fontSize: 14}}>You have</Text></Text></Text>}
                                     renderItem={renderItem} />
                                 <FlatList data={(item.need)}
                                     ListHeaderComponent={() => <Text style={{ color: '#fff', marginLeft:35  }}><Text><Text style={{fontFamily: 'PoppinsBold', fontSize: 14}}>You need</Text></Text></Text>}
