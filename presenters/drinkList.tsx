@@ -1,5 +1,5 @@
 import React from 'react';
-import { DrinkListItem } from '../models/model';
+import { DrinkListItem } from '../models/types';
 import DrinkListView from '../views/DrinkListView';
 import { checkAllDrinks } from '../components/findingDrinks';
 import { useSelector } from 'react-redux';

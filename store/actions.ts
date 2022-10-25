@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { ThunkAction } from "redux-thunk";
 import { AnyAction } from "redux";
 import { RootState } from "./reducers";
-import { Ingredient } from "../models/model";
+import { Ingredient } from "../models/types"
 
 // const dispatch = useDispatch();
 
