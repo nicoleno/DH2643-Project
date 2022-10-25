@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react
 import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from '../components/menuButton';
 import { ScrollView } from "react-native-gesture-handler";
-import { DrinkListItem } from "../models/types"
+import { DrinkListItem } from "../types"
 import { measure } from "react-native-reanimated";
 import { DetailsView } from '../views/DetailsView';
 

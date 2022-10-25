@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity, SectionList, ImageBackground 
 import React from 'react';
 import { Hamburger } from '../components/menuButton';
 import Animated from 'react-native-reanimated';
-import { DrinkListItem } from '../models/types';
+import { DrinkListItem } from '../types';
 import { FlatList } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 

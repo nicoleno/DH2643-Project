@@ -4,13 +4,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import IngredientCountIcon from '../components/ingredientCountIcon';
 import { Hamburger } from '../components/menuButton';
-import ShakerModel from '../models/shaker';
 import { useState } from 'react';
 import { IngredientScrollView } from './ingredientScrollView';
 
 
 export const HomepageView = ({ navigation }) => {
-    let shaker = new ShakerModel;
     const [showIngredient, setToggleValue] = useState(false);
 
     const childToParent = (showIngredient) => {
@@ -24,14 +22,7 @@ export const HomepageView = ({ navigation }) => {
                     <Text style={styles.shakeit} >Shakeit</Text><Hamburger navigation={navigation} />
                     <View style={styles.shakerArea}>
                         <View style={styles.topsection} >
-                            <ImageBackground style={styles.shakerReal} source={require('../assets/images/shaker-real.png')}
-                                onLayout={(event) => {
-                                    const layout = event.nativeEvent.layout;
-                                    shaker.setHeight(layout.height);
-                                    shaker.setWidth(layout.width);
-                                    shaker.setPosX(layout.x);
-                                    shaker.setPosY(layout.y);
-                                }} />
+                            <ImageBackground style={styles.shakerReal} source={require('../assets/images/shaker-real.png')} />
                             <View style={{ position: 'absolute', top: 25, left: 0, right: 47, bottom: 0, justifyContent: 'center', alignItems: 'center' }}>
                                 <IngredientCountIcon />
                             </View>
