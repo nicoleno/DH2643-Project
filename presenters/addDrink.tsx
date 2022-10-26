@@ -11,7 +11,7 @@ import DrinkList from './drinkList';
 
 export const AddDrink = ({ navigation, route }) => {
 
-    //TODO se varför tangentbordet stängs efter varje tryck, se hur man kan disablea previous och next baserat på vilken fråga man är på => när man är på första frågan ska previous vara disabled
+    //TODO se varför tangentbordet stängs efter varje tryck (androidbugg?). 
     // kolla även hur man då kan skicka in drinken senare till mongodb, har skapat en ny collection i den som man kan ladda upp dessa på. 
     // Kanske ha en annan view då där man kan se ens drinkar man gjort?
 
@@ -58,9 +58,13 @@ export const AddDrink = ({ navigation, route }) => {
     const [question, setQuestion] = React.useState(1);
 
     const setDrink = (name, alcIng, ing, garnish, glass, measurements, instructions) => {
+
+        const alcList = alcIng.split(", ")
+        const ingList = ing.split(", ")
+
         newDrink.name = name;
-        newDrink.alcoholIngredients = alcIng;
-        newDrink.nonAlcoholIngredients = ing;
+        newDrink.alcoholIngredients = alcList;
+        newDrink.nonAlcoholIngredients = ingList;
         newDrink.garnish = garnish;
         newDrink.typeOfGlass = glass;
         newDrink.measurements = measurements;
@@ -74,7 +78,7 @@ export const AddDrink = ({ navigation, route }) => {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write the desired name for your drink</Text>
-                    <TextInput style={styles.input} onChangeText={na => setName(na)} ></TextInput>
+                    <TextInput style={styles.input} onChangeText={name => setName(name)} value={name} ></TextInput>
                 </View>)
         }
 
@@ -145,11 +149,11 @@ export const AddDrink = ({ navigation, route }) => {
             </ImageBackground>
             <View>
                 <View style={styles.buttonHolder}>
-                    <TouchableOpacity style={styles.button} onPress={() =>
+                    <TouchableOpacity style={styles.button} disabled={question === 1 ? true : false} onPress={() =>
                         setQuestion(question - 1)}>
                         <Text>Previous</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => setQuestion(question + 1)}>
+                    <TouchableOpacity style={styles.button} disabled={question === 8 ? true : false} onPress={() => setQuestion(question + 1)}>
                         <Text>Next</Text>
                     </TouchableOpacity>
 
@@ -160,7 +164,7 @@ export const AddDrink = ({ navigation, route }) => {
 
                 </View>
             </View>
-        </LinearGradient>
+        </LinearGradient >
 
     )
 }
