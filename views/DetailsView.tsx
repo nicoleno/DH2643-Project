@@ -5,8 +5,6 @@ import { Hamburger } from '../components/menuButton';
 import { ScrollView } from "react-native-gesture-handler";
 
 export const DetailsView = ({ navigation, chosenDrink, routeName }) => {
-    console.log(routeName);
-
     const measurements = chosenDrink.measurements.split(", ");
 
     return (
@@ -21,7 +19,8 @@ export const DetailsView = ({ navigation, chosenDrink, routeName }) => {
                         <Text style={styles.bold}>Ingredients </Text>
                         {measurements.map((ing) => {
                             return (
-                                <Text key={ing} style={{ fontSize: 12 }}>{ing}</Text>)})}
+                                <Text key={ing} style={{ fontSize: 12 }}>{ing}</Text>)
+                        })}
                         <Text style={styles.bold}>Type of Glass</Text>
                         <Text style={styles.textList}>{chosenDrink.typeOfGlass}</Text>
                         <Text style={styles.bold}>Garnish</Text>
@@ -31,12 +30,12 @@ export const DetailsView = ({ navigation, chosenDrink, routeName }) => {
                         <View style={{ marginBottom: 20 }}></View>
                     </ScrollView>
                     <View style={{ alignItems: 'center', }}>
-                    <TouchableOpacity style={styles.backbutton}
-                        onPress={() => navigation.navigate(routeName)}>
-                        <ImageBackground style={{ height: 25, width: 25 }} source={require('../assets/images/backblack.png')}>
-                        </ImageBackground>
-                        <Text style={{ fontSize: 10, fontFamily: 'Poppins', color: 'black'}}>Back to Drinks</Text>
-                    </TouchableOpacity></View>
+                        <TouchableOpacity style={styles.backbutton}
+                            onPress={() => navigation.navigate(routeName)}>
+                            <ImageBackground style={{ height: 25, width: 25 }} source={require('../assets/images/backblack.png')}>
+                            </ImageBackground>
+                            <Text style={{ fontSize: 10, fontFamily: 'Poppins', color: 'black' }}>Back to Drinks</Text>
+                        </TouchableOpacity></View>
                 </View>
             </LinearGradient>
         </View>
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         padding: 10,
         fontFamily: 'PoppinsBold',
-        marginLeft:29
+        marginLeft: 29
     },
 
     backbutton: {
