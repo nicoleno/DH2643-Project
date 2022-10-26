@@ -7,6 +7,7 @@ import { Cocktails } from "../cocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../presenters/details"
 import DrinkList from "../presenters/drinkList"
+import { AddDrink } from "../presenters/addDrink";
 import { Hamburger } from "./menuButton";
 
 const Drawer = createDrawerNavigator();
@@ -35,6 +36,12 @@ const Sidebar = (props) => {
                     )
                 }} />
 
+                <Drawer.Screen name="Add Drink" component={AddDrink} options={{
+                    drawerIcon: () => (
+                        <Image source={require('../assets/images/cocktail.png')} style={{ height: 15, width: 15, }} />
+                    )
+                }} />
+
                 <Drawer.Screen name="DrinkList" component={DrinkList} initialParams={{ props }} options={{
                     drawerItemStyle: { height: 0 },
                 }} />
@@ -45,6 +52,8 @@ const Sidebar = (props) => {
                 <Drawer.Screen name="Hamburger" component={Hamburger} options={{
                     drawerItemStyle: { height: 0 },
                 }} />
+
+
 
 
             </Drawer.Navigator>
