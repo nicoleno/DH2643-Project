@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import * as SplashScreen from 'expo-splash-screen';
-import { MyDrinksView } from '../views/MyDrinksView';
+import { BrowseView } from '../views/BrowseCocktailsView';
 
-export const MyDrinks = ({ navigation }) => {
+export const BrowseCocktails = ({ navigation, route }) => {
+
+    console.log(route.params.drinks);
+
     const [data, setData] = useState([]);
-    const [appIsReady, setAppIsReady] = useState(false);
 
     const getDrinks = () => {
-        fetch("https://drinks-db-server.herokuapp.com/own_drinks", {
+        fetch("https://drinks-db-server.herokuapp.com/drinks", {
             method: "get",
             headers: {
                 Accept: 'application/json',
@@ -22,30 +23,17 @@ export const MyDrinks = ({ navigation }) => {
     useEffect(() => {
         (async () => {
             try {
-                await SplashScreen.preventAutoHideAsync();
                 await getDrinks();
             }
             catch (e) {
                 console.warn(e);
             }
-            finally {
-                setAppIsReady(true);
-            }
         })();
     }, []);
-
-    useEffect(() => {
-        SplashScreen.hideAsync();
-    }, [appIsReady]);
-
-    if (!appIsReady) {
-        return null;
-    }
-
-
+    // console.log(data);
 
 
     return (
-        <MyDrinksView data={data} navigation={navigation}></MyDrinksView>
+        <BrowseView navigation={navigation} data={data}></BrowseView>
     )
 }

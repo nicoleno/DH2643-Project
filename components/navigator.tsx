@@ -3,13 +3,13 @@ import { StyleSheet, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { HomePage } from "../presenters/HomePage";
-import { Cocktails } from "../cocktails";
+import { BrowseCocktails } from "../presenters/BrowseCocktails";
 import { CustomDrawer } from "./CustomDrawer";
 import { Details } from "../presenters/details"
 import DrinkList from "../presenters/drinkList"
 import { AddDrink } from "../presenters/addDrink";
 import { Hamburger } from "./menuButton";
-import { MyDrinks } from "../presenters/myDrinks";
+import { MyDrinks } from "../presenters/MyDrinks";
 
 const Drawer = createDrawerNavigator();
 
@@ -31,7 +31,7 @@ const Sidebar = (props) => {
                         <Image source={require('../assets/images/home.png')} style={{ height: 15, width: 15, }} />
                     )
                 }} />
-                <Drawer.Screen name="Browse Cocktails" component={Cocktails} initialParams={{ drinks: props.drinks }} options={{
+                <Drawer.Screen name="Browse Cocktails" component={BrowseCocktails} initialParams={{ drinks: props.drinks }} options={{
                     drawerIcon: () => (
                         <Image source={require('../assets/images/cocktail.png')} style={{ height: 15, width: 15, }} />
                     )
