@@ -2,18 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ImageBackground, Touchable } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from '../components/menuButton';
-import mongoose from 'mongoose';
-import Drink from '../db/model';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import DrinkList from './drinkList';
+import { NewDrink } from '../db/model';
 
 
 
-export const AddDrink = ({ navigation, route }) => {
+export const AddDrink = ({ navigation }) => {
 
-    //TODO se varför tangentbordet stängs efter varje tryck (androidbugg?). 
-    // kolla även hur man då kan skicka in drinken senare till mongodb, har skapat en ny collection i den som man kan ladda upp dessa på. 
-    // Kanske ha en annan view då där man kan se ens drinkar man gjort?
 
     const [name, setName] = React.useState("");
     const [instructions, setInstructions] = React.useState("");
@@ -23,54 +18,54 @@ export const AddDrink = ({ navigation, route }) => {
     const [glass, setGlass] = React.useState("");
     const [measurements, setmeasurements] = React.useState("");
 
-    const DrinkSchema = new mongoose.Schema({
-        _id: {
-            type: String,
-        },
-        name: {
-            type: String,
-            required: true,
-        },
-        instructions: {
-            type: String,
-        },
-        measurements: {
-            type: String,
-        },
-        alcoholIngredients: {
-            type: [String],
-        },
-        nonAlcoholIngredients: {
-            type: [String],
-        },
-        garnish: {
-            type: String,
-        },
-        typeOfGlass: {
-            type: String,
-        }
-
-    });
-
-    const DrinkModel = mongoose.model("DrinkModel", DrinkSchema);
-    const newDrink = new DrinkModel()
-
     const [question, setQuestion] = React.useState(1);
 
     const setDrink = (name, alcIng, ing, garnish, glass, measurements, instructions) => {
 
         const alcList = alcIng.split(", ")
         const ingList = ing.split(", ")
+        const newDrink = new NewDrink();
 
         newDrink.name = name;
+        newDrink.instructions = instructions;
         newDrink.alcoholIngredients = alcList;
         newDrink.nonAlcoholIngredients = ingList;
+        newDrink.measurements = measurements;
         newDrink.garnish = garnish;
         newDrink.typeOfGlass = glass;
-        newDrink.measurements = measurements;
-        newDrink.instructions = instructions;
+        newDrink.imageid = "1Q8kBp_SsX7Z98ZtoKdkSv7fh23eSShdg"
+
+
+        // const newDrink = {
+        //     name: name,
+        //     instructions: instructions,
+        //     alcoholIngredients: alcList,
+        //     nonAlcoholIngredients: ingList,
+        //     measurements: measurements,
+        //     garnish: garnish,
+        //     typeOfGlass: glass,
+        //     id: null,
+        //     imageid: "1Q8kBp_SsX7Z98ZtoKdkSv7fh23eSShdg"
+
+        // }
+
         console.log(newDrink);
+        postDrink(newDrink);
     }
+
+    const postDrink = async (drink) => {
+        await fetch("https://drinks-db-server.herokuapp.com/add_drink", {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(drink)
+        }).then(res => console.log(res)).catch(e => console.log(e));
+    }
+
+
+
     const InputQuestion = () => {
 
 
@@ -78,7 +73,7 @@ export const AddDrink = ({ navigation, route }) => {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write the desired name for your drink</Text>
-                    <TextInput style={styles.input} onChangeText={name => setName(name)} value={name} ></TextInput>
+                    <TextInput style={styles.input} onEndEditing={e => { setName(e.nativeEvent.text); setQuestion(question + 1) }}>{name}</TextInput>
                 </View>)
         }
 
@@ -86,7 +81,7 @@ export const AddDrink = ({ navigation, route }) => {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write down the alcoholic ingredients for your drink, please place a comma (,) between each ingredient.</Text>
-                    <TextInput multiline={true} style={styles.inputLarge} placeholder={"e.g. Vodka, Cointreau"} onChangeText={alcIng => setalcIng(alcIng)} value={alcIng}></TextInput>
+                    <TextInput style={styles.input} placeholder={"e.g. Vodka, Cointreau"} onEndEditing={e => { setalcIng(e.nativeEvent.text); setQuestion(question + 1) }}>{alcIng}</TextInput>
                 </View>)
         }
 
@@ -94,7 +89,7 @@ export const AddDrink = ({ navigation, route }) => {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write down the non-alcoholic ingredients for your drink, please place a comma (,) between each ingredient.</Text>
-                    <TextInput multiline={true} style={styles.inputLarge} placeholder={"e.g. Lemon, Soda Water"} onChangeText={ing => setIng(ing)} value={ing}></TextInput>
+                    <TextInput style={styles.input} placeholder={"e.g. Lemon, Soda Water"} onEndEditing={e => { setIng(e.nativeEvent.text); setQuestion(question + 1) }}>{ing}</TextInput>
                 </View>)
         }
 
@@ -102,8 +97,8 @@ export const AddDrink = ({ navigation, route }) => {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write down the measurements for the drink. Place a comma (,) after each ingredient</Text>
-                    <TextInput multiline={true} style={styles.inputLarge} placeholder={"e.g. 5cl Vodka, 3cl Lime, Soda Water"}
-                        onChangeText={measurements => setmeasurements(measurements)} value={measurements}></TextInput>
+                    <TextInput style={styles.input} placeholder={"e.g. 5cl Vodka, 3cl Lime, Soda Water"}
+                        onEndEditing={e => { setmeasurements(e.nativeEvent.text); setQuestion(question + 1) }}>{measurements}</TextInput>
                 </View>)
         }
 
@@ -111,29 +106,30 @@ export const AddDrink = ({ navigation, route }) => {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write down the garnish for the drink</Text>
-                    <TextInput multiline={true} style={styles.input} onChangeText={garnish => setGarnish(garnish)} value={garnish}></TextInput>
+                    <TextInput style={styles.input} onEndEditing={e => { setGarnish(e.nativeEvent.text); setQuestion(question + 1) }}>{garnish}</TextInput>
                 </View>)
         }
         else if (question === 6) {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Write down the type of glass for the drink</Text>
-                    <TextInput multiline={true} style={styles.input} onChangeText={glass => setGlass(glass)} value={glass}></TextInput>
+                    <TextInput style={styles.input} onEndEditing={e => { setGlass(e.nativeEvent.text); setQuestion(question + 1) }}>{glass}</TextInput>
                 </View>)
         }
         else if (question === 7) {
             return (
                 <View style={styles.inputArea}>
                     <Text style={styles.poppins3}> Finally write down the instructions for the drink</Text>
-                    <TextInput multiline={true} style={styles.inputLarge} onChangeText={instuctions => setInstructions(instuctions)} value={instructions}></TextInput>
+                    <TextInput style={styles.input} onEndEditing={e => { setInstructions(e.nativeEvent.text); setQuestion(question + 1) }}>{instructions}</TextInput>
                 </View>)
         }
 
         else if (question === 8) {
             return (
-                <View style={{ padding: 100 }}>
+                <View style={styles.inputArea} >
+                    <Text style={styles.poppins3}>Now you have everything needed! Go ahead and add the drink!</Text>
                     <TouchableOpacity style={styles.button} onPress={() => setDrink(name, alcIng, ing, garnish, glass, measurements, instructions)}>
-                        <Text>Add Drink</Text>
+                        <Text style={styles.poppins2}>Add Drink</Text>
                     </TouchableOpacity>
                 </View>)
         }
@@ -148,19 +144,19 @@ export const AddDrink = ({ navigation, route }) => {
                 <Text style={styles.poppins2} >Want to add your own drinks? Add them here!</Text>
             </ImageBackground>
             <View>
-                <View style={styles.buttonHolder}>
-                    <TouchableOpacity style={styles.button} disabled={question === 1 ? true : false} onPress={() =>
-                        setQuestion(question - 1)}>
-                        <Text>Previous</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} disabled={question === 8 ? true : false} onPress={() => setQuestion(question + 1)}>
-                        <Text>Next</Text>
-                    </TouchableOpacity>
 
-                </View>
                 <View style={styles.inputContainer}>
                     <InputQuestion />
 
+
+
+                </View>
+                <View style={styles.buttonHolder}>
+                    <TouchableOpacity style={styles.backbutton} onPress={() => setQuestion(question - 1)}>
+                        <ImageBackground style={{ height: 25, width: 25 }} source={require('../assets/images/back.png')}>
+                        </ImageBackground>
+                        <Text style={{ color: "rgba(255,255,255,1)", marginTop: 5, fontFamily: 'Poppins', fontSize: 10 }}>Previous Question</Text>
+                    </TouchableOpacity>
 
                 </View>
             </View>
@@ -226,7 +222,7 @@ const styles = StyleSheet.create({
     },
 
     inputContainer: {
-        height: 300,
+        height: 200,
         alignItems: 'center',
     },
 
@@ -242,40 +238,31 @@ const styles = StyleSheet.create({
 
 
     },
-    inputLarge: {
-        backgroundColor: 'white',
-        width: 300,
-        borderColor: 'black',
-        borderWidth: 1,
-        height: 200,
-        borderRadius: 30,
-        padding: 10,
-        textAlignVertical: 'top',
-
-
-    },
 
     button: {
-        backgroundColor: 'white',
+        backgroundColor: '#798777',
         height: 50,
         width: 100,
-        borderRadius: 30,
         justifyContent: 'center',
-        alignItems: 'center'
+        borderRadius: 30,
+        alignItems: 'center',
+        marginBottom: 10,
+        borderWidth: 1,
+        borderColor: '#fff'
+
     },
 
-
-
     buttonHolder: {
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        padding: 10
+        justifyContent: 'flex-start',
+        alignItems: 'center'
     },
 
 
     inputArea: {
         height: 100,
         width: 300,
+        alignItems: 'center',
+
     },
 
     poppins3: {
@@ -285,7 +272,16 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: "rgba(255, 255, 255,1)",
         marginBottom: 30,
+        marginTop: 30,
         height: 60
 
+    },
+    backbutton: {
+        height: 50,
+        width: 200,
+        borderRadius: 30,
+        justifyContent: 'center',
+        marginBottom: 50,
+        alignItems: 'center',
     },
 });
