@@ -137,7 +137,7 @@ export const AddDrink = ({ navigation }) => {
 
                 </View>
                 <View style={styles.buttonHolder}>
-                    <TouchableOpacity style={styles.backbutton} onPress={() => setQuestion(question - 1)}>
+                    <TouchableOpacity style={styles.backbutton} disabled={question === 1 ? true : false} onPress={() => setQuestion(question - 1)}>
                         <ImageBackground style={{ height: 25, width: 25 }} source={require('../assets/images/back.png')}>
                         </ImageBackground>
                         <Text style={{ color: "rgba(255,255,255,1)", marginTop: 5, fontFamily: 'Poppins', fontSize: 10 }}>Previous Question</Text>

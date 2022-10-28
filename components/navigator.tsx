@@ -9,7 +9,7 @@ import { Details } from "../presenters/details"
 import DrinkList from "../presenters/drinkList"
 import { AddDrink } from "../presenters/addDrink";
 import { Hamburger } from "./menuButton";
-import { MyDrinks } from "../presenters/MyDrinks";
+import { MyDrinks } from "../presenters/myDrinks";
 
 const Drawer = createDrawerNavigator();
 
