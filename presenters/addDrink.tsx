@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ImageBackground, Touchable } from 'react-native
 import { LinearGradient } from 'expo-linear-gradient';
 import { Hamburger } from '../components/menuButton';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import { NewDrink } from '../db/model';
+import { newDrink } from '../db/model';
 
 
 
@@ -24,7 +24,6 @@ export const AddDrink = ({ navigation }) => {
 
         const alcList = alcIng.split(", ")
         const ingList = ing.split(", ")
-        const newDrink = new NewDrink();
 
         newDrink.name = name;
         newDrink.instructions = instructions;
@@ -35,21 +34,7 @@ export const AddDrink = ({ navigation }) => {
         newDrink.typeOfGlass = glass;
         newDrink.imageid = "1Q8kBp_SsX7Z98ZtoKdkSv7fh23eSShdg"
 
-
-        // const newDrink = {
-        //     name: name,
-        //     instructions: instructions,
-        //     alcoholIngredients: alcList,
-        //     nonAlcoholIngredients: ingList,
-        //     measurements: measurements,
-        //     garnish: garnish,
-        //     typeOfGlass: glass,
-        //     id: null,
-        //     imageid: "1Q8kBp_SsX7Z98ZtoKdkSv7fh23eSShdg"
-
-        // }
-
-        console.log(newDrink);
+        //console.log(newDrink);
         postDrink(newDrink);
     }
 
@@ -61,7 +46,7 @@ export const AddDrink = ({ navigation }) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(drink)
-        }).then(res => console.log(res)).catch(e => console.log(e));
+        }).then(res => res.json()).catch(e => console.log(e));
     }
 
 
