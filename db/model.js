@@ -25,11 +25,15 @@ const DrinkSchema = new mongoose.Schema({
   },
   typeOfGlass: {
     type: String,
+  },
+  imageid: {
+    type: String,
   }
 
 });
 
-const Drink = mongoose.model("Drink", DrinkSchema);
 
-module.exports = Drink;
-module.exports = DrinkSchema;
+const NewDrink = mongoose.model("Drink", DrinkSchema, "ownDrinks");
+const Drink = mongoose.model("Drink", DrinkSchema, "drinks")
+const newDrink = new NewDrink();
+module.exports = { newDrink, Drink };

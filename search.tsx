@@ -44,7 +44,7 @@ const SearchDrink = ({ drinks, navigation }) => {
             onChangeText={(search) => searchfun(drinks, search)} editable={true} />
             <ScrollView>
                 <View style={styles.container}>{matches.map((match) =>
-                    <TouchableOpacity key={match.name} onPress={() => { navigation.navigate("Details", { item: match, allDrinks: drinks, routeName: "Browse Cocktails" }) }}>
+                    <TouchableOpacity key={match._id} onPress={() => { navigation.navigate("Details", { item: match, allDrinks: drinks, routeName: "Browse Cocktails" }) }}>
                         <ImageBackground style={styles.image} imageStyle={{ borderRadius: 30 }} source={{ uri: "https://drive.google.com/uc?export=view&id=" + match.imageid }}>
                             <Text style={styles.subcontainer} >{match.name}</Text>
                         </ImageBackground>

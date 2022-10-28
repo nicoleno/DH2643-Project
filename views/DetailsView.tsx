@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         height: 300,
     },
     recipeContainer: {
-        height: 350,
+        height: 500,
         backgroundColor: '#fff',
         alignContent: 'center',
         justifyContent: 'flex-start',
